@@ -1,6 +1,7 @@
 import React from 'react';
 import Footer from '../../shared/Footer';
 import Banner from './Banner/Banner';
+import BootSlier from './BootSlier';
 import HomeClients from './HomeClients/HomeClients';
 import HomePortfolio from './HomePortfolio/HomePortfolio';
 import Philosophy from './Philosophy/Philosophy';
@@ -13,6 +14,7 @@ const Home = () => {
             <HomePortfolio></HomePortfolio>
             <Philosophy></Philosophy>
             <HomeClients></HomeClients>
+            <BootSlier></BootSlier>
             <Footer></Footer>
         </div>
     );

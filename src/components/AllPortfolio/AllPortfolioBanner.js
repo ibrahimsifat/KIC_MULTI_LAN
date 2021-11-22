@@ -32,7 +32,10 @@ import Img24 from '../../img/AllPorfolio/24.jpg'
 import Img25 from '../../img/AllPorfolio/25.jpg'
 import Img26 from '../../img/AllPorfolio/26.jpg'
 import Img27 from '../../img/AllPorfolio/27.jpg'
+import { useTranslation } from 'react-i18next';
 const AllPortfolioBanner = () => {
+    const { t } = useTranslation()
+  
     return (
         <div>
             <div className="bg-purple-100 font-sans leading-normal tracking-normal">
@@ -44,10 +47,11 @@ style={{height:'500px',maxHeight:'560px'}} >
         <div className="container  mx-auto text-center break-normal">
 
                 <p className="text-white mt-32 font-extrabold text-3xl md:text-5xl">
-                    Our Portfolio
+                {t('allPortfolio_one')}
+               
                 </p>
                <div className="mx-auto text-center flex justify-center">
-               <p className="text-white font-semibold text-xl flex  mx-auto text-center mt-2"><Link className='nav_hover mr-2' to='/'>Home</Link> / <span className='nav_hover ml-2'>Portfolio</span></p>
+               <p className="text-white font-semibold text-xl flex  mx-auto text-center mt-2"><Link className='nav_hover text-white no-underline' to='/'>{t('service_allClients_two')}</Link><span className="mx-2">/</span> <span className='nav_hover '>{t('allPortfolio_two')}</span></p>
                </div>
                
         </div>
@@ -71,12 +75,17 @@ style={{height:'500px',maxHeight:'560px'}} >
 
                     <div className="w-full md:w-1/3 flex flex-col flex-grow flex-shrink ">
                         <div className="flex-1 bg-white rounded-t rounded-b-none overflow-hidden bg-purple-50 ">
-                            <p className="w-full text-gray-600 text-xs md:text-sm pt-6 px-6">GETTING STARTED</p>
-                            <div className="w-full font-bold text-xl text-gray-900 px-6 mb-7 ">👋 Welcome To KIC Portfolio</div>
+                            <p className="w-full text-gray-600 text-xs md:text-sm pt-6 px-6">{t('allPortfolio_three')}</p>
+                            <div className="w-full font-bold text-xl text-gray-900 px-6 mb-7 ">👋 {t('allPortfolio_four')}</div>
                             <p className="text-gray-800 font-serif text-base px-6 mb-5">
-                            We offer creative designs, high quality printed products and different advertising services to all clients, varying from small start-ups to the most prominent business owners. We can create a wide variety or printed products to develop, raise awareness and maintain the           professional image or your business.
+                            {t('allPortfolio_five')}
                             </p>
-                            <Link className='bg-btn px-4 py-2 mx-auto inline-block font-semibold duration-500 rounded-md mt-3 mb-5 ml-6 hover:scale-110 text-white ' to="../Profile.pdf" target="_blank" download>Download Portfolio</Link>
+                           <div className='mx-4'>
+                           <Link className='bg-btn px-4 py-2 mx-auto inline-block font-semibold no-underline duration-500 rounded-md mt-3 mx-12 text-white'
+                           to="../Profile.pdf" target="_blank" download>
+                            {t('allPortfolio_six')}
+                            </Link>
+                           </div>
 
                         </div>
 

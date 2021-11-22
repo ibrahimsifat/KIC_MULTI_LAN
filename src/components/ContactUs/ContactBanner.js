@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import LoginNavigation from '../../shared/LoginNavigation';
 import emailjs from 'emailjs-com'
 import './ContactUs.css'
+import { useTranslation } from 'react-i18next';
 const ContactBanner = () => {
+    const { t } = useTranslation()
     const [success,setSuccess]=useState(false)
     const handleSendEmail=(e)=>{
       
@@ -21,7 +23,8 @@ const ContactBanner = () => {
     }
 
 const massageAlert=<div class="bg-green-100 rounded-lg p-4 mb-4 text-sm text-green-700" role="alert">
-<span class="font-medium">Successfully sent the message!</span>
+<span class="font-medium">
+{t('Contact_one')}</span>
 </div>
     return (
         <div className='contact_bg_img'>
@@ -30,23 +33,25 @@ const massageAlert=<div class="bg-green-100 rounded-lg p-4 mb-4 text-sm text-gre
     <div className='flex justify-center items-center monsterratFont md:mx-8 mx-4'>
             <div>
                 {success&& massageAlert}
-                <h1 className='mt-16 monsterratFont tracking-tighter font-extrabold uppercase text-white text-3xl sm:text-5xl md:text-4xl lg:text-5xl mb-6 lg:mb-8'>send us a message</h1>
-                <div  className='w-12/12'>
-                    <form onSubmit={handleSendEmail}>
-                    <div>
-                        <label className='block text-white font-semibold pb-2 text-xl' htmlFor="Name">Name: </label>
+                <h1 className='mt-16 monsterratFont tracking-tighter font-extrabold uppercase text-white text-3xl sm:text-5xl md:text-4xl lg:text-5xl mb-6 lg:mb-8'>
+                {t('Contact_two')}
+                </h1>
+                <div  className='w-full'>
+                    <form onSubmit={handleSendEmail} className='w-full'>
+                    <div className='md:w-96 '>
+                        <label className='block text-white font-semibold pb-2 text-xl' htmlFor="Name">{t('Contact_three')}: </label>
                         <input className=' text-white p-1 outline-none bg-transparent border-2 w-full' type="text" name="name" id="" required />
                     </div>
                         <div className='mt-6'>
-                            <label className='block text-white font-semibold pb-2 text-xl' htmlFor="Email">Email: </label>
+                            <label className='block text-white font-semibold pb-2 text-xl' htmlFor="Email">{t('Contact_four')}: </label>
                             <input className=' text-white p-1 outline-none bg-transparent border-2 w-full' type="email" name="user-email" id="" required />
                         </div>
                         <div className='mt-6'>
-                            <label className='block text-white font-semibold pb-2 text-xl' htmlFor="Email">Message:: </label>
+                            <label className='block text-white font-semibold pb-2 text-xl' htmlFor="Email">{t('Contact_five')}: </label>
                             <textarea className=' text-white p-1 h-36 outline-none bg-transparent border-2 w-full' type="text" name="message" id="" required/>
                         </div>
                         <div className="mt-4 flex justify-end items-center">
-                        <button type='submit' className='uppercase mb-16 font-semibold text-white py-1 px-5 border-2'>Submit</button>
+                        <button type='submit' className='uppercase mb-16 font-semibold text-white py-1 px-5 border-2'> {t('Contact_six')}</button>
                         </div>
                         </form>
                 </div>
