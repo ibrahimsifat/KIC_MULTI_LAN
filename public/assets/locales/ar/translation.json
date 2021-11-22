@@ -1,0 +1,7 @@
+{
+    "app_title": "عنوان",
+    "language": "اللغة",
+    "welcome_message": "اهلا بكم",
+    "about_title": "هذا هو حسابي",
+    "days_since_release": "لقد مرت {{number_of_days}} أيام على إصدار هذا الفيديو"
+}

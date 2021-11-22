@@ -1,0 +1,11 @@
+.homePortfolioBg {
+    background-image: url(../../../img/home-portfolio-bg.png);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 600px;
+    background-size: cover;
+}
+
+.monsterratFont {
+    font-family: 'Montserrat', sans-serif;
+}

@@ -1,0 +1,15 @@
+.contact_bg_img {
+    background-image: url(../../img/contactbg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.contactFooterbg {
+    background-image: url(../../img/footerbg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.monsterratFont {
+    font-family: 'Montserrat', sans-serif;
+}

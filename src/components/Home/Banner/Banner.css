@@ -1,0 +1,9 @@
+.bg-img {
+    background-image: url(../../../img/home-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.home-content {
+    font-family: 'Poppins', sans-serif;
+}
