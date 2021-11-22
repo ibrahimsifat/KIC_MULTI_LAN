@@ -2,7 +2,9 @@ import React from 'react';
 import LoginNavigation from '../../../shared/LoginNavigation';
 import Hero from '../../../img/Hero.png'
 import './Banner.css'
+import { useTranslation } from 'react-i18next';
 const Banner = () => {
+    const { t } = useTranslation()
     return (
         <div className='bg-img h-	'>
          <div className='pt-10'>
@@ -11,9 +13,9 @@ const Banner = () => {
     <div className='grid md:grid-cols-2 '>
              <div className="home-content left flex flex-col justify-center lg:items-right items-center">
                 <div className='text-right px-4  md:my-0 my-8 md:pt-0 pt-8 '>
-                <p><span className=' text-3xl md:text-3xl text-white'>WE'RE</span> <span className='textred text-3xl sm:text-5xl md:text-5xl lg:text-6xl  font-bold'>PRINTING</span></p>
-                 <p className=' text-3xl sm:text-4xl md:text-4xl lg:text-5xl text-white'>AND ADVERTISING</p>
-                 <p className='textred font-bold text-3xl sm:text-5xl md:text-5xl lg:text-6xl'>AGENCY</p>
+                <p><span className=' text-3xl md:text-3xl text-white'>{t('home_banner_first')}</span> <span className='textred text-3xl sm:text-5xl md:text-5xl lg:text-6xl  font-bold'> {t('home_banner_second')}</span></p>
+                 <p className=' text-3xl sm:text-4xl md:text-4xl lg:text-5xl text-white'>{t('home_banner_three')}</p>
+                 <p className='textred font-bold text-3xl sm:text-5xl md:text-5xl lg:text-6xl'>{t('home_banner_fourth')}</p>
                 </div>
 
              </div>

@@ -9,7 +9,7 @@ import '../../App.css'
 // const love=<FontAwesomeIcon icon={faHeart}/>
 
 const SingleClients = ({client}) => {
-    const {img,img2,img3}=client
+    const {img,img2,img3,img4}=client
     const [showModal, setShowModal] = React.useState(false);
     return (
            <div className=" mx-auto  w-32 img-hover duration-700  ">  
@@ -67,9 +67,10 @@ const SingleClients = ({client}) => {
                 <div className="relative mx-auto ">
               {!img2&& <h1 className='text-center font-bold'>No Images</h1>}
              
-             <div className='px-5 md:flex'>
+             <div className='px-5 grid md:grid-cols-2'>
              <img className='block mx-auto mb-5 md:w-80' src={img2} alt="" />
              {img3&& <img className='block mx-auto mb-5 md:w-80' src={img3} alt="" />}
+             {img4&& <img className='block mx-auto mb-5 md:w-80' src={img4} alt="" />}
   
              </div>
                 </div>

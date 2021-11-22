@@ -1,7 +1,9 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import LoginNavigation from '../../shared/LoginNavigation';
 import './Serivces.css'
 const ServicesBanner = () => {
+    const { t } = useTranslation()
     return (
         <div className='service-bg-img h-screen	'>
          <div className='pt-10'>
@@ -10,11 +12,7 @@ const ServicesBanner = () => {
     <div className='grid lg:grid-cols-2 '>
              <div className="home-content left flex flex-col justify-center lg:items-right items-end">
           <div className='md:w-8/12 w-12/12 px-3 lg:mt-52 md:mt-44 mt-24 block'>
-          <p className='text-white monsterratFont text-xl'>We handle everything linked to branding,
-                social media, digital design, photography,
-                and consultancy, Our goal is to help our
-                clients grow and gain exposure with the
-                right designs, tone of voice and tools.</p>
+          <p className='text-white monsterratFont text-xl'>{t('Service_Banner_one')}</p>
                 <h1 className='bg-white py-1 md:w-64 w-52 ml-auto mt-4'> </h1>
           </div>
 
