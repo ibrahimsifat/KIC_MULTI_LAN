@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import Footer from '../../shared/Footer';
 import LoginNavigation from '../../shared/LoginNavigation'
+import Slider from '../slider/Slider';
 import AllClientsDetails from './AllClentsDetails';
 import './AllClients.css'
 const AllClients = () => {
@@ -24,6 +25,7 @@ const AllClients = () => {
       </div>
         <div className='my-20'>
         <AllClientsDetails></AllClientsDetails>
+        <Slider></Slider>
         <Footer></Footer>
         </div>
             

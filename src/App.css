@@ -42,6 +42,14 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+.arabic-font-1 {
+    font-family: 'Cairo', sans-serif;
+}
+
+.arabic-font-2 {
+    font-family: 'Tajawal', sans-serif;
+}
+
 .visionbg {
     height: 500px;
 }

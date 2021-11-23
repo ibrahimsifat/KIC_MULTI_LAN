@@ -61,15 +61,14 @@ useEffect(() => {
       <div className="bg-white  z-30 navigation  flex flex-wrap items-center justify-between   ">
       
         <div className=" container  mx-auto flex flex-wrap items-center justify-between ">
-          <div className="relative flex justify-between lg:w-auto lg:static lg:block lg:justify-between">
+          <div className="relative flex justify-start items-center  lg:w-auto lg:static lg:block ">
             <NavLink to='/'
               className="text-sm font-bold leading-relaxed inline-block ml-2 py-2 whitespace-nowrap uppercase  "
               
             >
              <NavLink to='/'> <img className='md:w-20 sm:w-16 w-14' src={logo} alt="" /></NavLink>
             </NavLink>
-            <button
-              className=" cursor-pointer text-xl leading-none px-1 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+            <button className=" cursor-pointer text-xl px-1 py-1  bg-red-500  lg:hidden outline-none focus:outline-none "
               type="button"
               onClick={() => setNavbarOpen(!navbarOpen)}
             >
@@ -83,7 +82,7 @@ useEffect(() => {
             }
             id="example-navbar-danger"
           >
-            <ul className={!IsArabic?" navnav md:bg-transparent bg-white-500 md:py-0 py-2 md:t-center text-bl md:flex flex-col lg:flex-row list-none ml-auto":" navnav md:bg-transparent bg-white-500 md:py-0 py-2 md:t-center text-bl md:flex flex-col lg:flex-row list-none mr-auto"}
+            <ul className={!IsArabic?"block navnav md:bg-transparent bg-white-500 md:py-0 py-2 md:t-center text-bl md:flex flex-col lg:flex-row list-none ml-auto":" navnav block md:bg-transparent bg-white-500 md:py-0 py-2 md:t-center text-bl md:flex flex-col lg:flex-row list-none mr-auto"}
             
             >
             <li className="mx-3 fromLeft ">

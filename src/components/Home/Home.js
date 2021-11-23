@@ -1,6 +1,8 @@
 import React from 'react';
 import Footer from '../../shared/Footer';
+import LoginNavigation from '../../shared/LoginNavigation';
 import Banner from './Banner/Banner';
+import Banner2 from './Banner/Banner2';
 import BootSlier from './BootSlier';
 import HomeClients from './HomeClients/HomeClients';
 import HomePortfolio from './HomePortfolio/HomePortfolio';
@@ -9,7 +11,8 @@ import Vision from './Vision';
 const Home = () => {
     return (
         <div>
-            <Banner></Banner>
+            <LoginNavigation></LoginNavigation>
+            <Banner2></Banner2>
             <Vision></Vision>
             <HomePortfolio></HomePortfolio>
             <Philosophy></Philosophy>
