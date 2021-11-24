@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import LoginNavigation from '../../shared/LoginNavigation';
+import cookies from 'js-cookie'
 import emailjs from 'emailjs-com'
 import './ContactUs.css'
 import { useTranslation } from 'react-i18next';
@@ -21,7 +22,7 @@ const ContactBanner = () => {
         ).catch(error=>console.log(error))
        e.target.reset()
     }
-
+    const IsArabic=cookies.get('i18next') ==='ar'
 const massageAlert=<div class="bg-green-100 rounded-lg p-4 mb-4 text-sm text-green-700" role="alert">
 <span class="font-medium">
 {t('Contact_one')}</span>
@@ -38,8 +39,8 @@ const massageAlert=<div class="bg-green-100 rounded-lg p-4 mb-4 text-sm text-gre
                 </h1>
                 <div  className='w-full'>
                     <form onSubmit={handleSendEmail} className='w-full'>
-                    <div className='md:w-96 '>
-                        <label className='block text-white font-semibold pb-2 text-xl' htmlFor="Name">{t('Contact_three')}: </label>
+                    <div className='md:w-96  '>
+                        <label className='block text-white font-semibold pb-2 text-xl' htmlFor="name">{t('Contact_three')}: </label>
                         <input className=' text-white p-1 outline-none bg-transparent border-2 w-full' type="text" name="name" id="" required />
                     </div>
                         <div className='mt-6'>

@@ -1,5 +1,5 @@
 import React from 'react';
-import Footer from '../../shared/Footer';
+import Footer2 from '../../shared/Footer2';
 import LoginNavigation from '../../shared/LoginNavigation';
 import Banner from './Banner/Banner';
 import Banner2 from './Banner/Banner2';
@@ -16,14 +16,13 @@ const Home = () => {
         <div>
             <LoginNavigation></LoginNavigation>
             <Banner2></Banner2>
-        <TestimonialSlider></TestimonialSlider>
             <HomeAbout></HomeAbout>
             {/* <Vision></Vision> */}
             <HomePortfolio></HomePortfolio>
             <Philosophy></Philosophy>
             <HomeClients></HomeClients>
             <BootSlier></BootSlier>
-            <Footer></Footer>
+            <Footer2></Footer2>
         </div>
     );
 };

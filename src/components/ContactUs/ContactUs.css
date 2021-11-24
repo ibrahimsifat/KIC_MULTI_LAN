@@ -17,3 +17,11 @@
 .bgContactBanner {
     background-image: url(../../img/aboutbg.png);
 }
+
+.contact-banner {
+    background-image: url(../../img/contacthandbg2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 500px;
+    width: 100%;
+}

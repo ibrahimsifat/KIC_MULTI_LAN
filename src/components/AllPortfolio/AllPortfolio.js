@@ -1,11 +1,11 @@
 import React from 'react';
 import AllPortfolioBanner from './AllPortfolioBanner';
-import Footer from '../../shared/Footer'
+import Footer2 from '../../shared/Footer2'
 const AllPortfolio = () => {
     return (
         <div>
             <AllPortfolioBanner></AllPortfolioBanner>
-        <Footer></Footer>
+        <Footer2></Footer2>
         </div>
     );
 };

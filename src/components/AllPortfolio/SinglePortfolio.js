@@ -9,18 +9,19 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 const search=<FontAwesomeIcon icon={faSearch}/>
-const SinglePortfolio = ({img,title,des}) => {
+const SinglePortfolio = ({portfolio}) => {
+  const {img,title,des}=portfolio
     const [showModal, setShowModal] = React.useState(false);
     return (
    
-           <div className=" mx-auto w-64  img-hover duration-700  ">  
+           <div className=" mx-auto  img-hover duration-700  ">  
             <div className="transition duration-300 ease-in-out xl:mb-0 lg:mb-0 md:mb-0 mb-6 cursor-pointer group">
               <Zoom >   
-                <div className="overflow-hidden rounded-xl relative item-zoom">
+                <div className="overflow-hidden relative item-zoom">
                
-                <img className="w-full rounded-xl transform transition hover:scale-105 duration-300 ease-in-out " src={img} alt="" />
+                <img className="w-full transform transition hover:scale-105 duration-300 ease-in-out " src={img} alt="" />
           
-                    <div className="absolute bottom-0 duration-700 h-full w-full flex justify-center items-center bg-gradient-to-r from-green-500  group-hover:bg-opacity-50   transition duration-500 ease-in-out opacity-0 group-hover:opacity-100 ">
+                    <div className="absolute bottom-0 duration-700 h-full w-full flex justify-center items-center bg-gray-900 group-hover:bg-opacity-90   transition duration-500 ease-in-out opacity-0 group-hover:opacity-100 ">
                 
    
    
@@ -48,9 +49,9 @@ const SinglePortfolio = ({img,title,des}) => {
       {showModal ? (
         <>
           <div
-            className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
+            className="justify-center items-center flex md:w-5/12 mx-auto h-auto overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
           >
-            <div className="relative w-auto my-6 mx-auto max-w-3xl">
+            <div className="relative w-auto my-6 mx-auto max-w-5xl">
               {/*content*/}
               <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
                 {/*header*/}
@@ -68,7 +69,7 @@ const SinglePortfolio = ({img,title,des}) => {
                 {/*body*/}
                 <div className="relative w-11/12 mx-auto  flex-col flex justify-center items-center">
               
-              <img className='block mx-auto mb-2 mx-auto' src={img} alt="" />
+              <img className='mx-auto mb-2 mx-auto w-full' src={img} alt="" />
           
 
                 </div>
@@ -81,14 +82,14 @@ const SinglePortfolio = ({img,title,des}) => {
                   >
                     Close
                   </button>
-                  <NavLink to='/portfoliodetails'
+                  {/* <NavLink to='/portfoliodetails'
                     className="bg-emerald-500  active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded  hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
                     onClick={() => setShowModal(false)}
                   >
                    More Details
                  
-                  </NavLink>
+                  </NavLink> */}
                 </div>
               </div>
             </div>

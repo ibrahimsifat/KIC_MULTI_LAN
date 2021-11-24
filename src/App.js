@@ -13,6 +13,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLongArrowAltUp } from '@fortawesome/free-solid-svg-icons'
 import AllclientDetails from './components/AllClients/AllclientDetails'
 import ClientsRecognition from './components/AllClients/ClientsRecognition'
+import HomeClientDetails from './components/Home/HomeClients/HomeClientDetails'
 export default function App() {
   const upIcon=<FontAwesomeIcon icon={faLongArrowAltUp}/>
 
@@ -75,6 +76,7 @@ export default function App() {
             <Route  path='/allclientsdetails/:clientId'>
                 <AllclientDetails></AllclientDetails>
             </Route>
+           
             <Route  path='/allclientsrecognition'>
                 <ClientsRecognition></ClientsRecognition>
             </Route>

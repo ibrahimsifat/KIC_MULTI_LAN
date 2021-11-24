@@ -20,7 +20,7 @@ const [clients,setClients]=useState([])
 console.log(id);
     }
     return (
-        <div className='container mx-auto grid lg:grid-cols-6 md:grid-cols-5 grid-cols-2 gap-4 my-0 pb-16'>   
+        <div className='container mx-auto grid lg:grid-cols-6 md:grid-cols-5 grid-cols-2  my-0 pb-16'>   
             {
                 clients.map(client=><SingleClients
                 key={client.id}

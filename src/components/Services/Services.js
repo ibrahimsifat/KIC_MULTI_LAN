@@ -1,5 +1,5 @@
 import React from 'react';
-import Footer from '../../shared/Footer';
+import Footer2 from '../../shared/Footer2';
 import GraphicDesignService from './GraphicDesignService';
 import ServicesBanner from './SerivcesBanner';
 import ServiceClients from './ServiceClients';
@@ -18,7 +18,7 @@ const Services = () => {
             <ServiceMarketing></ServiceMarketing>
             <ServiceDownloadPortfolio></ServiceDownloadPortfolio>
             <ServiceClients></ServiceClients>
-          <Footer></Footer>
+          <Footer2></Footer2>
         </div>
     );
 };

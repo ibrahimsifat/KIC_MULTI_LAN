@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import Footer from '../../shared/Footer';
+import Footer2 from '../../shared/Footer2';
 import LoginNavigation from '../../shared/LoginNavigation'
 import AllClientsDetails from './AllClentsDetails';
 import './AllClients.css'
@@ -25,7 +25,7 @@ const AllClients = () => {
         <div className='my-20'>
         <AllClientsDetails></AllClientsDetails>
  
-        <Footer></Footer>
+        <Footer2></Footer2>
         </div>
             
         </div>

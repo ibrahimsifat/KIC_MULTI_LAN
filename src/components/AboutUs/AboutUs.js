@@ -1,5 +1,5 @@
 import React from 'react';
-import Footer from '../../shared/Footer';
+import Footer2 from '../../shared/Footer2';
 import LoginNavigation from '../../shared/LoginNavigation';
 import HomeClients from '../Home/HomeClients/HomeClients';
 import AboutBanner from './AboutBanner';
@@ -18,7 +18,7 @@ const AboutUs = () => {
           <AboutPortfolio></AboutPortfolio>
           <AboutIdea></AboutIdea>
           <HomeClients></HomeClients>
-          <Footer></Footer>
+          <Footer2></Footer2>
         </div>
     );
 };

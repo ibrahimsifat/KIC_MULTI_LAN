@@ -285,3 +285,13 @@ select:focus~label {
     color: rgba(0, 0, 0, var(--tw-text-opacity));
     left: 0px;
 }
+
+.carousel-main img {
+    width: 1000px;
+    height: 500px;
+}
+
+.carousel-main {
+    width: 700px;
+    height: 500px;
+}

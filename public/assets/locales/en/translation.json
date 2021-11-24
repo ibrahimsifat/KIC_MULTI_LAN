@@ -55,6 +55,7 @@
     "service_portfolio_one": "Download our portfolio",
     "service_allClients_one": " Our Clients",
     "service_allClients_two": "Home",
+    "service_allClients_three": "Clients",
     "allPortfolio_one": "Our Portfolio",
     "allPortfolio_two": "Portfolio",
     "allPortfolio_three": "GETTING STARTED",
@@ -66,5 +67,8 @@
     "Contact_three": "Name",
     "Contact_four": "Email",
     "Contact_five": "Message",
-    "Contact_six": "Submit"
+    "Contact_six": "Submit",
+    "Contact_seven": "Subject",
+    "Contact_Agency_one": "kic printing and advertising agency"
+
 }
