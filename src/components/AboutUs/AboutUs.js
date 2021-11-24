@@ -7,10 +7,11 @@ import AboutContent from './AboutContent';
 import AboutIdea from './AboutIdea';
 import AboutPortfolio from './AboutPortfolio';
 import './AboutUs.css'
-
+import cookies from 'js-cookie'
 const AboutUs = () => {
+    const IsArabic=cookies.get('i18next') ==='ar'
     return (
-        <div>
+        <div className={!IsArabic?'monsterratFont':"arabic-font-1" }>
          <LoginNavigation></LoginNavigation>
           <AboutBanner></AboutBanner>
           <AboutContent></AboutContent>

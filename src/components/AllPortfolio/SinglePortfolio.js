@@ -5,11 +5,10 @@ import { NavLink } from 'react-router-dom';
 import '../../App.css'
 
 import Zoom from 'react-reveal/Zoom';
-// import Jump from 'react-reveal/Jump';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
-
-// const love=<FontAwesomeIcon icon={faHeart}/>
-
+const search=<FontAwesomeIcon icon={faSearch}/>
 const SinglePortfolio = ({img,title,des}) => {
     const [showModal, setShowModal] = React.useState(false);
     return (
@@ -33,7 +32,7 @@ const SinglePortfolio = ({img,title,des}) => {
         className="   font-bold uppercase text-2xl hover:text-3xl px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
         type="button"
         onClick={() => setShowModal(true)}
-      ><h1 className=' px-3 py-1 text-white hover:scale transition transform duration-500 rounded-full text-black'><i className="fas fa-search"></i></h1>
+      ><h1 className=' px-3 py-1 text-white hover:scale transition transform duration-500 rounded-full text-black'><i className="fas fa-search">{search}</i></h1>
  
       </i>
                </div>

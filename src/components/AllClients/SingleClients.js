@@ -1,15 +1,16 @@
-// import { faHeart,faShoppingCart } from '@fortawesome/free-solid-svg-icons';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import '../../App.css'
 // import Jump from 'react-reveal/Jump';
 
 
 // const cart = <FontAwesomeIcon icon={faShoppingCart} />
-// const love=<FontAwesomeIcon icon={faHeart}/>
+const search=<FontAwesomeIcon icon={faSearch}/>
 
-const SingleClients = ({client}) => {
-    const {img,img2,img3,img4}=client
+const SingleClients = ({client,handleClientDetails}) => {
+    const {img,img2,img3,img4,id}=client
     const [showModal, setShowModal] = React.useState(false);
     return (
            <div className=" mx-auto  w-32 img-hover duration-700  ">  
@@ -29,8 +30,8 @@ const SingleClients = ({client}) => {
                 <i
         className=" text-white  font-bold uppercase text-2xl hover:text-3xl px-4 py-2 rounded  outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-500"
         type="button"
-        onClick={() => setShowModal(true)}
-      ><i className="fas fa-search transition duration-500 hover:scale:110 "></i>
+        onClick={() => handleClientDetails(id)}
+      ><i className="fas fa-search transition duration-500 hover:scale:110 ">{search}</i>
  
       </i>
                </div>

@@ -13,3 +13,7 @@
 .monsterratFont {
     font-family: 'Montserrat', sans-serif;
 }
+
+.bgContactBanner {
+    background-image: url(../../img/aboutbg.png);
+}

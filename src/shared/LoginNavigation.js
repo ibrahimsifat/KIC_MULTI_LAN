@@ -60,13 +60,17 @@ useEffect(() => {
     <>
       <div className="bg-white  z-30 navigation  flex flex-wrap items-center justify-between   ">
       
-        <div className=" container  mx-auto flex flex-wrap items-center justify-between ">
+        <div className=" container   mx-auto flex flex-wrap items-center justify-between ">
           <div className="relative flex justify-start items-center  lg:w-auto lg:static lg:block ">
             <NavLink to='/'
               className="text-sm font-bold leading-relaxed inline-block ml-2 py-2 whitespace-nowrap uppercase  "
               
             >
-             <NavLink to='/'> <img className='md:w-20 sm:w-16 w-14' src={logo} alt="" /></NavLink>
+             <NavLink className='relative' to='/'> <img className=' md:w-20 sm:w-16 w-14 ' src={logo} alt="" />
+             <div className='w-6 h-6 absolute top-0 -right-16 rounded-full bg-red-500 animate-ping'>
+
+             </div>
+             </NavLink>
             </NavLink>
             <button className=" cursor-pointer text-xl px-1 py-1  bg-red-500  lg:hidden outline-none focus:outline-none "
               type="button"
@@ -94,7 +98,7 @@ useEffect(() => {
                {t('Navigation_home')}
                 </NavLink>
                 </li>
-                <li className="mx-3 fromLeft">
+                <li className="mx-3 fromLeft ">
                 <NavLink to='/aboutus' activeClassName="selected"
                   className="no-underline text-li	 py-2 flex items-center text-sm uppercase font-bold leading-snug    "
                   onClick={() => setNavbarOpen(!navbarOpen)}
@@ -112,15 +116,71 @@ useEffect(() => {
                {t('Navigation_Service')}
                 </NavLink>
                 </li>
-                <li className="mx-3 fromLeft">
-                <NavLink to='/allclients' activeClassName="selected"
-                  className="no-underline text-li	 py-2 flex items-center text-sm uppercase font-bold leading-snug    "
-                  onClick={() => setNavbarOpen(!navbarOpen)}
-                >
-               
-               {t('Navigation_Clients')}
-                </NavLink>
-                </li>
+           
+                <li class="group inline-block login">
+  <button
+    class="outline-none focus:outline-none  px-3 py-1 bg-white rounded-sm flex items-center min-w-32"
+  >
+    <NavLink to='/allclients'onClick={() => setNavbarOpen(!navbarOpen)} class="pr-1 font-semibold no-underline  text-li  ">{t('Navigation_Clients')}</NavLink>
+    <span>
+      <svg
+        class="fill-current h-4 w-4 transform group-hover:-rotate-180
+        transition duration-150 ease-in-out"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 20 20"
+      >
+        <path
+          d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+        />
+      </svg>
+    </span>
+  </button>
+  <ul
+    class="bg-white border  rounded-sm transform scale-0 group-hover:scale-100 absolute 
+  transition duration-150 ease-in-out origin-top "
+  >
+  <li><NavLink to='/allclients' onClick={() => setNavbarOpen(!navbarOpen)} class="rounded-sm no-underline mx-4 mt-2 block  text-li cursor-pointer">{t('Navigation_Clients')}</NavLink></li>
+  <NavLink to='/allclientsrecognition' onClick={() => setNavbarOpen(!navbarOpen)} class="rounded-sm no-underline  text-li hover:bg-gray-100 cursor-pointer mb-2 block mx-4 ">{t('Navigation_recognition')}</NavLink>
+
+
+   
+
+  </ul>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 <li className="mx-3 fromLeft">
                 <NavLink to='/allportfolio' activeClassName="selected"
                   className="no-underline text-li	 py-2 flex items-center text-sm uppercase font-bold leading-snug    "

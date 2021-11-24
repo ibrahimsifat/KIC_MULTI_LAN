@@ -12,9 +12,9 @@ const AboutPortfolio = () => {
 
             <a href='../Profile.pdf' download="KIC Portfolio" className='uppercase font-extrabold text-white md:text-4xl sm:text-3xl text-2xl cursor-pointer  duration-500 pb-2
             hover_border fromRight
-           w-44
+           w-56
             inline-block
-            
+            no-underline
             '>{t('home_portfolio_three')}</a>
         
            </div>

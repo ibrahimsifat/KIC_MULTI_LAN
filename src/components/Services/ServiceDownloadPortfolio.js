@@ -2,6 +2,10 @@ import React from 'react';
 import './Serivces.css'
 import Shap from '../../img/service-portfolio-save.png'
 import { useTranslation } from 'react-i18next';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+const chevronIcon=<FontAwesomeIcon icon={faChevronLeft}/>
+const chevronRightIcon=<FontAwesomeIcon icon={faChevronRight}/>
 const ServiceDownloadPortfolio = () => {
     const { t } = useTranslation()
     return (
@@ -11,10 +15,10 @@ const ServiceDownloadPortfolio = () => {
             </div>
             <div className="flex justify-center items-center">
             <i class="fas fa-chevron-right  text-gray-400 
-             text-3xl sm:text-4xl md:text-3xl lg:text-4xl mb-6 lg:mb-8 mr-10 "></i>
-           <a href='../Profile.pdf' download="KIC Portfolio" className=' fromLeft monsterratFont tracking-tighter font-extrabold uppercase py-9 text-white text-3xl sm:text-4xl md:text-3xl lg:text-4xl mb-6 lg:mb-8'>
+             text-3xl sm:text-4xl md:text-3xl lg:text-4xl mb-6 lg:mb-8 mr-10 ">{chevronRightIcon}</i>
+           <a href='../Profile.pdf' download="KIC Portfolio" className=' fromLeft monsterratFont tracking-tighter font-extrabold uppercase py-9 text-white text-3xl sm:text-4xl md:text-3xl lg:text-4xl mb-6 lg:mb-8 no-underline md:mx-16 mx-8'>
            {t('service_portfolio_one')}</a>
-           <i class="fas fa-chevron-left text-3xl sm:text-4xl md:text-3xl lg:text-4xl mb-6 lg:mb-8 ml-10 text-gray-400 "></i>
+           <i class="fas fa-chevron-left text-3xl sm:text-4xl md:text-3xl lg:text-4xl mb-6 lg:mb-8 ml-10 text-gray-400 ">{chevronIcon}</i>
             </div>
         </div>
     );
