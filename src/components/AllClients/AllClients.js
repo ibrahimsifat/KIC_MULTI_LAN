@@ -22,7 +22,7 @@ const AllClients = () => {
                     </div>
         </div>
       </div>
-        <div className='my-20'>
+        <div className='mb-20'>
         <AllClientsDetails></AllClientsDetails>
  
         <Footer2></Footer2>

@@ -8,6 +8,7 @@ import HomeAbout from './HomeAbout/HomeAbout';
 import HomeClients from './HomeClients/HomeClients';
 import HomePortfolio from './HomePortfolio/HomePortfolio';
 import Homeservices from './HomeService/Homeservices';
+import HomeSimpleService from './HomeSimpleService/HomeSimpleService';
 import Philosophy from './Philosophy/Philosophy';
 import TestimonialSlider from './Testimonial/TestimonialSlider';
 import Vision from './Vision';
@@ -18,6 +19,7 @@ const Home = () => {
             <Banner2></Banner2>
             <HomeAbout></HomeAbout>
             <Homeservices></Homeservices>
+            <HomeSimpleService></HomeSimpleService>
             {/* <Vision></Vision> */}
             <HomePortfolio></HomePortfolio>
             <Philosophy></Philosophy>

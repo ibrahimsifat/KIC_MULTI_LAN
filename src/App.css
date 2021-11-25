@@ -288,10 +288,15 @@ select:focus~label {
 
 .carousel-main img {
     width: 1000px;
-    height: 500px;
+    height: 600px;
 }
 
 .carousel-main {
-    width: 700px;
-    height: 500px;
+    width: 100vw;
+    height: 100vh;
+}
+
+.bg-simpleservice {
+    background-image: url(./img/circle_border.png);
+    background-repeat: no-repeat;
 }

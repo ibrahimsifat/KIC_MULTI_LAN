@@ -3,6 +3,9 @@ import { useParams } from 'react-router';
 import LoginNavigation from '../../shared/LoginNavigation';
 import '../../App.css'
 import { NavLink } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLongArrowAltLeft } from '@fortawesome/free-solid-svg-icons';
+const arrowIcon = <FontAwesomeIcon icon={faLongArrowAltLeft}/>
 const AllProfileDetails = () => {
     const {portfoliotId}=useParams()
     const [clients,setClients]=useState([])
@@ -35,14 +38,14 @@ const SingleDetails=({singleClient})=>{
       
 
 <div className="container mx-auto my-16 py-8 px-16 rounded-lg border">
-      <NavLink to='/' className=' bg-red-500 text-5xl no-underline'
->back to home <span></span></NavLink>
+      <NavLink to='/' className='hover:text-gray-200 duration-500 text-5xl no-underline'
+> <span >{arrowIcon}</span></NavLink>
 
           <img  className='my-16 w-11/12 md:w-8/12 mx-auto' src={img} alt="" />
             
       
     <div className=" mx-auto px-6 md:px-16   ">
-        <div className="bg-white 2">
+        {/* <div className="bg-white 2">
             <h3 className="text-2xl leading-8 font-extrabold text-gray-900 sm:text-3xl sm:leading-9 dark:text-white">
                 {"title"}
             </h3>
@@ -137,7 +140,7 @@ const SingleDetails=({singleClient})=>{
                 </ul>
             </div>
            
-        </div>
+        </div> */}
         {/* <button
             
             //  onClick={()=>handleAddCartBtn(match)}

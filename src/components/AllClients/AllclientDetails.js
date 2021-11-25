@@ -2,6 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import LoginNavigation from '../../shared/LoginNavigation';
 import '../../App.css'
+import { NavLink } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLongArrowAltLeft } from '@fortawesome/free-solid-svg-icons';
+const arrowIcon = <FontAwesomeIcon icon={faLongArrowAltLeft}/>
 const AllclientDetails = () => {
     const {clientId}=useParams()
     const [clients,setClients]=useState([])
@@ -17,8 +21,12 @@ const AllclientDetails = () => {
     const matchClient=clients.filter(client=>client.id===clientId)
     console.log('mached',matchClient);
     return (
-        <div>
+        <div >
           <LoginNavigation></LoginNavigation>
+        <div className='container'>
+        <NavLink to='/allclients' className=' hover:text-gray-200 duration-500 text-5xl no-underline'
+> <span >{arrowIcon}</span></NavLink>
+        </div>
             {
                 matchClient.map(singleClient=><SingleDetails
                 key={singleClient.id}

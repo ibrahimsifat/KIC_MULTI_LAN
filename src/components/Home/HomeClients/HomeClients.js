@@ -80,7 +80,7 @@ console.log(id);
         </>
                 </div>
          <div className='relative'>
-         <img className='w-36 pb-4 absolute top-5 left-2' src={clientBgIcon} alt="" />
+         <img className='md:w-36 w-24 pb-4 absolute top-10 md:top-5 left-2' src={clientBgIcon} alt="" />
          </div>
             </div>
         </div>

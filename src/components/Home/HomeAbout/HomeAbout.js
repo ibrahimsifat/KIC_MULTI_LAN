@@ -45,10 +45,10 @@ function HomeAbout() {
                                 <div className="relative z-10 p-4 bg-white shadow rounded mx-auto w-8/12  -mb-16">
                                  
                                     <div className="mt- flex items-center ">
-                                        <span className="text-white bg-purple-800 p-2 rounded-md">
+                                        <span className="text-white bg-purple-800 md:p-2 p-2 rounded-md">
                                         <span>{pincilICon}</span>
                                         </span>
-                                        <p className={!IsArabic?" text-xl font-bold ml-3 text-gray-800":" text-xl font-bold mr-4 text-gray-800"}>{t('home_vision_four')}</p>
+                                        <p className={!IsArabic?" text-xl font-bold md:ml-3 ml-2 text-gray-800":" text-xl font-bold md:mr-4 mr-2 text-gray-800"}>{t('home_vision_four')}</p>
                                     </div>
                                   
                                 </div>

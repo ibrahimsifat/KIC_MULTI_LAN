@@ -1,4 +1,10 @@
 .allclientbg {
-    background-image: url(../../img/aboutbg.png);
-    height: 450px;
+    background-image: url(../../img/clients-banner-1.jpg);
+    height: 400px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg-client-award {
+    background-image: url(../../img/bg-contant.png);
 }

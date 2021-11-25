@@ -15,11 +15,12 @@ const SingleClients = ({client,handleClientDetails}) => {
     return (
            <div className=" mx-auto  w-32 img-hover duration-700  ">  
             <div className=" transition duration-300 ease-in-out xl:mb-0 lg:mb-0 md:mb-0 mb-6 cursor-pointer group">
-                <div className="overflow-hidden relative rounded-2xl item-zoom">
+                
+                <div className="overflow-hidden relative shadow my-2 rounded-2xl item-zoom">
                
-                <img className="w-full transition duration-700  rounded-xl  " src={img} alt="" />
+                <img className="w-full transition duration-700    " src={img} alt="" />
           
-                    <div className="absolute bottom-0  h-full w-full flex justify-center items-center bg-gradient-to-r from-purple-500 group-hover:bg-opacity-75   transition duration-500 ease-in-out opacity-0 group-hover:opacity-100 ">
+                    <div className="absolute bottom-0  h-full w-full flex justify-center items-center bg-gradient-to-r from-blue-900 group-hover:bg-opacity-75   transition duration-500 ease-in-out opacity-0 group-hover:opacity-100 ">
                 
    
    

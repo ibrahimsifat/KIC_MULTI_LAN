@@ -19,7 +19,7 @@ const Homeservices = () => {
         .then(res=>res.json())
         .then(data=>setPortfolios(data))
     },[])
-  const sliecdService=portfolios.slice(1,10)
+  const sliecdService=portfolios.slice(1,9)
     return (
         <div>
             <div className="bg-purple-100 font-sans leading-normal tracking-normal">
@@ -36,7 +36,7 @@ const Homeservices = () => {
                 <h1 className='md:text-4xl text-2xl uppercase  sm:text-3xl font-bold '>Resent Work</h1>
                <p className='text-gray-700 mt-2 text-sm'>- WE ARE STRONGER -</p>
             </div>
-            <div className="container grid md:grid-cols-3 sm:grid-cols-2 lg:grid-cols-4 gap-1 mt-16 pb-16">
+            <div className="container grid md:grid-cols-3 sm:grid-cols-2 lg:grid-cols-4 gap-2 mt-16 pb-16">
 
             {
                 sliecdService.map(portfolio=><SinglePortfolio

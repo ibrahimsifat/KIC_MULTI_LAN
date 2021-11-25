@@ -12,6 +12,12 @@
     height: 360px;
 }
 
+@media screen and (max-width:600px) {
+    .about_content {
+        height: auto;
+    }
+}
+
 .about_portfolio_bg {
     background-image: url(../../img/aboutPortfoliobg.png);
     background-size: cover;
