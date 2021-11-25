@@ -59,7 +59,7 @@ useEffect(() => {
 
 
   return (
-    <>
+    <div className={!IsArabic?'monsterratFont':"arabic-font-1" }>
       <div className="bg-white  z-30 navigation  flex flex-wrap items-center justify-between   ">
       
         <div className=" container   mx-auto flex flex-wrap items-center justify-between ">
@@ -69,7 +69,7 @@ useEffect(() => {
               
             >
              <NavLink className='relative' to='/'> <img className=' md:w-20 sm:w-16 w-14 ' src={logo} alt="" />
-             <div className='w-6 h-6 absolute top-0 -right-16 rounded-full bg-red-500 animate-ping'>
+             <div className={!IsArabic?'w-6 h-6 absolute top-0 -right-16 rounded-full bg-red-500 animate-ping':'w-6 h-6 absolute top-0 right-2 rounded-full bg-red-500 animate-ping'}>
 
              </div>
              </NavLink>
@@ -213,7 +213,7 @@ useEffect(() => {
         </div>
       </div>
      
-    </>
+    </div>
   );
 }
 

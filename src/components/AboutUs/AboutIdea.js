@@ -18,12 +18,12 @@ const AboutIdea = () => {
                         
                     <div className={IsArabic?' md:ml-0 ml-6 ':' md:ml-44 ml-6  '} > 
                                     
-                            <h1 className='monsterratFont text-3xl font-extrabold sm:text-4xl md:text-4xl lg:text-5xl text-transparent uppercase strokeme'>
+                            <h1 className=' text-3xl font-extrabold sm:text-4xl md:text-4xl lg:text-5xl text-transparent uppercase strokeme'>
                             {t('home_idea_first')}
                             </h1>
-                            <h1 className='monsterratFont text-3xl font-extrabold sm:text-4xl md:text-4xl lg:text-5xl text-transparent uppercase strokeme'>
+                            <h1 className=' text-3xl font-extrabold sm:text-4xl md:text-4xl lg:text-5xl text-transparent uppercase strokeme'>
                             {t('home_idea_second')}</h1>
-                            <h1 className='monsterratFont text-3xl font-extrabold sm:text-4xl md:text-4xl lg:text-5xl text-transparent uppercase strokeme'>
+                            <h1 className=' text-3xl font-extrabold sm:text-4xl md:text-4xl lg:text-5xl text-transparent uppercase strokeme'>
                             {t('home_idea_three')}</h1>
 
                     </div>

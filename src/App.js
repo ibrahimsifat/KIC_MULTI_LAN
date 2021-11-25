@@ -14,6 +14,7 @@ import { faLongArrowAltUp } from '@fortawesome/free-solid-svg-icons'
 import AllclientDetails from './components/AllClients/AllclientDetails'
 import ClientsRecognition from './components/AllClients/ClientsRecognition'
 import HomeClientDetails from './components/Home/HomeClients/HomeClientDetails'
+import AllProfileDetails from './components/AllPortfolio/AllProfileDetails'
 export default function App() {
   const upIcon=<FontAwesomeIcon icon={faLongArrowAltUp}/>
 
@@ -75,6 +76,9 @@ export default function App() {
             </Route>
             <Route  path='/allclientsdetails/:clientId'>
                 <AllclientDetails></AllclientDetails>
+            </Route>
+            <Route  path='/allportfoliodetails/:portfoliotId'>
+                <AllProfileDetails></AllProfileDetails>
             </Route>
            
             <Route  path='/allclientsrecognition'>

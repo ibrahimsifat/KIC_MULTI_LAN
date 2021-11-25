@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import clientBgIcon from '../../../img/client-bg-icon.png'
 import { useTranslation } from 'react-i18next';
+import cookies from 'js-cookie'
 import { CarouselProvider, Slider} from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
 import { useState } from 'react/cjs/react.development';
@@ -8,7 +9,7 @@ import SingleHomeSlide from './SingleHomeSlide';
 import { useHistory } from 'react-router';
 const HomeClients = () => {
 
-
+    const IsArabic=cookies.get('i18next') ==='ar'
     let history=useHistory()
     const handlehomeClients=(id)=>{
         const url= `allclientsdetails/${id}`
@@ -27,9 +28,9 @@ console.log(id);
    
     return (
         <div className='-mt-24'>
-            <div className="my-24 relative ">
+            <div className={!IsArabic?"my-24 relative monsterratFont":"my-24 relative arabic-font-1"}>
                 <div className=' md:px-20'> 
-                <h1 className='lg:ml-20 ml:mx-10 sm:mx-8 mx-16 monsterratFont text-3xl font-extrabold sm:text-4xl md:text-4xl lg:text-5xl textred my-4 uppercase'>{t('home_clients_first')}</h1>
+                <h1 className='lg:ml-20 ml:mx-10 sm:mx-8 mx-16  text-3xl font-extrabold sm:text-4xl md:text-4xl lg:text-5xl textred my-4 uppercase'>{t('home_clients_first')}</h1>
                 <>
       
         <div className="2xl:mx-auto 2xl:container flex justify-center">

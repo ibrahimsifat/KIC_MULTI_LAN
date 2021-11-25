@@ -22,7 +22,7 @@ const Banner2 = () => {
           <div class="md:flex md:flex-wrap ">
             <div class="md:w-1/2 text- md:text- md:pt-16">
             <div className={!IsArabic?'text-left px-4  md:my-0 my-8 md:pt-8 pt-8 ':
-            'text-right px-4  md:my-0 my-8 md:pt-8 pt-8 '
+            'text-right px-4  md:my-0 my-8 md:pt-8 pt-8 arabic-font-1'
         }>
                 <p><span className=' text-3xl md:text-3xl text-white'>{t('home_banner_first')}</span> <span className='textred text-3xl sm:text-5xl md:text-5xl lg:text-6xl  font-bold'> {t('home_banner_second')}</span></p>
                  <p className=' text-3xl sm:text-4xl md:text-4xl lg:text-5xl text-white'>{t('home_banner_three')}</p>
@@ -39,7 +39,7 @@ const Banner2 = () => {
                 <div
                   class={!IsArabic?"-ml-24 -mb-40 absolute left-0 bottom-0 w-40 bg-white rounded-lg shadow-lg px-6 py-8 transform -rotate-12 z-10 swing "
                     :
-                    "-mr-24 -mb-10 absolute right-0 bottom-0 w-40 bg-white rounded-lg shadow-lg px-6 py-8 transform -rotate-12 z-10 swing"
+                    "-mr-24 -mb-10 absolute right-0 bottom-0 w-40 bg-white rounded-lg shadow-lg px-6 py-8 transform -rotate-12 z-10 swing arabic-font-1"
                 }
                 
                 >
@@ -55,7 +55,7 @@ const Banner2 = () => {
                 <div
                   class={!IsArabic?"ml-24 mb-16 absolute left-0 bottom-0 w-40 bg-white rounded-lg shadow-lg px-6 py-8 transform -rotate-12 swing"
                 :
-                "mr-40 mb-16 absolute right-0 bottom-0 w-40 bg-white rounded-lg shadow-lg px-6 py-8 transform -rotate-12 swing"
+                "mr-40 mb-16 absolute right-0 bottom-0 w-40 bg-white rounded-lg shadow-lg px-6 py-8 transform -rotate-12 swing arabic-font-1"
                 }
                   style={{zIndex:'2'}}
                 >
@@ -69,7 +69,7 @@ const Banner2 = () => {
                 <div
                   class={!IsArabic?"ml-40 mb-16 absolute left-0 bottom-0 w-40 bg-white rounded-lg shadow-lg px-6 py-8 transform -rotate-12 swing"
                     :
-                    "mr-24 mb-16 absolute right-0 bottom-0 w-40 bg-white rounded-lg shadow-lg px-6 py-8 transform -rotate-12 swing"
+                    "mr-24 mb-16 absolute right-0 bottom-0 w-40 bg-white rounded-lg shadow-lg px-6 py-8 transform -rotate-12 swing arabic-font-1"
                  }
                   style={{zIndex:'2',marginBottom:'-220px'}}
                 >
@@ -84,7 +84,7 @@ const Banner2 = () => {
                 <div
                   class={!IsArabic?"mt-10 w-full absolute right-0 top-0 flex rounded-lg bg-white overflow-hidden transform -rotate-12"
                 :
-                "mt-10 w-full absolute -left-52 top-0 flex rounded-lg bg-white overflow-hidden transform -rotate-12"
+                "mt-10 w-full absolute -left-64 top-0 flex rounded-lg bg-white overflow-hidden transform -rotate-12"
                 }
                 style={{zIndex:'1',marginRight:'-220px'}}
                 >

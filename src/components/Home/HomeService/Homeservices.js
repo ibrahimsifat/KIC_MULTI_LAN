@@ -1,61 +1,65 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
+import cookies from 'js-cookie'
+import LoginNavigation from '../../../shared/LoginNavigation'
+import { Link, NavLink } from 'react-router-dom';
+import kicFristImg from '../../../img/kicPort.png'
+import '../../../App.css'
+
+
+import { useTranslation } from 'react-i18next';
+import { useState } from 'react';
+import SinglePortfolio from '../../AllPortfolio/SinglePortfolio';
 const Homeservices = () => {
+    const IsArabic=cookies.get('i18next') ==='ar'
+    const { t } = useTranslation()
+    const [portfolios,setPortfolios]=useState([])
+    useEffect(()=>{
+        fetch('AllPortfolio.json')
+        .then(res=>res.json())
+        .then(data=>setPortfolios(data))
+    },[])
+  const sliecdService=portfolios.slice(1,10)
     return (
         <div>
+            <div className="bg-purple-100 font-sans leading-normal tracking-normal">
+
+       
+
+
+    <div className="container px-4  md:px-0 max-w-6xl mx-auto -mt-32">
+                  
+         
+      
+            <div className=' text-center pt-32'> 
+    
+                <h1 className='md:text-4xl text-2xl uppercase  sm:text-3xl font-bold '>Resent Work</h1>
+               <p className='text-gray-700 mt-2 text-sm'>- WE ARE STRONGER -</p>
+            </div>
+            <div className="container grid md:grid-cols-3 sm:grid-cols-2 lg:grid-cols-4 gap-1 mt-16 pb-16">
+
+            {
+                sliecdService.map(portfolio=><SinglePortfolio
+                key={portfolio.id}
+                portfolio={portfolio}
+                ></SinglePortfolio>)
+            }
+           
+             
+            </div>
         
-
-<div class="flex flex-wrap items-center pt-8">
-  <div class="w-full md:w-6/12 px-4 mr-auto ml-auto ">
-    <div class="justify-center flex flex-wrap relative">
-      <div class="my-4 w-full lg:w-6/12 px-4">
-        <a href="https://www.creative-tim.com/learning-lab/tailwind/svelte/alerts/notus?ref=vtw-index" target="_blank">
-          <div class="bg-red-600 shadow-lg rounded-lg text-center p-8">
-            <img alt="..." class="shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white" src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/svelte.jpg"/>
-            <p class="text-lg text-white mt-4 font-semibold">Svelte</p>
-          </div>
-        </a>
-        <a href="https://www.creative-tim.com/learning-lab/tailwind/react/alerts/notus?ref=vtw-index" target="_blank">
-          <div class="bg-lightBlue-500 shadow-lg rounded-lg text-center p-8 mt-8">
-            <img alt="..." class="shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white" src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/react.jpg"/>
-            <p class="text-lg text-white mt-4 font-semibold">ReactJS</p>
-          </div>
-        </a>
-        <a href="https://www.creative-tim.com/learning-lab/tailwind/nextjs/alerts/notus?ref=vtw-index" target="_blank">
-          <div class="bg-blueGray-700 shadow-lg rounded-lg text-center p-8 mt-8">
-            <img alt="..." class="shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white" src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/nextjs.jpg"/>
-            <p class="text-lg text-white mt-4 font-semibold">NextJS</p>
-          </div>
-        </a>
-      </div>
-      <div class="my-4 w-full lg:w-6/12 px-4 lg:mt-16">
-        <a href="https://www.creative-tim.com/learning-lab/tailwind/js/alerts/notus?ref=vtw-index" target="_blank">
-          <div class="bg-yellow-500 shadow-lg rounded-lg text-center p-8">
-            <img alt="..." class="shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white" src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/js.png"/>
-            <p class="text-lg text-white mt-4 font-semibold">
-              JavaScript
-            </p>
-          </div>
-        </a>
-        <a href="https://www.creative-tim.com/learning-lab/tailwind/angular/alerts/notus?ref=vtw-index" target="_blank">
-          <div class="bg-red-700 shadow-lg rounded-lg text-center p-8 mt-8">
-            <img alt="..." class="shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white" src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/angular.jpg" />
-            <p class="text-lg text-white mt-4 font-semibold">Angular</p>
-          </div>
-        </a>
-        <a href="https://www.creative-tim.com/learning-lab/tailwind/vue/alerts/notus?ref=vtw-index" target="_blank">
-          <div class="bg-emerald-500 shadow-lg rounded-lg text-center p-8 mt-8">
-            <img alt="..." class="shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white" src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/vue.jpg"/>
-            <p class="text-lg text-white mt-4 font-semibold">Vue.js</p>
-          </div>
-        </a>
-      </div>
+                    
+        </div>
+        
+        
+        
     </div>
-  </div>
 
 
-        </div>
-        </div>
+</div>
+
+
+
     );
 };
 

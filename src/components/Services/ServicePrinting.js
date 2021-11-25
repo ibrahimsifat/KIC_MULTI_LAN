@@ -1,8 +1,10 @@
 import React from 'react';
 import './Serivces.css'
+import cookies from 'js-cookie'
 import PrintingBG from '../../img/servicePrinting-0.png'
 import { useTranslation } from 'react-i18next';
 const ServicePrinting = () => {
+  const IsArabic=cookies.get('i18next') ==='ar'
   const { t } = useTranslation()
 
     return (
@@ -10,13 +12,13 @@ const ServicePrinting = () => {
             <div>
           <div className="grid md:grid-cols-5">
             <div className=" col-span-3 print-bg right  flex justify-center items-center lg-pt-0 pt-8 h-96 ">
-              <div className='px-8 md:px-16'>
-              <h1 className='monsterratFont tracking-tighter font-extrabold uppercase text-white text-3xl sm:text-5xl md:text-4xl lg:text-5xl mb-6 lg:mb-8'>
+              <div className={!IsArabic?'monsterratFont px-8 md:px-16':"arabic-font-2 px-8 md:px-16" }>
+              <h1 className=' tracking-tighter font-extrabold uppercase text-white text-3xl sm:text-5xl md:text-4xl lg:text-5xl mb-6 lg:mb-8'>
               <p>
               {t('service_printing_one')}</p>
 
               </h1>
-                <p className='text-white font-regular  mb-4 md:my-10 lg:my-0  sm:text-md lg:text-xl monsterratFont'>
+                <p className='text-white font-regular  mb-4 md:my-10 lg:my-0  sm:text-md lg:text-xl '>
                 {t('service_printing_two')}</p>
               </div>
             </div>
