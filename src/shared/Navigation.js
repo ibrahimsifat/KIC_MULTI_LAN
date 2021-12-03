@@ -2,8 +2,8 @@
 import { Turn as Hamburger } from 'hamburger-react'
 import React, { useState } from "react";
 import {  NavLink } from "react-router-dom";
-import '../../App.css'
-import logo from '../../img/logo.png'
+import '../App.css'
+import logo from '../img/logo.png'
 
 
 // const userIcon=<FontAwesomeIcon icon ={faUser}/>
@@ -26,7 +26,7 @@ const  Navigation=() =>{
     <>
       {/* <nav className={colorChange ? 'navbar colorChange sticky top-0 ' : 'navbar'}> */}
 
-      <div className="  mb-2 pt-8 z-30 navigation  flex flex-wrap items-center justify-between px-2  ">
+      <div className="bg-white  mb-2 pt-8 z-30 navigation  flex flex-wrap items-center justify-between px-2  ">
       
         <div className="container px-4 mx-auto flex flex-wrap items-start justify-between ">
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
@@ -54,26 +54,26 @@ const  Navigation=() =>{
             <ul className="md:static absolute top-0 z-10 left-0  navnav md:bg-transparent bg-black ul-block md:py-0 py-5 md:t-center text-bl md:flex flex-col lg:flex-row list-none lg:ml-auto">
             
                 <NavLink to='/home' activeClassName="selected"
-                  className="px-3 py-2 flex items-center text-sm uppercase font-bold leading-snug  nav_hover "
+                  className="px-3 md:text-white text-black py-2 flex items-center text-sm uppercase font-bold leading-snug  nav_hover "
                   onClick={() => setNavbarOpen(!navbarOpen)}
                 >
                Home
                
                 </NavLink>
                 <NavLink to='/allportfolio' activeClassName="selected"
-                  className="px-3 py-2 flex items-center text-sm uppercase font-bold leading-snug  nav_hover"
+                  className="px-3 md:text-white text-black py-2 flex items-center text-sm uppercase font-bold leading-snug  nav_hover"
                   onClick={() => setNavbarOpen(!navbarOpen)}
                 >
                Portfolio
                 </NavLink>
                 <NavLink to='/aboutus' activeClassName="selected"
-                  className="px-3 py-2 flex items-center text-sm uppercase font-bold leading-snug  nav_hover  "
+                  className="px-3 md:text-white text-black py-2 flex items-center text-sm uppercase font-bold leading-snug  nav_hover  "
                   onClick={() => setNavbarOpen(!navbarOpen)}
                 >
                About Us
                 </NavLink>
                 <NavLink to='/allclients' activeClassName="selected"
-                  className="px-3 py-2 flex items-center text-sm uppercase font-bold leading-snug  nav_hover  "
+                  className="px-3 md:text-white text-black py-2 flex items-center text-sm uppercase font-bold leading-snug  nav_hover  "
                   onClick={() => setNavbarOpen(!navbarOpen)}
                 >
                Our Clients
@@ -81,7 +81,7 @@ const  Navigation=() =>{
                 
                 <NavLink to='/login' activeClassName="selected"
 
-                  className="px-3 py-2 flex items-center text-sm uppercase font-bold leading-snug  nav_hover  "
+                  className="px-3 md:text-white text-black py-2 flex items-center text-sm uppercase font-bold leading-snug  nav_hover  "
                   onClick={() => setNavbarOpen(!navbarOpen)}
                 >
                Login

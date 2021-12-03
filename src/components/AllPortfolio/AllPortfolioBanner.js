@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import './AllPortfolio.css'
 import cookies from 'js-cookie'
-import LoginNavigation from '../../shared/LoginNavigation'
 import { Link } from 'react-router-dom';
 import kicFristImg from '../../img/kicPort2.jpg'
 import '../../App.css'
@@ -9,12 +8,13 @@ import SinglePortfolio from './SinglePortfolio';
 
 import { useTranslation } from 'react-i18next';
 import { useState } from 'react/cjs/react.development';
+import Navigation2 from '../../shared/Navigation2';
 const AllPortfolioBanner = () => {
     const IsArabic=cookies.get('i18next') ==='ar'
     const { t } = useTranslation()
     const [portfolios,setPortfolios]=useState([])
     useEffect(()=>{
-        fetch('AllPortfolio.json')
+        fetch('../AllPortfolio.json')
         .then(res=>res.json())
         .then(data=>setPortfolios(data))
     },[])
@@ -26,7 +26,7 @@ const AllPortfolioBanner = () => {
 
 <div className="w-full m-0 p-0 bg-cover bg-bottom bgImage "
 style={{height:'500px',maxHeight:'560px'}} >
-    <LoginNavigation></LoginNavigation>
+    <Navigation2></Navigation2>
         <div className="container  mx-auto text-center break-normal">
 
                 <p className="text-white mt-32 font-extrabold text-3xl md:text-5xl">
@@ -51,7 +51,7 @@ style={{height:'500px',maxHeight:'560px'}} >
                 
            
             <div className="flex h-full rounded overflow-hidden shadow-lg ">
-                <a href="..." className="bg-blue-100 flex flex-wrap no-underline hover:no-underline">
+                <div  className="bg-blue-100 flex flex-wrap no-underline hover:no-underline">
                     <div className="w-full md:w-2/3 rounded-t ">	
                         <img src={kicFristImg} className="h-full w-full shadow" alt=''/>
                     </div>
@@ -74,7 +74,7 @@ style={{height:'500px',maxHeight:'560px'}} >
 
                                         </div>
 
-                </a>
+                </div>
             </div>
       
             <div className='my-16 text-center'> 

@@ -1,24 +1,25 @@
 import React from 'react';
-import Footer2 from '../../shared/Footer2';
-import LoginNavigation from '../../shared/LoginNavigation';
-import HomeClients from '../Home/HomeClients/HomeClients';
+import Footer from '../../shared/Footer';
+import HomeClients2 from '../Home/HomeClients/HomeClients2';
 import AboutBanner from './AboutBanner';
 import AboutContent from './AboutContent';
 import AboutIdea from './AboutIdea';
 import AboutPortfolio from './AboutPortfolio';
 import './AboutUs.css'
 import cookies from 'js-cookie'
+import Navigation2 from '../../shared/Navigation2';
+
 const AboutUs = () => {
     const IsArabic=cookies.get('i18next') ==='ar'
     return (
         <div className={!IsArabic?'monsterratFont':"arabic-font-1" }>
-         <LoginNavigation></LoginNavigation>
+         <Navigation2></Navigation2>
           <AboutBanner></AboutBanner>
           <AboutContent></AboutContent>
           <AboutPortfolio></AboutPortfolio>
           <AboutIdea></AboutIdea>
-          <HomeClients></HomeClients>
-          <Footer2></Footer2>
+          <HomeClients2></HomeClients2>
+          <Footer></Footer>
         </div>
     );
 };

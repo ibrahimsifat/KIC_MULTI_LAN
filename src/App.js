@@ -9,14 +9,15 @@ import Services from './components/Services/Services'
 import ContactUs from './components/ContactUs/ContactUs'
 import AllClients from './components/AllClients/AllClients'
 import AllPortfolio from './components/AllPortfolio/AllPortfolio'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLongArrowAltUp } from '@fortawesome/free-solid-svg-icons'
 import AllclientDetails from './components/AllClients/AllclientDetails'
 import ClientsRecognition from './components/AllClients/ClientsRecognition'
-import HomeClientDetails from './components/Home/HomeClients/HomeClientDetails'
+import AnimatedCursor from "react-animated-cursor";
 import AllProfileDetails from './components/AllPortfolio/AllProfileDetails'
+import PromotionalGefts from './components/PromotionalGefts/PromotionalGefts'
+import KicMision from './components/KicMision/KicMision'
+import History from './components/History/History'
 export default function App() {
-  const upIcon=<FontAwesomeIcon icon={faLongArrowAltUp}/>
+
 
   const IsArabic=cookies.get('i18next') ==='ar'
 
@@ -41,11 +42,20 @@ export default function App() {
   };
 
   return (
+    <>
+     <AnimatedCursor
+        innerSize={8}
+        outerSize={44}
+        color="237, 63, 107"
+        outerAlpha={0.3}
+        innerScale={0.7}
+        outerScale={1.2}
+      />
    < div className={!IsArabic?'monsterratFont':"arabic-font-2" }>
              {showButton && (
         
         <button onClick={scrollToTop} id="topButton"
-        class="fixed z-10 hover:bg-purple-800 hover:text-red-700 duration-500  p-3 bg-white rounded-full shadow-md bottom-10 right-10 animate-bounce">
+        class="fixed z-10 hover:bg-purple-800 hover:text-red-700 duration-500  md:p-3 p-2 bg-white rounded-full shadow-md bottom-10 right-10 animate-bounce">
         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 10l7-7m0 0l7 7m-7-7v18">
             </path>
@@ -84,6 +94,15 @@ export default function App() {
             <Route  path='/allclientsrecognition'>
                 <ClientsRecognition></ClientsRecognition>
             </Route>
+            <Route  path='/promotionalgefts'>
+                <PromotionalGefts></PromotionalGefts>
+            </Route>
+            <Route  path='/visions'>
+                <KicMision></KicMision>
+            </Route>
+            <Route  path='/history'>
+                <History></History>
+            </Route>
             <Route exact path='/'>
                 <Home></Home>    
             </Route>
@@ -95,5 +114,6 @@ export default function App() {
     
 
     </div>
+    </>
   )
 }

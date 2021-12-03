@@ -6,11 +6,11 @@ const ContactAgency = () => {
     const { t } = useTranslation()
     const IsArabic=cookies.get('i18next') ==='ar'
     return (
-        <div className='contact-anner w-full relative monsterratFont'>
-          <p className={!IsArabic?'uppercase font-extrabold md:text-5xl text-2xl textred absolute md:top-56 top-40 left-40 tracking-tight'
+        <div className='contact-banner1 contact-banner2 w-full relative monsterratFont'>
+          {/* <p className={!IsArabic?'uppercase font-extrabold md:text-5xl text-2xl textred absolute md:top-56 top-40 left-40 tracking-tight'
         :
         'uppercase font-extrabold md:text-5xl text-2xl textred absolute md:top-56 top-32 right-80 tracking-widest'
-        }>{t('Contact_Agency_one')}</p>
+        }>{t('Contact_Agency_one')}</p> */}
         </div>
     );
 };

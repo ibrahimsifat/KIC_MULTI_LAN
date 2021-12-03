@@ -1,0 +1,7 @@
+.HistoryBanner {
+    background-image: url(../../img/history.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 430px;
+    background-position: center center;
+}

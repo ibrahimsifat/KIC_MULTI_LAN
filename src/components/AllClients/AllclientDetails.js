@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
-import LoginNavigation from '../../shared/LoginNavigation';
 import '../../App.css'
 import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLongArrowAltLeft } from '@fortawesome/free-solid-svg-icons';
+import Navigation2 from '../../shared/Navigation2';
 const arrowIcon = <FontAwesomeIcon icon={faLongArrowAltLeft}/>
 const AllclientDetails = () => {
     const {clientId}=useParams()
@@ -22,7 +22,7 @@ const AllclientDetails = () => {
     console.log('mached',matchClient);
     return (
         <div >
-          <LoginNavigation></LoginNavigation>
+          <Navigation2></Navigation2>
         <div className='container'>
         <NavLink to='/allclients' className=' hover:text-gray-200 duration-500 text-5xl no-underline'
 > <span >{arrowIcon}</span></NavLink>

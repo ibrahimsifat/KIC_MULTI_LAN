@@ -1,19 +1,26 @@
 import React from 'react';
-import slider1 from '../../img/Recognition2.jpg'
-import slider2 from '../../img/Recognition4.jpg'
-import slider3 from '../../img/Recognition5.jpg'
+import cookies from 'js-cookie'
+import slider1 from '../../img/Recognition1.jpg'
+import slider2 from '../../img/Recognition2.jpg'
 import './AllClients.css'
-import LoginNavigation from '../../shared/LoginNavigation';
+import { useTranslation } from 'react-i18next';
+import Navigation2 from '../../shared/Navigation2';
 const ClientsRecognition = () => {
+  const IsArabic=cookies.get('i18next') ==='ar'
+  const { t } = useTranslation()
     return (
         <div>
-            <LoginNavigation></LoginNavigation>
+            <Navigation2></Navigation2>
+           <div className=" mb-16 flex justify-center items-center">
+         <img src={t('clientRecognitionBanner')} alt="" />
+        
+           </div>
          <div className='bg-client-award'>
          <div  id="carouselExampleDark" class="carousel carousel-dark md:w-8/12 w-9/12 mx-auto slide" data-bs-ride="carousel">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 2"></button>
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active" data-bs-interval="10000">
@@ -30,13 +37,7 @@ const ClientsRecognition = () => {
         <p>Some representative placeholder content for the second slide.</p> */}
       </div>
     </div>
-    <div class="carousel-item">
-      <img src={slider3} class="d-block w-100" alt="..."/>
-      <div class="carousel-caption d-none d-md-block">
-        {/* <h5>Third slide label</h5>
-        <p>Some representative placeholder content for the third slide.</p> */}
-      </div>
-    </div>
+
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>

@@ -21,6 +21,7 @@
     "js-cookie": "^2.2.1",
     "pure-react-carousel": "^1.27.8",
     "react": "^17.0.1",
+    "react-animated-cursor": "^2.2.0",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
     "react-i18next": "^11.8.8",

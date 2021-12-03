@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 
 import cookies from 'js-cookie'
-import LoginNavigation from '../../../shared/LoginNavigation'
 import { Link, NavLink } from 'react-router-dom';
 import kicFristImg from '../../../img/kicPort.png'
 import '../../../App.css'

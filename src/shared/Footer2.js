@@ -49,7 +49,7 @@ const Footer1 = () => {
             <p className='border-b-2 border-red-600 border-fuchsia-600 w-32'></p>
             <p className='font-semibold  mt-4 mb-2'>{t('home_footer_second')}: <span className=' '>+966505353820</span></p>
             <p className='font-semibold  mt-4 mb-2'>{t('home_footer_three')}: <span className=' '>atif@kicadv.com</span></p>
-             
+       
          </div>
                 </div>
                 <div className="sm:ml-0 ml-8">

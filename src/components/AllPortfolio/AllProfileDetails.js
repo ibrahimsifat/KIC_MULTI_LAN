@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
-import LoginNavigation from '../../shared/LoginNavigation';
 import '../../App.css'
 import { NavLink } from 'react-router-dom';
+import cookies from 'js-cookie'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLongArrowAltLeft } from '@fortawesome/free-solid-svg-icons';
-const arrowIcon = <FontAwesomeIcon icon={faLongArrowAltLeft}/>
+import { faLongArrowAltLeft, faLongArrowAltRight } from '@fortawesome/free-solid-svg-icons';
+import Navigation2 from '../../shared/Navigation2';
+const leftArrowIcon = <FontAwesomeIcon icon={faLongArrowAltLeft}/>
+const rightArrowIcon = <FontAwesomeIcon icon={faLongArrowAltRight}/>
+const IsArabic=cookies.get('i18next') ==='ar'
 const AllProfileDetails = () => {
     const {portfoliotId}=useParams()
     const [clients,setClients]=useState([])
@@ -22,7 +25,7 @@ const AllProfileDetails = () => {
     console.log('mached',matchClient);
     return (
         <div>
-          <LoginNavigation></LoginNavigation>
+          <Navigation2></Navigation2>
             {
                 matchClient.map(singleClient=><SingleDetails
                 key={singleClient.id}
@@ -38,8 +41,8 @@ const SingleDetails=({singleClient})=>{
       
 
 <div className="container mx-auto my-16 py-8 px-16 rounded-lg border">
-      <NavLink to='/' className='hover:text-gray-200 duration-500 text-5xl no-underline'
-> <span >{arrowIcon}</span></NavLink>
+      <NavLink to='/allportfolio' className='hover:text-gray-200 duration-500 text-5xl no-underline'
+> <span >{leftArrowIcon}</span></NavLink>
 
           <img  className='my-16 w-11/12 md:w-8/12 mx-auto' src={img} alt="" />
             
@@ -166,21 +169,21 @@ const SingleDetails=({singleClient})=>{
 }
 
 
-const CloseSVG=()=>{
-    return(
-        <svg xmlns="http://www.w3.org/2000/svg" width="6" height="6" className="h-6 w-6 mr-2" fill="red" viewBox="0 0 1792 1792">
-        <path d="M1277 1122q0-26-19-45l-181-181 181-181q19-19 19-45 0-27-19-46l-90-90q-19-19-46-19-26 0-45 19l-181 181-181-181q-19-19-45-19-27 0-46 19l-90 90q-19 19-19 46 0 26 19 45l181 181-181 181q-19 19-19 45 0 27 19 46l90 90q19 19 46 19 26 0 45-19l181-181 181 181q19 19 45 19 27 0 46-19l90-90q19-19 19-46zm387-226q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z">
-        </path>
-    </svg>
-    )
-}
+// const CloseSVG=()=>{
+//     return(
+//         <svg xmlns="http://www.w3.org/2000/svg" width="6" height="6" className="h-6 w-6 mr-2" fill="red" viewBox="0 0 1792 1792">
+//         <path d="M1277 1122q0-26-19-45l-181-181 181-181q19-19 19-45 0-27-19-46l-90-90q-19-19-46-19-26 0-45 19l-181 181-181-181q-19-19-45-19-27 0-46 19l-90 90q-19 19-19 46 0 26 19 45l181 181-181 181q-19 19-19 45 0 27 19 46l90 90q19 19 46 19 26 0 45-19l181-181 181 181q19 19 45 19 27 0 46-19l90-90q19-19 19-46zm387-226q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z">
+//         </path>
+//     </svg>
+//     )
+// }
 
-const RightSVG=()=>{
-    return(
- <svg className="h-6 w-6 mr-2" xmlns="http://www.w3.org/2000/svg" width="6" height="6" stroke="currentColor" fill="#10b981" viewBox="0 0 1792 1792">
-                                <path d="M1412 734q0-28-18-46l-91-90q-19-19-45-19t-45 19l-408 407-226-226q-19-19-45-19t-45 19l-91 90q-18 18-18 46 0 27 18 45l362 362q19 19 45 19 27 0 46-19l543-543q18-18 18-45zm252 162q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z">
-                                </path>
-                            </svg>
-    )
-}
+// const RightSVG=()=>{
+//     return(
+//  <svg className="h-6 w-6 mr-2" xmlns="http://www.w3.org/2000/svg" width="6" height="6" stroke="currentColor" fill="#10b981" viewBox="0 0 1792 1792">
+//                                 <path d="M1412 734q0-28-18-46l-91-90q-19-19-45-19t-45 19l-408 407-226-226q-19-19-45-19t-45 19l-91 90q-18 18-18 46 0 27 18 45l362 362q19 19 45 19 27 0 46-19l543-543q18-18 18-45zm252 162q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z">
+//                                 </path>
+//                             </svg>
+//     )
+// }
 export default AllProfileDetails;

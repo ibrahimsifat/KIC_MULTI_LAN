@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import LoginNavigation from '../../shared/LoginNavigation';
 import cookies from 'js-cookie'
 import emailjs from 'emailjs-com'
 import './ContactUs.css'
 import { useTranslation } from 'react-i18next';
+import Navigation2 from '../../shared/Navigation2';
 const ContactBanner = () => {
     const { t } = useTranslation()
     const [success,setSuccess]=useState(false)
@@ -29,17 +29,17 @@ const massageAlert=<div class="bg-green-100 rounded-lg p-4 mb-4 text-sm text-gre
 </div>
     return (
         <div className='contact_bg_img'>
-         <div className='pt-10'>
-         <LoginNavigation></LoginNavigation>
+         <div className='pt-'>
+         <Navigation2></Navigation2>
     <div className='flex justify-center items-center monsterratFont md:mx-8 mx-4'>
             <div>
                 {success&& massageAlert}
-                <h1 className='mt-16 monsterratFont tracking-tighter font-extrabold uppercase text-white text-3xl sm:text-5xl md:text-4xl lg:text-5xl mb-6 lg:mb-8'>
+                <h1 className='mt-16 monsterratFont tracking-tighter font-extrabold uppercase text-white text-3xl sm:text-5xl md:text-4xl lg:text-5xl mb-6 md:mx-32 lg:mb-8'>
                 {t('Contact_two')}
                 </h1>
                 <div  className='w-full'>
                     <form onSubmit={handleSendEmail} className='w-full'>
-                    <div className='md:w-96  '>
+                    <div className=' '>
                         <label className='block text-white font-semibold pb-2 text-xl' htmlFor="name">{t('Contact_three')}: </label>
                         <input className=' text-white p-1 outline-none bg-transparent border-2 w-full' type="text" name="name" id="" required />
                     </div>

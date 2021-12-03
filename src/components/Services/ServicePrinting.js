@@ -10,9 +10,9 @@ const ServicePrinting = () => {
     return (
         <div className='mb-6'>
             <div>
-          <div className="grid md:grid-cols-5">
-            <div className=" col-span-3 print-bg right  flex justify-center items-center lg-pt-0 pt-8 h-96 ">
-              <div className={!IsArabic?'monsterratFont px-8 md:px-16':"arabic-font-2 px-8 md:px-16" }>
+          <div className="grid md:grid-cols-5  ">
+            <div className=" col-span-3 print-bg right  flex justify-center items-center lg-pt-0 pt-8 md:h-96">
+              <div className={!IsArabic?'monsterratFont  px-6 md:py-0 py-6 md:px-16':"arabic-font-2 px-8 md:px-16" }>
               <h1 className=' tracking-tighter font-extrabold uppercase text-white text-3xl sm:text-5xl md:text-4xl lg:text-5xl mb-6 lg:mb-8'>
               <p>
               {t('service_printing_one')}</p>

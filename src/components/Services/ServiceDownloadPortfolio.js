@@ -17,10 +17,10 @@ const ServiceDownloadPortfolio = () => {
             </div>
             <div className={!IsArabic?'monsterratFont flex justify-center items-center':"arabic-font-2 flex justify-center items-center" }>
             <i class="fas fa-chevron-right  text-gray-400 
-             text-3xl sm:text-4xl md:text-3xl lg:text-4xl mb-6 lg:mb-8 mr-10 ">{chevronRightIcon}</i>
-           <a href='../Profile.pdf' download="KIC Portfolio" className=' fromLeft  tracking-tighter font-extrabold uppercase py-9 text-white text-3xl sm:text-4xl md:text-3xl lg:text-4xl mb-6 lg:mb-8 no-underline md:mx-16 mx-8'>
+             text-3xl sm:text-4xl md:text-3xl lg:text-4xl mb-6 lg:mb-8  sm:mr-2 md:mr-10 ">{chevronRightIcon}</i>
+           <a href='../Profile.pdf' download="KIC Portfolio" className=' fromLeft  tracking-tighter font-extrabold uppercase py-9 text-white text-xl sm:text-2xl  lg:text-4xl mb-6 lg:mb-8 no-underline md:mx-16 mx-4'>
            {t('service_portfolio_one')}</a>
-           <i class="fas fa-chevron-left text-3xl sm:text-4xl md:text-3xl lg:text-4xl mb-6 lg:mb-8 ml-10 text-gray-400 ">{chevronIcon}</i>
+           <i class="fas fa-chevron-left text-3xl sm:text-4xl md:text-3xl lg:text-4xl mb-6 lg:mb-8 md:ml-10 sm:ml-2 text-gray-400 ">{chevronIcon}</i>
             </div>
         </div>
     );

@@ -12,12 +12,7 @@ const AboutPortfolio = () => {
             <p className='uppercase font-extrabold text-white md:text-4xl sm:text-3xl text-2xl '>{t('home_portfolio_first')}</p>
             <p className='uppercase font-extrabold text-white md:text-4xl sm:text-3xl text-2xl '>{t('home_portfolio_second')}</p>
 
-            <a href='../Profile.pdf' download="KIC Portfolio" className='uppercase font-extrabold text-white md:text-4xl sm:text-3xl text-2xl cursor-pointer  duration-500 pb-2
-            hover_border fromRight
-           w-56
-            inline-block
-            no-underline
-            '>{t('home_portfolio_three')}</a>
+            <a href='../Profile.pdf' download="KIC Portfolio" className='uppercase font-extrabold text-white md:text-4xl sm:text-3xl text-2xl cursor-pointer  duration-500 pb-2 hover_border fromRight w-56 inline-block no-underline arabic-font-1'>{t('home_portfolio_three')}</a>
         
            </div>
         </div>

@@ -8,10 +8,11 @@ import { useTranslation } from 'react-i18next';
 import i18next from 'i18next'
 import cookies from 'js-cookie'
 import classNames from 'classnames'
+import LogoBanner from '../img/logobg.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faGlobe } from '@fortawesome/free-solid-svg-icons';
-
+import CMYK from '../img/cmyk-for-logo.png'
 const facebookIcon=<FontAwesomeIcon icon ={faFacebookF}/>
 const instagramIcon=<FontAwesomeIcon icon ={faInstagram}/>
 const globalIcon=<FontAwesomeIcon icon ={faGlobe}/>
@@ -35,9 +36,7 @@ const languages = [
   },
 ]
 
-const GlobeIcon = ({ width = 20, height = 20 }) => (
- <i>{globalIcon}</i>
-)
+
 const IsArabic=cookies.get('i18next') ==='ar'
 
 const currentLanguageCode = cookies.get('i18next') || 'en'
@@ -45,86 +44,89 @@ const currentLanguage = languages.find((l) => l.code === currentLanguageCode)
 const { t } = useTranslation()
 
 useEffect(() => {
-  console.log('Setting page stuff')
   document.body.dir = currentLanguage.dir || 'ltr'
   document.title = t('app_title')
 }, [currentLanguage, t])
 
 
   return (
-    <div className={!IsArabic?'monsterratFont':"arabic-font-1" }>
-      <div className="bg-white  z-30 navigation  flex flex-wrap items-center justify-between   ">
+    <div className={!IsArabic?'monsterratFont container  ':"arabic-font-1   " }>
+      <div className=" z-30 navigation  flex flex-wrap items-center justify-between   ">
       
-        <div className=" container   mx-auto flex flex-wrap items-center justify-between ">
-          <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
-            <NavLink to='/'
-              className="text-sm font-bold leading-relaxed inline-block ml-2 py-2 whitespace-nowrap uppercase  "
-              
-            >
-             <NavLink className='relative' to='/'> <img className=' md:w-20 sm:w-16 w-14 ' src={logo} alt="" />
-             <div className={!IsArabic?'w-6 h-6 absolute top-0 -right-16 rounded-full bg-red-500 animate-ping':'w-6 h-6 absolute top-0 right-2 rounded-full bg-red-500 animate-ping'}>
-
+        <div className="    mx-auto  ">
+          <div>
+          <div className="text-sm font-bold leading-relaxed inline-block ml-2  whitespace-nowrap uppercase  ">
+            
+            </div>
+          </div>
+          <div className="w-full bg-white rounded-t-2xl relative flex items-center justify-between lg:w-auto lg:static lg:block lg:justify-start">
+      <div className="flex justify-start items-center mr-auto">
+            <div>
+                <NavLink className='relative' to='/'> <img className=' md:w-28 sm:w-24 w-20 ' src={logo} alt="" />
+                <p className={!IsArabic?'md:w-6 md:h-6 w-3 h-3 absolute top-0 md:-right-24  -right-12 rounded-full bg-red-500 animate-ping':'md:w-6 md:h-6 w-3 h-3  absolute top-0 right-2 rounded-full bg-red-500 animate-ping'}>
+                </p>
+                </NavLink>
              </div>
-             </NavLink>
-            </NavLink>
-      
-         <button className=" cursor-pointer text-xl leading-none px-1 py-1 rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+             <div className='md:ml-3'>
+
+                <h1 className='monsterratFont md:text-3xl lg:text-4xl text-xl font-semibold uppercase '>Printing EST.</h1>
+                <h1 className='md:text-sm text-red-400 -mt-2 text-xs font-semibold'>For Design and Printing Service</h1>
+                <img className='md:w-16 w-12 ' src={CMYK} alt="" />
+             </div>
+            <div>
+              <img className='w-full h-36 lg:block hidden ml-auto' src={LogoBanner} alt="" />
+            </div>
+            </div>
+        <div>
+        <button className="sm:ml-64 ml-4 cursor-pointer text-xl leading-none px-2 py-1 rounded bg-transparent block lg:hidden outline-none focus:outline-none"
               type="button"
               onClick={() => setNavbarOpen(!navbarOpen)}
             >
            <Hamburger toggled={isOpen} toggle={setOpen} />
             </button>
+        </div>
 
           </div>
           <div
             className={
-              "lg:flex flex-grow items-center" +
+              "lg:flex flex-grow items-center md:bg-transparent  " +
               (navbarOpen ? " flex" : " hidden")
             }
             id="example-navbar-danger"
           >
-            <ul className={!IsArabic?"block navnav md:bg-transparent bg-white-500 md:py-0 py-2 md:t-center text-bl md:flex flex-col lg:flex-row list-none ml-auto":" navnav block md:bg-transparent bg-white-500 md:py-0 py-2 md:t-center text-bl md:flex flex-col lg:flex-row list-none mr-auto"}
+            <ul className={!IsArabic?"block z-50 navnav  rounded-b-2xl md:bg-indigo-800 md:py-0 py-2 px-3 md:t-center text-bl md:flex flex-col lg:flex-row list-none md:ml-auto mx-auto":"block z-50 navnav  rounded-b-2xl md:bg-indigo-800 md:py-0 py-2 px-3 md:t-center text-bl md:flex flex-col lg:flex-row list-none md:ml-auto mx-auto"}
             
             >
-            <li className="mx-3 fromLeft ">
+          <li className={!IsArabic?"md:mr-9 fromLeft":"md:ml-9  fromLeft"}>
                 <NavLink to='/' 
-                  className="no-underline text-li  py-2 flex items-center text-sm uppercase font-bold leading-snug   "
+                  className="no-underline text-li text-white md:my-0 my-2 hover:text-indigo-300 duration-500 py-2 flex items-center text-sm uppercase font-bold leading-snug  "
                   onClick={() => setNavbarOpen(!navbarOpen)}
                 >
                
                {t('Navigation_home')}
                 </NavLink>
                 </li>
-                <li className="mx-3 fromLeft ">
-                <NavLink to='/aboutus' activeClassName="selected"
-                  className="no-underline text-li	 py-2 flex items-center text-sm uppercase font-bold leading-snug    "
-                  onClick={() => setNavbarOpen(!navbarOpen)}
-                >
-               
-               {t('Navigation_About')}
-                </NavLink>
-                </li>
-                <li className="mx-3 fromLeft">
-                <NavLink to='/services' activeClassName="selected"
-                  className="no-underline text-li	 py-2 flex items-center text-sm uppercase font-bold leading-snug  "
-                  onClick={() => setNavbarOpen(!navbarOpen)}
-                >
-               {t('Navigation_Service')}
-                </NavLink>
-                </li>
                 <li class="group inline-block login">
   <button
    
   >
-    <NavLink to='/allclients'onClick={() => setNavbarOpen(!navbarOpen)} class="no-underline text-li	 py-2 flex items-center text-sm uppercase font-bold leading-snug ">{t('Navigation_Clients')}</NavLink>
+    <p  onClick={() => setNavbarOpen(!navbarOpen)} class="no-underline text-li	 py-2 flex items-center text-sm uppercase font-bold leading-snug md:mx-3 text-white md:my-0 my-2 hover:text-indigo-300 duration-500 "> {t('Navigation_About')}</p>
   
   </button>
   <ul
-    class="bg-white border  rounded-sm transform scale-0 group-hover:scale-100 absolute 
-  transition duration-150 ease-in-out origin-top "
+    class="bg-indigo-800 border-2 border-indigo-600  rounded-sm transform scale-0 group-hover:scale-100 absolute 
+  transition duration-150 ease-in-out origin-top px-3 "
   >
-  <li><NavLink to='/allclients' onClick={() => setNavbarOpen(!navbarOpen)} class="rounded-sm no-underline mt-2 block  text-li cursor-pointer">{t('Navigation_Clients')}</NavLink></li>
-  <li> <NavLink to='/allclientsrecognition' onClick={() => setNavbarOpen(!navbarOpen)} class="rounded-sm no-underline  text-li hover:bg-gray-100 cursor-pointer mb-2 block  ">{t('Navigation_recognition')}</NavLink></li>
+  <li>
+    <NavLink to='/aboutus' onClick={() => setNavbarOpen(!navbarOpen)} class="rounded-sm no-underline text-white text-li cursor-pointer mb-2  block  mt-3 uppercase">{t('Navigation_About')}</NavLink>
+    </li>
+  <li>
+    <NavLink to='/visions' onClick={() => setNavbarOpen(!navbarOpen)} class="rounded-sm no-underline text-white text-li cursor-pointer mb-2  block  mt-3 uppercase">{t('home_vision_first')}</NavLink>
+    </li>
+  <li>
+    <NavLink to='/history' onClick={() => setNavbarOpen(!navbarOpen)} class="rounded-sm no-underline text-white text-li cursor-pointer mb-2  block  mt-3 uppercase">{t('home_history')}</NavLink>
+    </li>
+ 
 
 
    
@@ -134,19 +136,58 @@ useEffect(() => {
 
 
 
-              <li className="mx-3 fromLeft">
+                <li className="md:mx-3  fromLeft">
+                <NavLink to='/services' activeClassName="selected"
+                  className="no-underline text-li	text-white md:my-0 my-2 hover:text-indigo-300 duration-500 py-2 flex items-center text-sm uppercase font-bold leading-snug  "
+                  onClick={() => setNavbarOpen(!navbarOpen)}
+                >
+               {t('Navigation_Service')}
+                </NavLink>
+                </li>
+                <li class="group inline-block login">
+  <button
+   
+  >
+    <NavLink to='/allclients' onClick={() => setNavbarOpen(!navbarOpen)} class="no-underline text-li	 py-2 flex items-center text-sm uppercase font-bold leading-snug md:mx-3 text-white md:my-0 my-2 hover:text-indigo-300 duration-500 ">{t('Navigation_Clients')}</NavLink>
+  
+  </button>
+  <ul
+    class="bg-indigo-800 border-2 border-indigo-600  rounded-sm transform scale-0 group-hover:scale-100 absolute 
+  transition duration-150 ease-in-out origin-top px-3 "
+  >
+  <li><NavLink to='/allclients' onClick={() => setNavbarOpen(!navbarOpen)} class="rounded-sm no-underline text-white text-li cursor-pointer mb-2  block  mt-2 uppercase">{t('Navigation_Clients')}</NavLink></li>
+  <p> <NavLink to='/allclientsrecognition' onClick={() => setNavbarOpen(!navbarOpen)} class="rounded-sm no-underline text-white text-li cursor-pointer mb-2  block  mt-2 uppercase">{t('Navigation_recognition')}</NavLink></p>
+
+
+   
+
+  </ul>
+</li>
+
+
+
+              <li className="md:mx-3  fromLeft">
+                <NavLink to='/promotionalgefts' activeClassName="selected"
+                  className="no-underline text-li	text-white md:my-0 my-2 hover:text-indigo-300 duration-500 py-2 flex items-center text-sm uppercase font-bold leading-snug    "
+                  onClick={() => setNavbarOpen(!navbarOpen)}
+                >
+               
+               {t('Navigation_promotional')}
+                </NavLink>
+                </li>
+              <li className="md:mx-3  fromLeft">
                 <NavLink to='/allportfolio' activeClassName="selected"
-                  className="no-underline text-li	 py-2 flex items-center text-sm uppercase font-bold leading-snug    "
+                  className="no-underline text-li	text-white md:my-0 my-2 hover:text-indigo-300 duration-500 py-2 flex items-center text-sm uppercase font-bold leading-snug    "
                   onClick={() => setNavbarOpen(!navbarOpen)}
                 >
                
                {t('Navigation_Portfolio')}
                 </NavLink>
                 </li>
-                <li className="mx-3 fromLeft">
+                <li className="md:mx-3  fromLeft">
                 <NavLink to='/contactus' activeClassName="selected"
 
-                  className="no-underline text-li	 py-2 flex items-center text-sm uppercase font-bold leading-snug    "
+                  className="no-underline text-li	text-white md:my-0 my-2 hover:text-indigo-300 duration-500 py-2 flex items-center text-sm uppercase font-bold leading-snug    "
                   onClick={() => setNavbarOpen(!navbarOpen)}
                 >
                   {t('Navigation_Touch')}
@@ -156,13 +197,13 @@ useEffect(() => {
              
              <div className="dropdown">
             <button
-              className="btn  dropdown-toggle cursor-pointer text-li 	outlineglobal"
+              className="btn  dropdown-toggle cursor-pointer text-white md:my-0 my-2 hover:text-indigo-300 duration-500 	outlineglobal"
               type="button"
               id="dropdownMenuButton1"
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              <GlobeIcon className='inline'/>
+             <i className='text-white md:my-0 my-2 hover:text-indigo-300 duration-500'>{globalIcon}</i>
             </button>
             <ul className="dropdown-menu outlineglobal" aria-labelledby="dropdownMenuButton1">
               <p>
@@ -192,19 +233,20 @@ useEffect(() => {
             </ul>
           </div>
   
-<li className='mx-2 mt-2'>
-         <a href='https://www.facebook.com/KIC-Printing-Advertising-333673783382403/' target='_blank' rel="noreferrer" className='text-black mt-2'>{facebookIcon}</a>
-</li>
-<li className="mx-2 fromLeft mt-2">
-<a href='https://www.instagram.com/kicadvertising/' target='_blank' rel="noreferrer" className='text-black mt-2'>{instagramIcon}</a>
-</li>
+<span className='md:mx-2 mx-3 mt-3 '>
+         <a href='https://www.facebook.com/KIC-Printing-Advertising-333673783382403/' target='_blank' rel="noreferrer" className='text-white md:my-0 my-2 hover:text-indigo-300 duration-500 '>{facebookIcon}</a>
+</span>
+<span className="md:mx-2 mx-3  mt-3">
+<a href='https://www.instagram.com/kicadvertising/' target='_blank' rel="noreferrer" className='text-white md:my-0 my-2 hover:text-indigo-300 duration-500 '>{instagramIcon}</a>
+</span>
 
             </ul>
           </div>
         </div>
+        </div>
       </div>
      
-    </div>
+   
   );
 }
 

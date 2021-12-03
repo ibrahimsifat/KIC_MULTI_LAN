@@ -16,7 +16,7 @@ const ServiceMarketing = () => {
               
               {t('service_marketing_one')}
               </h1>
-                <p className='text-white font-regular  mb-4 md:my-10 lg:my-0  sm:text-md lg:text-xl '>
+                <p className='text-white font-regular  md:pb-0 pb-10 md:my-10 lg:my-0  sm:text-md lg:text-xl '>
                     
                     {t('service_marketing_two')}</p>
               </div>
