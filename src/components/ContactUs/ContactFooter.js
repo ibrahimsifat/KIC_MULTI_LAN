@@ -15,9 +15,7 @@ const ContactFooter = () => {
         <div className='contactFooterbg'>
          <div className="">
          <div className="container monsterratFont mx-auto flex flex-col py-20 justify-center items-center  ">
-                <div>
-                    <h1 className='text-2xl text-white font-semibold uppercase text-center '>Mr. Atif Jebreal</h1>
-                </div>
+              
                 <div className='mt-12 grid lg:grid-cols-3 md:grid-cols-2 justify-around items-center '>
 
                     <p className='text-xl lg:mx-10  '>

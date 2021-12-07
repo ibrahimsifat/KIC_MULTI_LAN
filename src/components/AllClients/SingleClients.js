@@ -16,11 +16,11 @@ const SingleClients = ({client,handleClientDetails}) => {
            <div className=" mx-auto  w-32 img-hover duration-700  ">  
             <div className=" transition duration-300 ease-in-out xl:mb-0 lg:mb-0 md:mb-0 mb-6 cursor-pointer group">
                 
-                <div className="overflow-hidden relative  my-2 rounded-2xl item-zoom">
+                <div className="overflow-hidden relative  my-2 rounded-md item-zoom" onClick={() => handleClientDetails(id)}>
                
-                <img className="w-full transition duration-700    " src={img} alt="" />
+                <img className="w-full transition duration-700  border  " src={img} alt=""/>
           
-                    <div className="absolute bottom-0  h-full w-full flex justify-center items-center bg-gradient-to-r from-gray-200 group-hover:bg-opacity-75   transition duration-500 ease-in-out opacity-0 group-hover:opacity-100 ">
+                    <div className="absolute bottom-0  h-full w-full flex justify-center items-center from-gray-500 bg-gray-900 group-hover:bg-opacity-75   transition duration-500 ease-in-out opacity-0 group-hover:opacity-100 ">
                 
    
    
@@ -31,8 +31,8 @@ const SingleClients = ({client,handleClientDetails}) => {
                 <i
         className=" text-white  font-bold uppercase text-2xl hover:text-3xl px-4 py-2 rounded  outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-500"
         type="button"
-        onClick={() => handleClientDetails(id)}
-      ><i className="fas fa-search transition duration-500 hover:scale:110 ">{search}</i>
+        
+      ><i className="fas fa-search ">{search}</i>
  
       </i>
                </div>

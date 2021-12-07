@@ -12,7 +12,8 @@ const { t } = useTranslation()
             :
             'sm:flex justify-start inline-block md:py-12 lg:py-16 py-10  items-center md:mr-28 mr-4'
         }>
-            <div className={!IsArabic?'monsterratFont  md:mx-6 mx-4 md:w-8/12 text-start':"arabic-font-1  md:mx-6 mx-4 md:w-8/12 text-end" } >
+            <div data-aos="fade-left" data-aos-easing="linear"
+     data-aos-duration="1000" className={!IsArabic?'monsterratFont  md:mx-6 mx-4 md:w-8/12 text-start':"arabic-font-1  md:mx-6 mx-4 md:w-8/12 text-end" } >
                <p> <span className='textred text-3xl sm:text-2xl md:text-3xl lg:text-6xl tracking-tight	 font-bold'>{t('About_Banner_one')}</span></p>
                  <p className='tracking-widest text-3xl sm:text-4xl md:text-4xl lg:text-5xl text-white'>{t('About_Banner_two')}</p>
                  <p className='text-white font-regular md:text-md text-sm md:mt-8 mt-3   '>

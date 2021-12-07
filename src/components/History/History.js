@@ -3,15 +3,13 @@ import cookies from 'js-cookie'
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import './History.css'
-import VIsionImg from '../../img/mision.jpg'
-import VIsionImgArabic from '../../img/mision-arabic.jpg'
-import Navigation2 from '../../shared/Navigation2';
+import Navigation3 from '../../shared/Navigation3';
 const History = () => {
     const IsArabic=cookies.get('i18next') ==='ar'
     const { t } = useTranslation()
     return (
-        <div >
-            <Navigation2></Navigation2>
+        <div>
+            <Navigation3></Navigation3>
             <div className='mb-16'>
                 <div className='HistoryBanner'>
                 <div className='   flex justify-center flex-col items-center pt-32'>
@@ -27,7 +25,7 @@ const History = () => {
                 </div>
                 
             </div>
-       <div className='container text-center'>
+       <div className='container text-center mb-16'>
        <h1> {t('home_history2')}</h1>
        </div>
 

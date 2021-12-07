@@ -3,14 +3,14 @@ import cookies from 'js-cookie'
 import { useTranslation } from 'react-i18next';
 
 import './Serivces.css'
-import Navigation2 from '../../shared/Navigation2';
+import Navigation3 from '../../shared/Navigation3';
 const ServicesBanner = () => {
     const IsArabic=cookies.get('i18next') ==='ar'
     const { t } = useTranslation()
     return (
         <div className='service-bg-img h-screen	'>
          <div className=''>
-         <Navigation2></Navigation2>
+         <Navigation3></Navigation3>
     <div className='flex justify-center items-center '>
     <div className='grid lg:grid-cols-2 '>
              <div className="home-content left flex flex-col justify-center lg:items-right items-end">

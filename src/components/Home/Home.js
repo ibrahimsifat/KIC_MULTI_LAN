@@ -21,7 +21,7 @@ const Home = () => {
             <Vision></Vision>
             {/* <Homeservices></Homeservices> */}
             <HomePortfolio></HomePortfolio>
-            <Philsoplhy2></Philsoplhy2>
+            {/* <Philsoplhy2></Philsoplhy2> */}
             {/* <HomeClients></HomeClients> */}
             {/* <HomeSimpleService></HomeSimpleService> */}
             {/* <BootSlier></BootSlier> */}

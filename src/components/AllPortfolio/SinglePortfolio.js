@@ -27,7 +27,7 @@ console.log(id);
            
             <div className="transition duration-300 ease-in-out xl:mb-0 lg:mb-0 md:mb-0 mb-6 cursor-pointer group">
               <Zoom >   
-                <div className="overflow-hidden relative item-zoom">
+                <div className="overflow-hidden relative item-zoom"  onClick={() => handleClientDetails(id)}>
                
                 <img className="w-full transform transition hover:scale-105 duration-300 ease-in-out " src={img} alt="" />
           
@@ -42,7 +42,7 @@ console.log(id);
                 <i
         className="   font-bold uppercase text-2xl hover:text-3xl px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
         type="button"
-        onClick={() => handleClientDetails(id)}
+       
       ><h1 className=' px-3 py-1 text-white hover:scale transition transform duration-500 rounded-full text-black'><i className="fas fa-search">{search}</i></h1>
  
       </i>

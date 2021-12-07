@@ -8,7 +8,7 @@ import SinglePortfolio from './SinglePortfolio';
 
 import { useTranslation } from 'react-i18next';
 import { useState } from 'react/cjs/react.development';
-import Navigation2 from '../../shared/Navigation2';
+import Navigation3 from '../../shared/Navigation3';
 const AllPortfolioBanner = () => {
     const IsArabic=cookies.get('i18next') ==='ar'
     const { t } = useTranslation()
@@ -26,7 +26,7 @@ const AllPortfolioBanner = () => {
 
 <div className="w-full m-0 p-0 bg-cover bg-bottom bgImage "
 style={{height:'500px',maxHeight:'560px'}} >
-    <Navigation2></Navigation2>
+    <Navigation3></Navigation3>
         <div className="container  mx-auto text-center break-normal">
 
                 <p className="text-white mt-32 font-extrabold text-3xl md:text-5xl">

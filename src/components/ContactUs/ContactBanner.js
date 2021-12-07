@@ -3,7 +3,7 @@ import cookies from 'js-cookie'
 import emailjs from 'emailjs-com'
 import './ContactUs.css'
 import { useTranslation } from 'react-i18next';
-import Navigation2 from '../../shared/Navigation2';
+import Navigation3 from '../../shared/Navigation3';
 const ContactBanner = () => {
     const { t } = useTranslation()
     const [success,setSuccess]=useState(false)
@@ -30,7 +30,7 @@ const massageAlert=<div class="bg-green-100 rounded-lg p-4 mb-4 text-sm text-gre
     return (
         <div className='contact_bg_img'>
          <div className='pt-'>
-         <Navigation2></Navigation2>
+         <Navigation3></Navigation3>
     <div className='flex justify-center items-center monsterratFont md:mx-8 mx-4'>
             <div>
                 {success&& massageAlert}

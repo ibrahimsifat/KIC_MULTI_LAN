@@ -11,11 +11,12 @@ import AllClients from './components/AllClients/AllClients'
 import AllPortfolio from './components/AllPortfolio/AllPortfolio'
 import AllclientDetails from './components/AllClients/AllclientDetails'
 import ClientsRecognition from './components/AllClients/ClientsRecognition'
-import AnimatedCursor from "react-animated-cursor";
 import AllProfileDetails from './components/AllPortfolio/AllProfileDetails'
 import PromotionalGefts from './components/PromotionalGefts/PromotionalGefts'
 import KicMision from './components/KicMision/KicMision'
 import History from './components/History/History'
+import Philosophy from './components/Home/Philosophy/Philosophy'
+import PHILOSOPHY3 from './components/Home/Philosophy/PHILOSOPHY3'
 export default function App() {
 
 
@@ -43,14 +44,7 @@ export default function App() {
 
   return (
     <>
-     <AnimatedCursor
-        innerSize={8}
-        outerSize={44}
-        color="237, 63, 107"
-        outerAlpha={0.3}
-        innerScale={0.7}
-        outerScale={1.2}
-      />
+
    < div className={!IsArabic?'monsterratFont':"arabic-font-2" }>
              {showButton && (
         
@@ -102,6 +96,9 @@ export default function App() {
             </Route>
             <Route  path='/history'>
                 <History></History>
+            </Route>
+            <Route  path='/philosophy'>
+                <PHILOSOPHY3 ></PHILOSOPHY3>
             </Route>
             <Route exact path='/'>
                 <Home></Home>    

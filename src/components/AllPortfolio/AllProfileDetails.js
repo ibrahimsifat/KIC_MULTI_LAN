@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 import cookies from 'js-cookie'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLongArrowAltLeft, faLongArrowAltRight } from '@fortawesome/free-solid-svg-icons';
-import Navigation2 from '../../shared/Navigation2';
+import Navigation3 from '../../shared/Navigation3';
 const leftArrowIcon = <FontAwesomeIcon icon={faLongArrowAltLeft}/>
 const rightArrowIcon = <FontAwesomeIcon icon={faLongArrowAltRight}/>
 const IsArabic=cookies.get('i18next') ==='ar'
@@ -25,7 +25,7 @@ const AllProfileDetails = () => {
     console.log('mached',matchClient);
     return (
         <div>
-          <Navigation2></Navigation2>
+          <Navigation3></Navigation3>
             {
                 matchClient.map(singleClient=><SingleDetails
                 key={singleClient.id}
@@ -41,8 +41,23 @@ const SingleDetails=({singleClient})=>{
       
 
 <div className="container mx-auto my-16 py-8 px-16 rounded-lg border">
-      <NavLink to='/allportfolio' className='hover:text-gray-200 duration-500 text-5xl no-underline'
-> <span >{leftArrowIcon}</span></NavLink>
+<div className='container flex justify-start  items-center my-5 '>
+       <NavLink to='/allportfolio' className='flex justify-center mx-14 items-center border-b no-underline text-black font-semibold px-2 hover:border duration-500 hover:text-white mx-auto'> 
+            <div className='mx-2 text-white duration-500 text-4xl no-underline'> 
+ 
+            <button  id="topButton"
+        class=" z-10  hover:text-red-700 duration-500 text-black md:p-3 p-2  bottom-10 right-10 animate-bounce">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 10l7-7m0 0l7 7m-7-7v18">
+            </path>
+        </svg>
+        <div class="absolute top-0 -left-4 w-10 h-10 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob "></div>
+        </button>
+                      
+            </div>
+         
+        </NavLink>
+        </div>
 
           <img  className='my-16 w-11/12 md:w-8/12 mx-auto' src={img} alt="" />
             

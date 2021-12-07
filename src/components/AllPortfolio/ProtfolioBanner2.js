@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import SinglePortfolio from './SinglePortfolio';
 import cookies from 'js-cookie'
 import kicFristImg from '../../img/kicPort2.jpg'
-import Navigation2 from '../../shared/Navigation2';
+import Navigation3 from '../../shared/Navigation3';
 const ProtfolioBanner2 = () => {
     const { t } = useTranslation()
     const [portfolios,setPortfolios]=useState([])
@@ -19,7 +19,7 @@ const ProtfolioBanner2 = () => {
             
             <div className="w-full m-0 p-0 bg-cover bg-bottom bgImage "
 style={{height:'500px',maxHeight:'560px'}} >
-    <Navigation2></Navigation2>
+    <Navigation3></Navigation3>
         <div className="container  mx-auto text-center break-normal">
 
                 <p className="text-white mt-32 font-extrabold text-3xl md:text-5xl">
@@ -36,7 +36,7 @@ style={{height:'500px',maxHeight:'560px'}} >
     <div className="flex w-10/12 mx-auto rounded shadow-lg ">
                 <div  className="bg-blue-100 flex flex-wrap ">
                     <div className="w-full md:w-2/3 rounded-t ">	
-                        <img src={kicFristImg} className="w-full h-full shadow" alt=''/>
+                        <img src='https://i.ibb.co/rZrJpmS/43.jpg' className="w-full h-full shadow" alt=''/>
                     </div>
 
                     <div className={!IsArabic?'monsterratFont w-full md:w-1/3 flex flex-col flex-grow items-center  flex-shrink':"arabic-font-1 w-full md:w-1/3 flex flex-col flex-grow flex-shrink" }>
@@ -61,8 +61,8 @@ style={{height:'500px',maxHeight:'560px'}} >
             </div>
 <div className=' my-20 text-center'> 
     
-    <h1 className='md:text-4xl text-2xl uppercase  sm:text-3xl font-bold '>Our portfolio Work</h1>
-   <p className='text-gray-700 mt-2 text-sm'>- WE ARE STRONGER -</p>
+    <h1 className='md:text-4xl text-2xl uppercase  sm:text-3xl font-bold '>{t('allPortfolio_seven')}</h1>
+   <p className='text-gray-700 mt-2 text-sm'>- {t('allPortfolio_eight')} -</p>
 </div>
 <div className="container grid md:grid-cols-3 sm:grid-cols-2 lg:grid-cols-4 gap-1 mt-16 pb-16">
 

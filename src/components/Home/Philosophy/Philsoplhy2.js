@@ -9,9 +9,9 @@ const Philsoplhy2 = () => {
     const IsArabic=cookies.get('i18next') ==='ar'
     return (
         <div>
-            <div className={!IsArabic?'md:ml-32 ml-5 mt-14 grid grid-cols-5 ':'md:mr-32 mr-5 mt-14 grid grid-cols-5 '}>
+            <div className={!IsArabic?'md:ml-32 mt-40 ml-5 grid grid-cols-5 ':'md:mr-32 mr-5 mt-40 4 grid grid-cols-5 '}>
                 <div className='col-span-4'>
-                <h1 className={!IsArabic?'monsterratFont text-3xl font-extrabold sm:text-4xl md:text-4xl lg:text-5xl  uppercase':'arabic-font-1 text-3xl font-extrabold sm:text-4xl md:text-4xl lg:text-5xl  uppercase'}>{t('home_PHILOSOPHY_first')}</h1>
+                {/* <h1 className={!IsArabic?'monsterratFont text-3xl font-extrabold sm:text-4xl md:text-4xl lg:text-5xl  uppercase':'arabic-font-1 text-3xl font-extrabold sm:text-4xl md:text-4xl lg:text-5xl  uppercase'}>{t('home_PHILOSOPHY_first')}</h1> */}
                 <h1 className={!IsArabic?' py-2 md:my-2 md:text-xl text-sm monsterratFont ':'my-2 md:my-2 text-sm lg:text-xl arabic-font-1 '}>{t('home_PHILOSOPHY_second')}</h1>
                 </div>
                 <div>

@@ -8,11 +8,12 @@ const AboutIdea = () => {
     const { t } = useTranslation()
     return (
        
-                 <div className='aboutIdeaBg flex flex-col  justify-center items-center '>
+                 <div className='aboutIdeaBg flex flex-col   justify-center items-center '>
             <div className='grid sm:grid-cols-4 px-4 gap-4 pb-8 container'>
              
               <div className='col-span-2'>
-                  <img src={IdeaIcon} alt="" />
+                  <img data-aos="fade-left" data-aos-easing="linear"
+     data-aos-duration="1000" src={IdeaIcon} alt="" />
                   </div>  
               <div className='flex justify-center items-center md:mr-44   col-span-2   '>
                         

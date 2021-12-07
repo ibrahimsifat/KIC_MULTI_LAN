@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowDown, faSave } from '@fortawesome/free-solid-svg-icons';
-import Navigation2 from '../../../shared/Navigation2';
+import Navigation3 from '../../../shared/Navigation3';
 const ArrowDown= <FontAwesomeIcon icon={faSave}/>
 const Banner = () => {
     const { t } = useTranslation()
@@ -14,10 +14,11 @@ const Banner = () => {
     return (
         <div className={!IsArabic?'bg-img':'bg-img-arabic'}>
          <div className=''>
-         <Navigation2></Navigation2>
+         <Navigation3></Navigation3>
     <div className='flex justify-center items-center '>
-    <div className='grid md:grid-cols-2 '>
-             <div className="home-content left flex flex-col justify-center lg:items-right items-center">
+    <div  className='grid md:grid-cols-2 '>
+             <div data-aos="fade-up-left"  data-aos-easing="linear"
+     data-aos-duration="1000" className="home-content left flex flex-col justify-center lg:items-right items-center">
                 <div className={!IsArabic?'monsterratFont text-right px-4  md:my-0 my-8 md:pt-0 pt-8 ':
                 'text-right px-4  md:my-0 my-8 md:pt-0 pt-8 arabic-font-1 '}>
                 <p><span className='text-3xl md:text-3xl text-white'>{t('home_banner_first')}</span> 
@@ -30,7 +31,8 @@ const Banner = () => {
 
                 </div>
              </div>
-             <div className="right w-12/12 mt-2 md:mt-8 px-4">
+             <div data-aos="fade-up" data-aos-easing="linear"
+     data-aos-duration="1000" className="right w-12/12 mt-2 md:mt-8 px-4">
                 <img  src={Hero} alt="" />
              </div>
                 

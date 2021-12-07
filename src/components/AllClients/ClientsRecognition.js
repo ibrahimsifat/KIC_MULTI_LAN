@@ -2,15 +2,16 @@ import React from 'react';
 import cookies from 'js-cookie'
 import slider1 from '../../img/Recognition1.jpg'
 import slider2 from '../../img/Recognition2.jpg'
+import slider3 from '../../img/Recognition3.jpg'
 import './AllClients.css'
 import { useTranslation } from 'react-i18next';
-import Navigation2 from '../../shared/Navigation2';
+import Navigation3 from '../../shared/Navigation3';
 const ClientsRecognition = () => {
   const IsArabic=cookies.get('i18next') ==='ar'
   const { t } = useTranslation()
     return (
         <div>
-            <Navigation2></Navigation2>
+            <Navigation3></Navigation3>
            <div className=" mb-16 flex justify-center items-center">
          <img src={t('clientRecognitionBanner')} alt="" />
         
@@ -32,6 +33,13 @@ const ClientsRecognition = () => {
     </div>
     <div class="carousel-item" data-bs-interval="1000">
       <img src={slider2} class="d-block w-100" alt="..."/>
+      <div class="carousel-caption d-none d-md-block">
+        {/* <h5>Second slide label</h5>
+        <p>Some representative placeholder content for the second slide.</p> */}
+      </div>
+    </div>
+    <div class="carousel-item" data-bs-interval="1000">
+      <img src={slider3} class="d-block w-100" alt="..."/>
       <div class="carousel-caption d-none d-md-block">
         {/* <h5>Second slide label</h5>
         <p>Some representative placeholder content for the second slide.</p> */}
