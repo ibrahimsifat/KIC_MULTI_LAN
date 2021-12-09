@@ -1,7 +1,5 @@
-// import { faHeart,faShoppingCart } from '@fortawesome/free-solid-svg-icons';
-
 import React from 'react';
-import { NavLink ,useHistory} from 'react-router-dom';
+import { useHistory} from 'react-router-dom';
 import '../../App.css'
 
 import Zoom from 'react-reveal/Zoom';
@@ -19,8 +17,8 @@ const SinglePortfolio = ({portfolio}) => {
 
 console.log(id);
   }
-  const {img,id,des}=portfolio
-    const [showModal, setShowModal] = React.useState(false);
+  const {img,id}=portfolio
+
     return (
    
            <div className=" mx-auto  img-hover duration-700  ">  

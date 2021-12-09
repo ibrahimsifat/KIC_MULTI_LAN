@@ -1,6 +1,5 @@
 import React from 'react';
 import Footer from '../../shared/Footer';
-import HomeClients2 from '../Home/HomeClients/HomeClients2';
 import AboutBanner from './AboutBanner';
 import AboutContent from './AboutContent';
 import AboutIdea from './AboutIdea';

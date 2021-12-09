@@ -49,7 +49,8 @@
 
 /* border animation  */
 
-a:after {
+
+/* a:after {
     display: block;
     content: '';
     border-bottom: solid 3px #fff;
@@ -63,7 +64,7 @@ a:hover:after {
 
 a.fromRight:after {
     transform-origin: 100% 50%;
-}
+} */
 
 
 /* 

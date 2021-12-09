@@ -1,7 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import Img from  '../../../img/PHILOSOPHY.jpg'
 import Navigation3 from '../../../shared/Navigation3';
 import Philsoplhy2 from './Philsoplhy2'
 import './Philosophy.css'

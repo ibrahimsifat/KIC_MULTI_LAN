@@ -12,8 +12,8 @@ const Footer1 = () => {
     const { t } = useTranslation()
     
     const [success,setSuccess]=useState(false)
-    const massageAlert=<div class="bg-green-100 rounded-lg p-2 mb-1 text-sm text-green-700" role="alert">
-    <span class="font-medium">
+    const massageAlert=<div className="bg-green-100 rounded-lg p-2 mb-1 text-sm text-green-700" role="alert">
+    <span className="font-medium">
     {t('home_footer_subscribe')}</span>
     </div>
     const IsArabic=cookies.get('i18next') ==='ar'

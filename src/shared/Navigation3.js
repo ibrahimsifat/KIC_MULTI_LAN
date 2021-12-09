@@ -1,4 +1,3 @@
-
 import { Turn as Hamburger } from 'hamburger-react'
 import React, { useEffect, useState } from "react";
 import {  NavLink } from "react-router-dom";
@@ -54,7 +53,7 @@ useEffect(() => {
           <div className="  rounded-t-2xl relative flex items-center justify-between lg:w-auto lg:static lg:block lg:justify-start">
           <div className="flex justify-start items-center mr-auto">
                 <div>
-                    <NavLink className='relative  sm:mx-4 ' to='/'> <img className=' md:w-18 sm:w-16 w-14 sm:mx-6 mx-3 md:pt-0 pt-2' src={logo} alt="" />
+                    <NavLink className='relative  sm:mx-4 ' to='/'> <img className=' md:w-16 sm:w-14 w-14 sm:mx-6 mx-3 md:pt-0 pt-2 md:-mb-4' src={logo} alt="" />
                     {/* <p className={!IsArabic?'md:w-6 md:h-6 w-3 h-3 absolute lg:top-10 md:top-5 top-0 md:-right-14  -right-14 rounded-full bg-red-500 animate-ping':'md:w-6 md:h-6 w-3 h-3  absolute top-0 right-2 rounded-full bg-red-500 animate-ping'}>
                     </p> */}
                     </NavLink>
@@ -87,37 +86,37 @@ useEffect(() => {
             }
             id="example-navbar-danger"
           >
-            <ul className={!IsArabic?"block z-50 navnav  rounded-b-2xl  md:py-0 py-2 px-3 md:t-center text-bl md:flex flex-col lg:flex-row list-none md:ml-auto mx-auto":"block z-50 navnav  rounded-b-2xl  md:py-0 py-2 px-3 md:t-center text-bl md:flex flex-col lg:flex-row list-none md:ml-auto mx-auto"}
+            <ul className={!IsArabic?"block  bg-white z-50 navnav  rounded-b-2xl  md:py-0 py-2 px-3 md:t-center text-bl md:flex flex-col lg:flex-row list-none md:ml-auto mx-auto":"block z-50 navnav  rounded-b-2xl  md:py-0 py-2 px-3 md:t-center text-bl md:flex flex-col lg:flex-row list-none md:ml-auto mx-auto"}
             
             >
           <li className={!IsArabic?"md:mr-5 fromLeft":"md:ml-3  fromLeft"}>
                 <NavLink to='/' 
-                  className="no-underline text-li text-black md:my-0 my-2 hover:text-indigo-300 duration-500 py-2 flex items-center text-sm uppercase font-bold leading-snug  "
+                  className="no-underline text-li text-black md:my-0 my-2  duration-300 py-2 flex items-center text-sm uppercase font-bold leading-snug  hover:text-pink-500  "
                   onClick={() => setNavbarOpen(!navbarOpen)}
                 >
                
                {t('Navigation_home')}
                 </NavLink>
                 </li>
-                <li class="group inline-block login">
+                <li className="group inline-block login">
   <button
    
   >
-    <p  onClick={() => setNavbarOpen(!navbarOpen)} class="no-underline text-li	 py-2 flex items-center text-sm uppercase font-bold leading-snug lg:mx-4 text-black md:my-0 my-2 hover:text-indigo-300 duration-500 "> {t('Navigation_About')}</p>
+    <NavLink to='/aboutus'  onClick={() => setNavbarOpen(!navbarOpen)} className="no-underline text-li	 md:py-2 flex items-center text-sm uppercase font-bold leading-snug hover:text-pink-500  lg:mx-4 text-black md:my-0 md:my-2 duration-500 "> {t('Navigation_About')}</NavLink>
   
   </button>
   <ul
-    class="bg-black border-2 border-indigo-600  rounded-sm transform scale-0 group-hover:scale-100 absolute 
-  transition duration-150 ease-in-out origin-top px-5 "
+    className="bg-white border-2 border-red-500 border-opacity-25 rounded-sm transform scale-0 group-hover:scale-100 absolute 
+  transition duration-150 ease-in-out origin-top px-3 "
   >
   <li>
-    <NavLink to='/aboutus' onClick={() => setNavbarOpen(!navbarOpen)} class="rounded-sm no-underline text-white text-li cursor-pointer mb-2  block  mt-3 uppercase">{t('Navigation_About')}</NavLink>
+    <NavLink to='/aboutus' onClick={() => setNavbarOpen(!navbarOpen)} className="rounded-sm no-underline text-black text-li cursor-pointer mb-2  block  mt-3 uppercase font-bold text-sm hover:text-red-500 ">{t('Navigation_About')}</NavLink>
     </li>
   <li>
-    <NavLink to='/visions' onClick={() => setNavbarOpen(!navbarOpen)} class="rounded-sm no-underline text-white text-li cursor-pointer mb-2  block  mt-3 uppercase">{t('vision_first')}</NavLink>
+    <NavLink to='/visions' onClick={() => setNavbarOpen(!navbarOpen)} className="rounded-sm no-underline text-black text-li cursor-pointer mb-2  block  mt-3 uppercase font-bold text-sm hover:text-red-500 ">{t('vision_first')}</NavLink>
     </li>
   <li>
-    <NavLink to='/history' onClick={() => setNavbarOpen(!navbarOpen)} class="rounded-sm no-underline text-white text-li cursor-pointer mb-2  block  mt-3 uppercase">{t('home_history')}</NavLink>
+    <NavLink to='/history' onClick={() => setNavbarOpen(!navbarOpen)} className="rounded-sm no-underline text-black text-li cursor-pointer mb-2  block  mt-3 uppercase font-bold text-sm hover:text-red-500 ">{t('home_history')}</NavLink>
     </li>
  
 
@@ -129,39 +128,59 @@ useEffect(() => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+<li className='lg:hidden'> 
+    <NavLink to='/visions' onClick={() => setNavbarOpen(!navbarOpen)} className="rounded-sm text-sm font-bold text-black  no-underline  text-li cursor-pointer mb-2  block  mt-3 uppercase">{t('vision_first')}</NavLink>
+    </li>
+  <li className='lg:hidden'>
+    <NavLink to='/history' onClick={() => setNavbarOpen(!navbarOpen)} className="rounded-sm no-underline text-sm font-bold text-black text-li cursor-pointer mb-2  block  mt-3 uppercase">{t('home_history')}</NavLink>
+    </li>
+
+
                 <li className="lg:mx-4  fromLeft">
                 <NavLink to='/services' activeClassName="selected"
-                  className="no-underline text-li	text-black md:my-0 my-2 hover:text-indigo-300 duration-500 py-2 flex items-center text-sm uppercase font-bold leading-snug  "
+                  className="no-underline text-li	text-black md:my-0 my-2 hover:text-indigo-300 duration-500 py-2 flex items-center text-sm uppercase font-bold leading-snug hover:text-pink-500   "
                   onClick={() => setNavbarOpen(!navbarOpen)}
                 >
                {t('Navigation_Service')}
                 </NavLink>
                 </li>
-                <li class="group inline-block login">
+                <li className="group inline-block login">
   <button
    
   >
-    <NavLink to='/allclients' onClick={() => setNavbarOpen(!navbarOpen)} class="no-underline text-li	 py-2 flex items-center text-sm uppercase font-bold leading-snug lg:mx-4 text-black md:my-0 my-2 hover:text-indigo-300 duration-500 ">{t('Navigation_Clients')}</NavLink>
+    <NavLink to='/allclients' onClick={() => setNavbarOpen(!navbarOpen)} className="no-underline text-li	 md:py-2 flex items-center text-sm uppercase font-bold leading-snug hover:text-pink-500  lg:mx-4 text-black md:my-0 my-2 hover:text-indigo-300 duration-500 ">{t('Navigation_Clients')}</NavLink>
   
   </button>
   <ul
-    class="bg-black border-2 border-indigo-600  rounded-sm transform scale-0 group-hover:scale-100 absolute 
+    className="bg-white border-2 border-red-500  rounded-sm transform scale-0 group-hover:scale-100 absolute border-opacity-25
   transition duration-150 ease-in-out origin-top px-3 "
   >
-  <li><NavLink to='/allclients' onClick={() => setNavbarOpen(!navbarOpen)} class="rounded-sm no-underline text-white text-li cursor-pointer mb-2  block  mt-2 uppercase">{t('Navigation_Clients')}</NavLink></li>
-  <p> <NavLink to='/allclientsrecognition' onClick={() => setNavbarOpen(!navbarOpen)} class="rounded-sm no-underline text-white text-li cursor-pointer mb-2  block  mt-2 uppercase">{t('Navigation_recognition')}</NavLink></p>
+  <li><NavLink to='/allclients' onClick={() => setNavbarOpen(!navbarOpen)} className="rounded-sm no-underline text-black text-sm font-bold hover:text-red-500 text-li cursor-pointer mb-2  block  mt-2 uppercase">{t('Navigation_Clients')}</NavLink></li>
+  <li> <NavLink to='/allclientsrecognition' onClick={() => setNavbarOpen(!navbarOpen)} className="rounded-sm no-underline text-black text-sm font-bold hover:text-red-500 text-li cursor-pointer mb-2  block  mt-2 uppercase">{t('Navigation_recognition')}</NavLink></li>
 
 
    
 
   </ul>
 </li>
-
+<li className='lg:hidden text-sm'> <NavLink to='/allclientsrecognition' onClick={() => setNavbarOpen(!navbarOpen)} className="rounded-sm no-underline text-black font-bold text-li cursor-pointer my-2  block  my-2 uppercase">{t('Navigation_recognition')}</NavLink></li>
 
 
               <li className="lg:mx-4  fromLeft">
                 <NavLink to='/promotionalgefts' activeClassName="selected"
-                  className="no-underline text-li	text-black md:my-0 my-2 hover:text-indigo-300 duration-500 py-2 flex items-center text-sm uppercase font-bold leading-snug    "
+                  className="no-underline text-li	text-black md:my-0 my-2 hover:text-indigo-300 duration-500 py-2 flex items-center text-sm uppercase font-bold leading-snug hover:text-pink-500     "
                   onClick={() => setNavbarOpen(!navbarOpen)}
                 >
                
@@ -170,7 +189,7 @@ useEffect(() => {
                 </li>
               <li className="lg:mx-4  fromLeft">
                 <NavLink to='/philosophy' activeClassName="selected"
-                  className="no-underline text-li	text-black md:my-0 my-2 hover:text-indigo-300 duration-500 py-2 flex items-center text-sm uppercase font-bold leading-snug    "
+                  className="no-underline text-li	text-black md:my-0 my-2 hover:text-indigo-300 duration-500 py-2 flex items-center text-sm uppercase font-bold leading-snug hover:text-pink-500     "
                   onClick={() => setNavbarOpen(!navbarOpen)}
                 >
                
@@ -179,7 +198,7 @@ useEffect(() => {
                 </li>
               <li className="lg:mx-4  fromLeft">
                 <NavLink to='/allportfolio' activeClassName="selected"
-                  className="no-underline text-li	text-black md:my-0 my-2 hover:text-indigo-300 duration-500 py-2 flex items-center text-sm uppercase font-bold leading-snug    "
+                  className="no-underline text-li	text-black md:my-0 my-2 hover:text-indigo-300 duration-500 py-2 flex items-center text-sm uppercase font-bold leading-snug hover:text-pink-500     "
                   onClick={() => setNavbarOpen(!navbarOpen)}
                 >
                
@@ -189,7 +208,7 @@ useEffect(() => {
                 <li className="lg:mx-4  fromLeft">
                 <NavLink to='/contactus' activeClassName="selected"
 
-                  className="no-underline text-li	text-black md:my-0 my-2 hover:text-indigo-300 duration-500 py-2 flex items-center text-sm uppercase font-bold leading-snug    "
+                  className="no-underline text-li	text-black md:my-0 my-2 hover:text-indigo-300 duration-500 py-2 flex items-center text-sm uppercase font-bold leading-snug hover:text-pink-500     "
                   onClick={() => setNavbarOpen(!navbarOpen)}
                 >
                   {t('Navigation_Touch')}

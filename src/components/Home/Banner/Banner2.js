@@ -12,15 +12,15 @@ const Banner2 = () => {
     const IsArabic=cookies.get('i18next') ==='ar'
     return (
         <div>
-          <body class="" >
+          <body className="" >
   
 <div>
 
-    <div style={{background: "#270B55"}} class="bg-bg md:overflow-hidden">
-      <div class="px-4 py-20 md:py-4">
-        <div class="md:max-w-6xl md:mx-auto">
-          <div class="md:flex md:flex-wrap ">
-            <div class="md:w-1/2 text- md:text- md:pt-16">
+    <div style={{background: "#270B55"}} className="bg-bg md:overflow-hidden">
+      <div className="px-4 py-20 md:py-4">
+        <div className="md:max-w-6xl md:mx-auto">
+          <div className="md:flex md:flex-wrap ">
+            <div className="md:w-1/2 text- md:text- md:pt-16">
             <div className={!IsArabic?'text-left px-4  md:my-0 my-8 md:pt-8 pt-8 ':
             'text-right px-4  md:my-0 my-8 md:pt-8 pt-8 arabic-font-1'
         }>
@@ -31,13 +31,13 @@ const Banner2 = () => {
 
               <NavLink to='aboutus'
                 
-                class="mt-6 md:mx-6 mx-7 mb-12 md:mb-0 md:mt-10 inline-block py-2 px-6 text-white bgred hover:bg-purple-900 duration-500 rounded-lg shadow text-start no-underline"
+                className="mt-6 md:mx-6 mx-7 mb-12 md:mb-0 md:mt-10 inline-block py-2 px-6 text-white bgred hover:bg-purple-900 duration-500 rounded-lg shadow text-start no-underline"
                 >{t('home_banner_six')}</NavLink>
             </div>
-            <div class="md:w-1/2 relative">
-              <div class="hidden md:block">
+            <div className="md:w-1/2 relative">
+              <div className="hidden md:block">
                 <div
-                  class={!IsArabic?"-ml-24 -mb-40 absolute left-0 bottom-0 w-40 bg-white rounded-lg shadow-lg px-6 py-8 transform -rotate-12 z-10 swing "
+                  className={!IsArabic?"-ml-24 -mb-40 absolute left-0 bottom-0 w-40 bg-white rounded-lg shadow-lg px-6 py-8 transform -rotate-12 z-10 swing "
                     :
                     "-mr-24 -mb-10 absolute right-0 bottom-0 w-40 bg-white rounded-lg shadow-lg px-6 py-8 transform -rotate-12 z-10 swing arabic-font-1"
                 }
@@ -45,7 +45,7 @@ const Banner2 = () => {
                 >
                  
                 <img src={printIcon} alt="" />
-                  <div class="text-gray-800 font-bold text-center">
+                  <div className="text-gray-800 font-bold text-center">
                   
                   {t('home_banner_eight')} <br />{t('home_banner_seven')}
 
@@ -53,7 +53,7 @@ const Banner2 = () => {
                 </div>
 
                 <div
-                  class={!IsArabic?"ml-24 mb-16 absolute left-0 bottom-0 w-40 bg-white rounded-lg shadow-lg px-6 py-8 transform -rotate-12 swing"
+                  className={!IsArabic?"ml-24 mb-16 absolute left-0 bottom-0 w-40 bg-white rounded-lg shadow-lg px-6 py-8 transform -rotate-12 swing"
                 :
                 "mr-40 mb-16 absolute right-0 bottom-0 w-40 bg-white rounded-lg shadow-lg px-6 py-8 transform -rotate-12 swing arabic-font-1"
                 }
@@ -61,13 +61,13 @@ const Banner2 = () => {
                 >
                   <img src={graphicIcon} alt="" /> 
 
-                  <div class="text-gray-800 font-bold mt-2 text-center">
+                  <div className="text-gray-800 font-bold mt-2 text-center">
                     {t('home_banner_nine')}
                   </div>
                 </div>
 
                 <div
-                  class={!IsArabic?"ml-40 mb-16 absolute left-0 bottom-0 w-40 bg-white rounded-lg shadow-lg px-6 py-8 transform -rotate-12 swing"
+                  className={!IsArabic?"ml-40 mb-16 absolute left-0 bottom-0 w-40 bg-white rounded-lg shadow-lg px-6 py-8 transform -rotate-12 swing"
                     :
                     "mr-24 mb-16 absolute right-0 bottom-0 w-40 bg-white rounded-lg shadow-lg px-6 py-8 transform -rotate-12 swing arabic-font-1"
                  }
@@ -75,28 +75,28 @@ const Banner2 = () => {
                 >
                   <img src={webDev} alt="" /> 
 
-                  <div class=" font-bold text-gray-800 text-center">
+                  <div className=" font-bold text-gray-800 text-center">
                    
  {t('home_banner_ten')} <br /> {t('home_banner_eleven')}
                   </div>
                 </div>
 
                 <div
-                  class={!IsArabic?"mt-10 w-full absolute right-0 top-0 flex rounded-lg bg-white overflow-hidden transform -rotate-12"
+                  className={!IsArabic?"mt-10 w-full absolute right-0 top-0 flex rounded-lg bg-white overflow-hidden transform -rotate-12"
                 :
                 "mt-10 w-full absolute -left-64 top-0 flex rounded-lg bg-white overflow-hidden transform -rotate-12"
                 }
                 style={{zIndex:'1',marginRight:'-220px'}}
                 >
-                  <div class="" style={{height:' 560px'}}></div>
+                  <div className="" style={{height:' 560px'}}></div>
                 <img src={homebg} alt="" />
                 </div>
 
                 <div
-                  class="w-full absolute left-0 bottom-0 ml-1 transform  -rotate-12"
+                  className="w-full absolute left-0 bottom-0 ml-1 transform  -rotate-12"
                  style={{zIndex:'1',marginBottom:'-360px'}}
                 >
-                  <div class="grid--gray h-48 w-48"></div>
+                  <div className="grid--gray h-48 w-48"></div>
                 </div>
               </div>
 
@@ -106,7 +106,7 @@ const Banner2 = () => {
         </div>
       </div>
       <svg
-        class="fill-current text-white hidden md:block"
+        className="fill-current text-white hidden md:block"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1440 320"
       >

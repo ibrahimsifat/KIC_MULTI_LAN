@@ -1,5 +1,4 @@
 import React from 'react';
-import AllPortfolioBanner from './AllPortfolioBanner';
 import Footer from '../../shared/Footer'
 import ProtfolioBanner2 from './ProtfolioBanner2';
 const AllPortfolio = () => {

@@ -1,13 +1,8 @@
 import React from 'react';
 import './HomePortfolio.css'
-import cookies from 'js-cookie'
-import Fade from 'react-reveal/Fade';
-
 import Sabe from '../../../img/home-portfolio-shep.png'
-import { useTranslation } from 'react-i18next';
 const HomePortfolio = () => {
-  const { t } = useTranslation()
-  const IsArabic=cookies.get('i18next') ==='ar'
+
     return (
         <div className=' homePortfolioBg relative '>
              <div className=''>

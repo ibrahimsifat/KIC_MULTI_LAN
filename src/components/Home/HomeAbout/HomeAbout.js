@@ -1,5 +1,5 @@
 import cookies from 'js-cookie'
-import { faChevronRight, faCube, faPencilRuler } from "@fortawesome/free-solid-svg-icons";
+import { faChevronRight,  faPencilRuler } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { useTranslation } from "react-i18next";
@@ -8,7 +8,6 @@ import Img from '../../../img/home-about.png'
 
 
 const pincilICon=<FontAwesomeIcon size='2x' icon={faPencilRuler}/>
-const cubeICon=<FontAwesomeIcon  icon={faCube}/>
 const right=<FontAwesomeIcon  icon={faChevronRight}/>
 
 function HomeAbout() {

@@ -106,25 +106,25 @@ useEffect(() => {
                {t('Navigation_home')}
                 </NavLink>
                 </li>
-                <li class="group inline-block login">
+                <li className="group inline-block login">
   <button
    
   >
-    <p  onClick={() => setNavbarOpen(!navbarOpen)} class="no-underline text-li	 py-2 flex items-center text-sm uppercase font-bold leading-snug md:mx-3 text-white md:my-0 my-2 hover:text-indigo-300 duration-500 "> {t('Navigation_About')}</p>
+    <p  onClick={() => setNavbarOpen(!navbarOpen)} className="no-underline text-li	 py-2 flex items-center text-sm uppercase font-bold leading-snug md:mx-3 text-white md:my-0 my-2 hover:text-indigo-300 duration-500 "> {t('Navigation_About')}</p>
   
   </button>
   <ul
-    class="bg-indigo-800 border-2 border-indigo-600  rounded-sm transform scale-0 group-hover:scale-100 absolute 
+    className="bg-indigo-800 border-2 border-indigo-600  rounded-sm transform scale-0 group-hover:scale-100 absolute 
   transition duration-150 ease-in-out origin-top px-3 "
   >
   <li>
-    <NavLink to='/aboutus' onClick={() => setNavbarOpen(!navbarOpen)} class="rounded-sm no-underline text-white text-li cursor-pointer mb-2  block  mt-3 uppercase">{t('Navigation_About')}</NavLink>
+    <NavLink to='/aboutus' onClick={() => setNavbarOpen(!navbarOpen)} className="rounded-sm no-underline text-white text-li cursor-pointer mb-2  block  mt-3 uppercase">{t('Navigation_About')}</NavLink>
     </li>
   <li>
-    <NavLink to='/visions' onClick={() => setNavbarOpen(!navbarOpen)} class="rounded-sm no-underline text-white text-li cursor-pointer mb-2  block  mt-3 uppercase">{t('home_vision_first')}</NavLink>
+    <NavLink to='/visions' onClick={() => setNavbarOpen(!navbarOpen)} className="rounded-sm no-underline text-white text-li cursor-pointer mb-2  block  mt-3 uppercase">{t('home_vision_first')}</NavLink>
     </li>
   <li>
-    <NavLink to='/history' onClick={() => setNavbarOpen(!navbarOpen)} class="rounded-sm no-underline text-white text-li cursor-pointer mb-2  block  mt-3 uppercase">{t('home_history')}</NavLink>
+    <NavLink to='/history' onClick={() => setNavbarOpen(!navbarOpen)} className="rounded-sm no-underline text-white text-li cursor-pointer mb-2  block  mt-3 uppercase">{t('home_history')}</NavLink>
     </li>
  
 
@@ -144,19 +144,19 @@ useEffect(() => {
                {t('Navigation_Service')}
                 </NavLink>
                 </li>
-                <li class="group inline-block login">
+                <li className="group inline-block login">
   <button
    
   >
-    <NavLink to='/allclients' onClick={() => setNavbarOpen(!navbarOpen)} class="no-underline text-li	 py-2 flex items-center text-sm uppercase font-bold leading-snug md:mx-3 text-white md:my-0 my-2 hover:text-indigo-300 duration-500 ">{t('Navigation_Clients')}</NavLink>
+    <NavLink to='/allclients' onClick={() => setNavbarOpen(!navbarOpen)} className="no-underline text-li	 py-2 flex items-center text-sm uppercase font-bold leading-snug md:mx-3 text-white md:my-0 my-2 hover:text-indigo-300 duration-500 ">{t('Navigation_Clients')}</NavLink>
   
   </button>
   <ul
-    class="bg-indigo-800 border-2 border-indigo-600  rounded-sm transform scale-0 group-hover:scale-100 absolute 
+    className="bg-indigo-800 border-2 border-indigo-600  rounded-sm transform scale-0 group-hover:scale-100 absolute 
   transition duration-150 ease-in-out origin-top px-3 "
   >
-  <li><NavLink to='/allclients' onClick={() => setNavbarOpen(!navbarOpen)} class="rounded-sm no-underline text-white text-li cursor-pointer mb-2  block  mt-2 uppercase">{t('Navigation_Clients')}</NavLink></li>
-  <p> <NavLink to='/allclientsrecognition' onClick={() => setNavbarOpen(!navbarOpen)} class="rounded-sm no-underline text-white text-li cursor-pointer mb-2  block  mt-2 uppercase">{t('Navigation_recognition')}</NavLink></p>
+  <li><NavLink to='/allclients' onClick={() => setNavbarOpen(!navbarOpen)} className="rounded-sm no-underline text-white text-li cursor-pointer mb-2  block  mt-2 uppercase">{t('Navigation_Clients')}</NavLink></li>
+  <p> <NavLink to='/allclientsrecognition' onClick={() => setNavbarOpen(!navbarOpen)} className="rounded-sm no-underline text-white text-li cursor-pointer mb-2  block  mt-2 uppercase">{t('Navigation_recognition')}</NavLink></p>
 
 
    

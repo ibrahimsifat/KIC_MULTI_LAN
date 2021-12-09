@@ -1,17 +1,9 @@
 import React, { useEffect } from 'react';
-
-import cookies from 'js-cookie'
-import { Link, NavLink } from 'react-router-dom';
-import kicFristImg from '../../../img/kicPort.png'
 import '../../../App.css'
-
-
-import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
 import SinglePortfolio from '../../AllPortfolio/SinglePortfolio';
 const Homeservices = () => {
-    const IsArabic=cookies.get('i18next') ==='ar'
-    const { t } = useTranslation()
+   
     const [portfolios,setPortfolios]=useState([])
     useEffect(()=>{
         fetch('AllPortfolio.json')

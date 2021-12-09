@@ -1,8 +1,9 @@
 import React from 'react';
+import Footer from '../../shared/Footer';
 import ContactAgency from './ContactAgency';
 import ContactBanner from './ContactBanner';
 
-import ContactFooter from './ContactFooter';
+
 
 const ContactUs = () => {
     return (
@@ -11,7 +12,8 @@ const ContactUs = () => {
             <ContactBanner></ContactBanner>
             <ContactAgency></ContactAgency>
             {/* <HomeClients></HomeClients> */}
-            <ContactFooter></ContactFooter>
+            {/* <ContactFooter></ContactFooter> */}
+            <Footer></Footer>
         </div>
     );
 };

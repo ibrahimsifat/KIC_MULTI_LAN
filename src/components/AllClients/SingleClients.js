@@ -10,7 +10,7 @@ import '../../App.css'
 const search=<FontAwesomeIcon icon={faSearch}/>
 
 const SingleClients = ({client,handleClientDetails}) => {
-    const {img,img2,img3,img4,id}=client
+    const {img,id}=client
   
     return (
            <div className=" mx-auto  w-32 img-hover duration-700  ">  

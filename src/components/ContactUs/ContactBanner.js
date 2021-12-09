@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import cookies from 'js-cookie'
 import emailjs from 'emailjs-com'
 import './ContactUs.css'
 import { useTranslation } from 'react-i18next';
@@ -22,9 +21,8 @@ const ContactBanner = () => {
         ).catch(error=>console.log(error))
        e.target.reset()
     }
-    const IsArabic=cookies.get('i18next') ==='ar'
-const massageAlert=<div class="bg-green-100 rounded-lg p-4 mb-4 text-sm text-green-700" role="alert">
-<span class="font-medium">
+const massageAlert=<div className="bg-green-100 rounded-lg p-4 mb-4 text-sm text-green-700" role="alert">
+<span className="font-medium">
 {t('Contact_one')}</span>
 </div>
     return (

@@ -15,7 +15,6 @@ import AllProfileDetails from './components/AllPortfolio/AllProfileDetails'
 import PromotionalGefts from './components/PromotionalGefts/PromotionalGefts'
 import KicMision from './components/KicMision/KicMision'
 import History from './components/History/History'
-import Philosophy from './components/Home/Philosophy/Philosophy'
 import PHILOSOPHY3 from './components/Home/Philosophy/PHILOSOPHY3'
 export default function App() {
 
@@ -49,12 +48,12 @@ export default function App() {
              {showButton && (
         
         <button onClick={scrollToTop} id="topButton"
-        class="fixed z-10 hover:bg-purple-800 hover:text-red-700 duration-500  md:p-3 p-2 bg-white rounded-full shadow-md bottom-10 right-10 animate-bounce">
-        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 10l7-7m0 0l7 7m-7-7v18">
+        className="fixed z-10 hover:bg-purple-800 hover:text-red-700 duration-500  md:p-3 p-2 bg-white rounded-full shadow-md bottom-10 right-4 ">
+        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M5 10l7-7m0 0l7 7m-7-7v18">
             </path>
         </svg>
-        <div class="absolute top-0 -left-4 w-10 h-10 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob "></div>
+     
         </button>
       )}
             <BrowserRouter>

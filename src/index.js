@@ -33,7 +33,7 @@ i18next
 
 const loadingMarkup = (
   <div className="py-4 text-center">
-   <div class="loader">Loading...</div>
+   <div className="loader">Loading...</div>
   </div>
 )
 

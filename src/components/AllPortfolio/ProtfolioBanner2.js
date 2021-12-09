@@ -3,7 +3,6 @@ import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import SinglePortfolio from './SinglePortfolio';
 import cookies from 'js-cookie'
-import kicFristImg from '../../img/kicPort2.jpg'
 import Navigation3 from '../../shared/Navigation3';
 const ProtfolioBanner2 = () => {
     const { t } = useTranslation()
@@ -47,7 +46,9 @@ style={{height:'500px',maxHeight:'560px'}} >
                             {t('allPortfolio_five')}
                             </p>
                            <div className='mx-4'>
-                           <Link className='bg-btn px-4 py-2 mb-4 mx-auto inline-block text-xl font-semibold no-underline duration-500 rounded-md mx-12 text-white'
+                               
+                           <Link className='bg-btn lg:px-4 py-2 mb-4 mx-auto inline-block 
+                           lg:text-xl md:text-md text-sm font-semibold no-underline duration-500 rounded-md mx-12 text-white'
                            to="../Profile.pdf" target="_blank" download>
                             {t('allPortfolio_six')}
                             </Link>

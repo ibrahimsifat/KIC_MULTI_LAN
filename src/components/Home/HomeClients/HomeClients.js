@@ -2,29 +2,21 @@ import React, { useEffect } from 'react';
 import clientBgIcon from '../../../img/client-bg-icon.png'
 import { useTranslation } from 'react-i18next';
 import cookies from 'js-cookie'
-import { CarouselProvider, Slider} from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
-import SingleHomeSlide from './SingleHomeSlide';
 import { useState } from 'react/cjs/react.development';
-import { useHistory } from 'react-router';
 const HomeClients = () => {
 
     const IsArabic=cookies.get('i18next') ==='ar'
-    let history=useHistory()
-    const handlehomeClients=(id)=>{
-        const url= `allclientsdetails/${id}`
-        history.push(url)
-
-console.log(id);
-    }
+   
+   
     const { t } = useTranslation()
-    const [users,setUsers]=useState([])
+    const [setUsers]=useState([])
 
     useEffect(()=>{
         fetch('../AllMeal.json')
         .then(res=>res.json())
         .then(data=>setUsers(data))
-    },[])
+    },[setUsers])
    
     return (
         <div className='-mt-24'>
