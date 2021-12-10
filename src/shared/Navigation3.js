@@ -102,7 +102,7 @@ useEffect(() => {
   <button
    
   >
-    <NavLink to='/aboutus'  onClick={() => setNavbarOpen(!navbarOpen)} className="no-underline text-li	 md:py-2 flex items-center text-sm uppercase font-bold leading-snug hover:text-pink-500  lg:mx-4 text-black md:my-0 md:my-2 duration-500 "> {t('Navigation_About')}</NavLink>
+    <NavLink to='/aboutus' activeClassName="selected" onClick={() => setNavbarOpen(!navbarOpen)} className="no-underline text-li	 md:py-2 flex items-center text-sm uppercase font-bold leading-snug hover:text-pink-500  lg:mx-4 text-black md:my-0 md:my-2 duration-500 "> {t('Navigation_About')}</NavLink>
   
   </button>
   <ul
@@ -160,7 +160,7 @@ useEffect(() => {
   <button
    
   >
-    <NavLink to='/allclients' onClick={() => setNavbarOpen(!navbarOpen)} className="no-underline text-li	 md:py-2 flex items-center text-sm uppercase font-bold leading-snug hover:text-pink-500  lg:mx-4 text-black md:my-0 my-2 hover:text-indigo-300 duration-500 ">{t('Navigation_Clients')}</NavLink>
+    <NavLink to='/allclients' activeClassName="selected" onClick={() => setNavbarOpen(!navbarOpen)} className="no-underline text-li	 md:py-2 flex items-center text-sm uppercase font-bold leading-snug hover:text-pink-500  lg:mx-4 text-black md:my-0 my-2 hover:text-indigo-300 duration-500 ">{t('Navigation_Clients')}</NavLink>
   
   </button>
   <ul

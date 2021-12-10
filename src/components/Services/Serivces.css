@@ -46,7 +46,7 @@
 
 /* border animation  */
 
-a:after {
+.border-line:after {
     display: block;
     content: '';
     border-bottom: solid 3px #fff;
@@ -54,10 +54,10 @@ a:after {
     transition: transform 250ms ease-in-out;
 }
 
-a:hover:after {
+.border-line:hover:after {
     transform: scaleX(1);
 }
 
-a.fromLeft:after {
+.border-line.fromLeft:after {
     transform-origin: 0% 50%;
 }

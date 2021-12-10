@@ -13,12 +13,12 @@ const SingleClients = ({client,handleClientDetails}) => {
     const {img,id}=client
   
     return (
-           <div className=" mx-auto  w-32 img-hover duration-700  ">  
-            <div className=" transition duration-300 ease-in-out xl:mb-0 lg:mb-0 md:mb-0 mb-6 cursor-pointer group">
+           <div className=" mx-auto  img-hover duration-700  ">  
+            <div className=" transition duration-300 ease-in-out  cursor-pointer group">
                 
-                <div className="overflow-hidden relative  my-2 rounded-md item-zoom" onClick={() => handleClientDetails(id)}>
+                <div className="overflow-hidden relative  rounded-md item-zoom" onClick={() => handleClientDetails(id)}>
                
-                <img className="w-full transition duration-700  border  " src={img} alt=""/>
+                <img className="w-full transition duration-700  border-2 border-gray-200 border-opacity-50   " src={img} alt=""/>
           
                     <div className="absolute bottom-0  h-full w-full flex justify-center items-center from-gray-500 bg-gray-900 group-hover:bg-opacity-75   transition duration-500 ease-in-out opacity-0 group-hover:opacity-100 ">
                 

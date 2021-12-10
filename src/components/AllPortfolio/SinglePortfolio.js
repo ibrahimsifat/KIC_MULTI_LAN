@@ -21,7 +21,7 @@ console.log(id);
 
     return (
    
-           <div className=" mx-auto  img-hover duration-700  ">  
+           <div className=" mx-auto  img-hover duration-700 border border-white ">  
            
             <div className="transition duration-300 ease-in-out xl:mb-0 lg:mb-0 md:mb-0 mb-6 cursor-pointer group">
               <Zoom >   

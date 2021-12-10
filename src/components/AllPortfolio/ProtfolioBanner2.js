@@ -32,13 +32,15 @@ style={{height:'500px',maxHeight:'560px'}} >
         </div>
        
     </div>
-    <div className="flex w-10/12 mx-auto rounded shadow-lg ">
-                <div  className="bg-blue-100 flex flex-wrap ">
-                    <div className="w-full md:w-2/3 rounded-t ">	
-                        <img src='https://i.ibb.co/rZrJpmS/43.jpg' className="w-full h-full shadow" alt=''/>
+    <div className="flex w-10/12 mx-auto rounded  ">
+                <div  className="bg-blue-100 grid sm:grid-cols-3">
+               
+                    <div className='col-span-2'>
+                    <img  src='https://i.ibb.co/rZrJpmS/43.jpg' className=" h-full " alt=''/>
+           
                     </div>
 
-                    <div className={!IsArabic?'monsterratFont w-full md:w-1/3 flex flex-col flex-grow items-center  flex-shrink':"arabic-font-1 w-full md:w-1/3 flex flex-col flex-grow flex-shrink" }>
+                    <div className={!IsArabic?'monsterratFont w-full flex flex-col flex-grow items-center h-full flex-shrink':"arabic-font-1 w-full h-full flex-col flex-grow flex-shrink" }>
                         <div className="flex-1 bg-white rounded-t rounded-b-none bg-purple-50 md:pt-44 ">
                             
                             <div className="w-full font-bold text-xl text-gray-900 px-6 mb-7 mt-3">👋 {t('allPortfolio_four')}</div>
@@ -47,7 +49,7 @@ style={{height:'500px',maxHeight:'560px'}} >
                             </p>
                            <div className='mx-4'>
                                
-                           <Link className='bg-btn lg:px-4 py-2 mb-4 mx-auto inline-block 
+                           <Link className='bg-btn lg:px-4 px-2 py-2 mb-4 mx-auto inline-block 
                            lg:text-xl md:text-md text-sm font-semibold no-underline duration-500 rounded-md mx-12 text-white'
                            to="../Profile.pdf" target="_blank" download>
                             {t('allPortfolio_six')}

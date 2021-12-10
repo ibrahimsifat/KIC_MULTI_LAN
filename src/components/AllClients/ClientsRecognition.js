@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Footer from '../../shared/Footer'
 import slider1 from '../../img/Recognition1.jpg'
 import slider2 from '../../img/Recognition2.jpg'
 import slider3 from '../../img/Recognition3.jpg'
@@ -16,7 +16,7 @@ const ClientsRecognition = () => {
          <img src={t('clientRecognitionBanner')} alt="" />
         
            </div>
-         <div className='bg-client-award'>
+         <div className='bg-client-award mb-10'>
          <div  id="carouselExampleDark" className="carousel carousel-dark md:w-8/12 w-9/12 mx-auto slide" data-bs-ride="carousel">
   <div className="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
@@ -57,6 +57,7 @@ const ClientsRecognition = () => {
   </button>
 </div>
          </div>
+         <Footer></Footer>
         </div>
     );
 };
