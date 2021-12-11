@@ -15,7 +15,8 @@ const AboutIdea = () => {
                   <img data-aos="fade-left" data-aos-easing="linear"
      data-aos-duration="1000" src={IdeaIcon} alt="" />
                   </div>  
-              <div className='flex justify-center items-center md:mr-44   col-span-2   '>
+              <div data-aos="fade-left" data-aos-easing="linear"
+     data-aos-duration="1000" className='flex justify-center items-center md:mr-44   col-span-2   '>
                         
                     <div className={IsArabic?' md:ml-0 ml-6 ':' md:ml-44 ml-6  '} > 
                                     

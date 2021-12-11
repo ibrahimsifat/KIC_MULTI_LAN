@@ -2,6 +2,8 @@ import { Turn as Hamburger } from 'hamburger-react'
 import React, { useEffect, useState } from "react";
 import {  NavLink } from "react-router-dom";
 import '../App.css'
+import Slide from 'react-reveal/Slide';
+import Rotate from 'react-reveal/Rotate';
 import logo from '../../src/img/logo.png'
 import { useTranslation } from 'react-i18next';
 import i18next from 'i18next'
@@ -46,18 +48,19 @@ useEffect(() => {
 
 
   return (
-    <div className={!IsArabic?'monsterratFont bg-white sm:-mt-5 lg:flex  items-center justify-center ':"arabic-font-1  lg:flex  items-center justify-center bg-white" }>
+    <div className={!IsArabic?'monsterratFont bg-white sm:-mt-5 lg:flex  items-center justify-center bg-opacity-60 ':"arabic-font-1  lg:flex  items-center justify-center bg-white" }>
       <div className=" z-30 navigation  lg:flex  items-center justify-between">
       
         <div className="    mx-auto flex  lg:px-5">
           <div className="  rounded-t-2xl relative flex items-center justify-between lg:w-auto lg:static lg:block lg:justify-start">
           <div className="flex justify-start items-center mr-auto">
-                <div>
+          <Rotate top left>  <div>
                     <NavLink className='relative  sm:mx-4 ' to='/'> <img className=' md:w-16 sm:w-14 w-14 sm:mx-6 mx-3 md:pt-0 pt-2 md:-mb-4' src={logo} alt="" />
                     {/* <p className={!IsArabic?'md:w-6 md:h-6 w-3 h-3 absolute lg:top-10 md:top-5 top-0 md:-right-14  -right-14 rounded-full bg-red-500 animate-ping':'md:w-6 md:h-6 w-3 h-3  absolute top-0 right-2 rounded-full bg-red-500 animate-ping'}>
                     </p> */}
                     </NavLink>
                 </div>
+                </Rotate>
                 {/* <div className='md:ml-3'>
 
                     <h6 className='monsterratFont md:text-md lg:text-xl text-sm font- -m-2 uppercase text-gray-400 '>   {t('Logo_text_1')}</h6>
@@ -79,6 +82,8 @@ useEffect(() => {
                     <Hamburger toggled={isOpen} toggle={setOpen} />
                       </button>
                 </div>
+                <Slide top>
+        
           <div
             className={
               "lg:flex flex-grow items-center md:bg-transparent  lg:mt-6 " +
@@ -86,7 +91,7 @@ useEffect(() => {
             }
             id="example-navbar-danger"
           >
-            <ul className={!IsArabic?"block  bg-white z-50 navnav  rounded-b-2xl  md:py-0 py-2 px-3 md:t-center text-bl md:flex flex-col lg:flex-row list-none md:ml-auto mx-auto":"block z-50 navnav  rounded-b-2xl  md:py-0 py-2 px-3 md:t-center text-bl md:flex flex-col lg:flex-row list-none md:ml-auto mx-auto"}
+            <ul className={!IsArabic?"block bg-white  z-50 navnav  rounded-b-2xl  md:py-0 py-2 px-3 md:t-center text-bl md:flex flex-col lg:flex-row list-none md:ml-auto mx-auto":"block z-50 navnav bg-white  rounded-b-2xl  md:py-0 py-2 px-3 md:t-center text-bl md:flex flex-col lg:flex-row list-none md:ml-auto mx-auto"}
             
             >
           <li className={!IsArabic?"md:mr-5 fromLeft":"md:ml-3  fromLeft"}>
@@ -102,7 +107,7 @@ useEffect(() => {
   <button
    
   >
-    <NavLink to='/aboutus' activeClassName="selected" onClick={() => setNavbarOpen(!navbarOpen)} className="no-underline text-li	 md:py-2 flex items-center text-sm uppercase font-bold leading-snug hover:text-pink-500  lg:mx-4 text-black md:my-0 md:my-2 duration-500 "> {t('Navigation_About')}</NavLink>
+    <NavLink to='/aboutus' activeClassName="selected" onClick={() => setNavbarOpen(!navbarOpen)} className="no-underline text-li	 md:py-2 flex items-center text-sm uppercase font-bold leading-snug hover:text-pink-500  lg:mx-4 text-black md:my-0 md:my-2 duration-300 "> {t('Navigation_About')}</NavLink>
   
   </button>
   <ul
@@ -150,7 +155,7 @@ useEffect(() => {
 
                 <li className="lg:mx-4  fromLeft">
                 <NavLink to='/services' activeClassName="selected"
-                  className="no-underline text-li	text-black md:my-0 my-2 hover:text-indigo-300 duration-500 py-2 flex items-center text-sm uppercase font-bold leading-snug hover:text-pink-500   "
+                  className="no-underline text-li	text-black md:my-0 my-2 hover:text-indigo-300 duration-300 py-2 flex items-center text-sm uppercase font-bold leading-snug hover:text-pink-500   "
                   onClick={() => setNavbarOpen(!navbarOpen)}
                 >
                {t('Navigation_Service')}
@@ -160,7 +165,7 @@ useEffect(() => {
   <button
    
   >
-    <NavLink to='/allclients' activeClassName="selected" onClick={() => setNavbarOpen(!navbarOpen)} className="no-underline text-li	 md:py-2 flex items-center text-sm uppercase font-bold leading-snug hover:text-pink-500  lg:mx-4 text-black md:my-0 my-2 hover:text-indigo-300 duration-500 ">{t('Navigation_Clients')}</NavLink>
+    <NavLink to='/allclients' activeClassName="selected" onClick={() => setNavbarOpen(!navbarOpen)} className="no-underline text-li	 md:py-2 flex items-center text-sm uppercase font-bold leading-snug hover:text-pink-500  lg:mx-4 text-black md:my-0 my-2 hover:text-indigo-300 duration-300 ">{t('Navigation_Clients')}</NavLink>
   
   </button>
   <ul
@@ -180,7 +185,7 @@ useEffect(() => {
 
               <li className="lg:mx-4  fromLeft">
                 <NavLink to='/promotionalgefts' activeClassName="selected"
-                  className="no-underline text-li	text-black md:my-0 my-2 hover:text-indigo-300 duration-500 py-2 flex items-center text-sm uppercase font-bold leading-snug hover:text-pink-500     "
+                  className="no-underline text-li	text-black md:my-0 my-2 hover:text-indigo-300 duration-300 py-2 flex items-center text-sm uppercase font-bold leading-snug hover:text-pink-500     "
                   onClick={() => setNavbarOpen(!navbarOpen)}
                 >
                
@@ -189,7 +194,7 @@ useEffect(() => {
                 </li>
               <li className="lg:mx-4  fromLeft">
                 <NavLink to='/philosophy' activeClassName="selected"
-                  className="no-underline text-li	text-black md:my-0 my-2 hover:text-indigo-300 duration-500 py-2 flex items-center text-sm uppercase font-bold leading-snug hover:text-pink-500     "
+                  className="no-underline text-li	text-black md:my-0 my-2 hover:text-indigo-300 duration-300 py-2 flex items-center text-sm uppercase font-bold leading-snug hover:text-pink-500     "
                   onClick={() => setNavbarOpen(!navbarOpen)}
                 >
                
@@ -198,7 +203,7 @@ useEffect(() => {
                 </li>
               <li className="lg:mx-4  fromLeft">
                 <NavLink to='/allportfolio' activeClassName="selected"
-                  className="no-underline text-li	text-black md:my-0 my-2 hover:text-indigo-300 duration-500 py-2 flex items-center text-sm uppercase font-bold leading-snug hover:text-pink-500     "
+                  className="no-underline text-li	text-black md:my-0 my-2 hover:text-indigo-300 duration-300 py-2 flex items-center text-sm uppercase font-bold leading-snug hover:text-pink-500     "
                   onClick={() => setNavbarOpen(!navbarOpen)}
                 >
                
@@ -208,7 +213,7 @@ useEffect(() => {
                 <li className="lg:mx-4  fromLeft">
                 <NavLink to='/contactus' activeClassName="selected"
 
-                  className="no-underline text-li	text-black md:my-0 my-2 hover:text-indigo-300 duration-500 py-2 flex items-center text-sm uppercase font-bold leading-snug hover:text-pink-500     "
+                  className="no-underline text-li	text-black md:my-0 my-2 hover:text-indigo-300 duration-300 py-2 flex items-center text-sm uppercase font-bold leading-snug hover:text-pink-500     "
                   onClick={() => setNavbarOpen(!navbarOpen)}
                 >
                   {t('Navigation_Touch')}
@@ -218,13 +223,13 @@ useEffect(() => {
              
              <div className="dropdown">
             <button
-              className="btn  dropdown-toggle cursor-pointer text-black md:my-0 my-2 hover:text-indigo-300 duration-500 	outlineglobal"
+              className="btn  dropdown-toggle cursor-pointer text-black md:my-0 my-2 hover:text-indigo-300 duration-300 	outlineglobal"
               type="button"
               id="dropdownMenuButton1"
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-             <i className='text-black md:my-0 my-2 hover:text-indigo-300 duration-500'>{globalIcon}</i>
+             <i className='text-black md:my-0 my-2 hover:text-indigo-300 duration-300'>{globalIcon}</i>
             </button>
             <ul className="dropdown-menu outlineglobal" aria-labelledby="dropdownMenuButton1">
               <p>
@@ -255,14 +260,17 @@ useEffect(() => {
           </div>
 {/*   
 <span className='md:mx-2 mx-3 mt-3 '>
-         <a href='https://www.facebook.com/KIC-Printing-Advertising-333673783382403/' target='_blank' rel="noreferrer" className='text-black md:my-0 my-2 hover:text-indigo-300 duration-500 '>{facebookIcon}</a>
+         <a href='https://www.facebook.com/KIC-Printing-Advertising-333673783382403/' target='_blank' rel="noreferrer" className='text-black md:my-0 my-2 hover:text-indigo-300 duration-300 '>{facebookIcon}</a>
 </span>
 <span className="md:mx-2 mx-3  mt-3">
-<a href='https://www.instagram.com/kicadvertising/' target='_blank' rel="noreferrer" className='text-black md:my-0 my-2 hover:text-indigo-300 duration-500 '>{instagramIcon}</a>
+<a href='https://www.instagram.com/kicadvertising/' target='_blank' rel="noreferrer" className='text-black md:my-0 my-2 hover:text-indigo-300 duration-300 '>{instagramIcon}</a>
 </span> */}
 
             </ul>
           </div>
+
+</Slide>
+
         </div>
       </div>
      

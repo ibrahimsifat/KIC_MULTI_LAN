@@ -8,7 +8,7 @@ const Vision = () => {
   const { t } = useTranslation()
   const IsArabic=cookies.get('i18next') ==='ar'
     return (
-        <div>
+      <Fade bottom>   <div>
           <div className="grid md:grid-cols-2">
           <div className="left">
                 <img src={VisionsBg} alt="" />
@@ -23,6 +23,7 @@ const Vision = () => {
             </div>
           </div>
         </div>
+        </Fade>
     );
 };
 
