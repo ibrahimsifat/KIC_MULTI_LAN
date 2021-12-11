@@ -3,11 +3,12 @@ import './Serivces.css'
 import cookies from 'js-cookie'
 import WebdesignBG from '../../img/serviceWebdesign-01.png'
 import { useTranslation } from 'react-i18next';
+import Fade from 'react-reveal/Fade';
 const IsArabic=cookies.get('i18next') ==='ar'
 const ServiceWebdesign = () => {
   const { t } = useTranslation()
     return (
-        <div className='mb-6'>
+      <Fade left> <div className='mb-6'>
             <div>
           <div className="grid md:grid-cols-2">
           <div className="left">
@@ -26,6 +27,7 @@ const ServiceWebdesign = () => {
           </div>
         </div>
         </div>
+        </Fade>
     );
 };
 

@@ -2,11 +2,12 @@ import React from 'react';
 import cookies from 'js-cookie'
 import { useTranslation } from 'react-i18next';
 import graphicBG from '../../img/graphicService.png'
+import Fade from 'react-reveal/Fade';
 const GraphicDesignService = () => {
   const IsArabic=cookies.get('i18next') ==='ar'
   const { t } = useTranslation()
     return (
-        <div className='mb-6 '>
+      <Fade left>  <div className='mb-6 '>
             <div>
           <div className="grid md:grid-cols-2">
           <div className="left">
@@ -22,6 +23,7 @@ const GraphicDesignService = () => {
           </div>
         </div>
         </div>
+        </Fade>
     );
 };
 

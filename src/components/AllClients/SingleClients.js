@@ -7,15 +7,16 @@ import '../../App.css'
 
 
 // const cart = <FontAwesomeIcon icon={faShoppingCart} />
+import Zoom from 'react-reveal/Zoom';
 const search=<FontAwesomeIcon icon={faSearch}/>
-
 const SingleClients = ({client,handleClientDetails}) => {
     const {img,id}=client
   
     return (
-           <div className=" mx-auto  img-hover duration-700  ">  
+        <div className=" mx-auto  img-hover duration-700  ">  
             <div className=" transition duration-300 ease-in-out  cursor-pointer group">
                 
+           <Zoom>     
                 <div className="overflow-hidden relative  rounded-md item-zoom" onClick={() => handleClientDetails(id)}>
                
                 <img className="w-full transition duration-700  border-2 border-gray-200 border-opacity-50   " src={img} alt=""/>
@@ -39,15 +40,17 @@ const SingleClients = ({client,handleClientDetails}) => {
 
                     </div>
                 </div>
+
+ </Zoom>
             </div>
             
  
 
-    
+   
 
             </div>
 
-   
+     
 
     );
 };

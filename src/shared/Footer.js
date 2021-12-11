@@ -6,10 +6,15 @@ import { useTranslation } from "react-i18next";
 import '../App.css'
 import Foot from "./Foot";
 import { FaFacebookF } from "react-icons/fa";
+import { FiInstagram } from "react-icons/fi";
+import { BsWhatsapp } from "react-icons/bs";
+import { BsTwitter } from "react-icons/bs";
+import { GrMail } from "react-icons/gr";
 
+import tippy from 'tippy.js';
+import 'tippy.js/dist/tippy.css';
 import { NavLink } from "react-router-dom";
-const faceBookIcon= <FontAwesomeIcon icon={faFacebookF} />
-const instagramIcon= <FontAwesomeIcon icon={faInstagram} />
+
 const IsArabic=cookies.get('i18next') ==='ar'
 const Footer = () => {
     const { t } = useTranslation()
@@ -21,7 +26,7 @@ const Footer = () => {
      <Pages></Pages>
          <Foot></Foot>
          </div> 
-         <p className="md:mt-8 mt-5 pb-2 text-center md:text-white text-black  "> {t('home_footer_copyright')} © 2021 KIC.</p>
+         <p className="md:mt-8 mt-5 pb-2 text-center text-white  "> {t('home_footer_copyright')} © 2021 KIC.</p>
    </div>
      </div>
     );
@@ -34,9 +39,9 @@ const Pages=()=>{
         <>
         <div className='mx-auto '>
 
-        <p className='text-xl text-white text- font-bold'>{t('Footer_Pages')}</p>
+        <p className='text-xl text-white text- font-bold mx-4'>{t('Footer_Pages')}</p>
         
-        <span className='border-b-2 border-red-600 block   border-fuchsia-600 w-16'></span>
+        <span className='border-b-2 border-red-600 block mx-4  border-fuchsia-600 w-16'></span>
         <div className="grid grid-cols-2 mx-4">
        
         <div className='hover:text-red-500 text-left '>
@@ -84,43 +89,84 @@ const Details=()=>{
 
              <div className='w-full flex mt-3'>
          
-
-<button id="facebook" class="bg-white  sticky duration-500 border-2 border-blue-600 fixed  w-12 transform hover:-translate-y-3   h-12 text-2xl rounded-full hover:bg-blue-600 hover:text-white text-blue-600 ">
-<FaFacebookF/>
+<a href="https://www.facebook.com/KIC-Printing-Advertising-333673783382403/" target="_blank" rel="noopener noreferrer">
+<button id="facebook" class="  sticky duration-500 border-2 border-blue-600 fixed  md:w-12 w-10 transform hover:-translate-y-3   md:h-12 h-10 text-2xl rounded-full hover:bg-blue-600 hover:text-white text-blue-600  flex justify-center items-center">
+<FaFacebookF className=""/>
 </button>
+</a>
 
 
 
-
-
-<button id="instagram" class=" border-2 hover:border-0 border-pink-500 bg-gradient-to-b text-2xl hover:from-indigo-600 hover:via-pink-600 hover:to-yellow-500 min-w-wull hover:text-white bg-white text-pink-600 w-12 h-12  transform hover:-translate-y-3 rounded-full duration-500 ">
-<i class="fab fa-instagram"></i>
+<a href="https://www.instagram.com/kicadvertising/" target="_blank" rel="noopener noreferrer">
+<button id="instagram" class="mx-2 border-2 hover:border-0 border-pink-500 bg-gradient-to-b text-2xl hover:from-indigo-600 hover:via-pink-600 hover:to-yellow-500 min-w-wull hover:text-white  text-pink-600 md:w-12 w-10 md:h-12 h-10  transform hover:-translate-y-3 rounded-full duration-500 flex justify-center items-center">
+<FiInstagram/>
 </button>
+</a>
 
-
-
-<button id="whatsapp" class="bg-white duration-500    w-12 h-12 border-2 rounded-full border-green-600 transform hover:-translate-y-3  text-2xl text-green-500 hover:bg-green-600 hover:text-white">
-<i class="fab fa-whatsapp"></i>
+<a href="https://wa.me/+966505353820" target="_blank" rel="noopener noreferrer">
+<button id="whatsapp" class=" duration-500    md:w-12 w-10 md:h-12 h-10 border-2 rounded-full border-green-600 transform hover:-translate-y-3  text-2xl text-green-500 hover:bg-green-600 hover:text-white flex justify-center items-center">
+<BsWhatsapp/>
 </button>
+</a>
 
-
-
-<button id="twitter" class="bg-white  transform hover:-translate-y-3  border-2 w-12 h-12 rounded-full duration-500 text-blue-400 border-blue-400 hover:bg-blue-400 hover:text-white text-2xl">
-<i class="fab fa-twitter"></i>
+<a href="https://twitter.com/home" target="_blank" rel="noopener noreferrer">
+<button id="twitter" class=" mx-2 transform hover:-translate-y-3  border-2 md:w-12 w-10 md:h-12 h-10 rounded-full duration-500 text-blue-400 border-blue-400 hover:bg-blue-400 hover:text-white text-2xl flex justify-center items-center">
+<BsTwitter/>
 </button>
+</a>
 
 
-<button id="youtube" class="bg-white transform hover:-translate-y-3  border-2 w-12 h-12 rounded-full duration-500 text-red-500 border-red-500 hover:bg-red-500 hover:text-white text-2xl">
-<i class="fab fa-youtube"></i>
-</button>
+<a href="mailto:atif@kicadv.com">
+<button id="mail" class=" transform hover:-translate-y-3  border-2 md:w-12 w-10 md:h-12 h-10 rounded-full duration-500 text-blue-500 border-blue-500  hover:bg-blue-500 hover:text-white text-2xl flex justify-center items-center">
+<GrMail/>
+  </button>
 
-
-<button id="snapchat" class="bg-white transform hover:-translate-y-3  border-2 w-12 h-12 rounded-full duration-500 text-yellow-300 border-yellow-300 hover:bg-yellow-300 hover:text-white text-2xl">
-<i class="fab fa-snapchat-ghost"></i>
-</button>  
+</a>
              </div>
         </div>
          </div>
     )
 }
+
+
+
+tippy('#facebook',{
+  content:'Facebook',
+  animation:'fade',
+  delay:[200,200]
+});
+tippy('#instagram',{
+  content:'Instagram',
+  animation:'fade',
+  delay:[200,200]
+});
+ tippy('#whatsapp',{
+  content:'Whatsapp',
+  animation:'fade',
+  delay:[200,200]
+});
+tippy('#twitter',{
+  content:'Twitter',
+  animation:'fade',
+  delay:[200,200]
+});
+tippy('#youtube',{
+  content:'Youtube',
+  animation:'fade',
+  placement: 'left-start',
+  delay:[200,200]
+});
+
+tippy('#mail',{
+  content:'Send us mail',
+  animation:'fade',
+  placement: 'top',
+  delay:[200,200]
+});
+
+
+
+
+
+
 export default Footer;

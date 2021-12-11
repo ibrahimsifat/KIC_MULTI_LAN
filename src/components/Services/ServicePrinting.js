@@ -3,12 +3,13 @@ import './Serivces.css'
 import cookies from 'js-cookie'
 import PrintingBG from '../../img/servicePrinting-0.png'
 import { useTranslation } from 'react-i18next';
+import Fade from 'react-reveal/Fade';
 const ServicePrinting = () => {
   const IsArabic=cookies.get('i18next') ==='ar'
   const { t } = useTranslation()
 
     return (
-        <div className='mb-6'>
+      <Fade right> <div className='mb-6'>
             <div>
           <div className="grid md:grid-cols-5  ">
             <div className=" col-span-3 print-bg right  flex justify-center items-center lg-pt-0 pt-8 md:h-96">
@@ -28,6 +29,7 @@ const ServicePrinting = () => {
           </div>
         </div>
         </div>
+        </Fade>
     );
 };
 
