@@ -1,5 +1,7 @@
 .bgImage {
     background-image: url(../../img/aboutPortfoliobg.png);
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 .bg-btn {

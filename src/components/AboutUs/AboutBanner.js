@@ -16,12 +16,13 @@ const { t } = useTranslation()
      data-aos-duration="1000" className={!IsArabic?'monsterratFont  md:mx-6 mx-4 md:w-8/12 text-start':"arabic-font-1  md:mx-6 mx-4 md:w-8/12 text-end" } >
                <p> <span className='textred text-3xl sm:text-2xl md:text-3xl lg:text-6xl tracking-tight	 font-bold'>{t('About_Banner_one')}</span></p>
                  <p className='tracking-widest text-3xl sm:text-4xl md:text-4xl lg:text-5xl text-white'>{t('About_Banner_two')}</p>
-                 <p className='text-white font-regular md:text-md text-sm md:mt-8 mt-3   '>
-                 {t('About_Banner_three')}</p>
-                 <p className='text-white font-regular md:text-md text-sm   mt-3 '>
+                 {!IsArabic?<p className='text-white font-regular md:text-md md:text-md  md:mt-8 mt-3   '>
+                 {t('About_Banner_three')}</p>:<p className='text-white md:text-xl   md:mt-8 mt-3   '>
+                 {t('About_Banner_three')}</p>}
+               {!IsArabic&&  <p className='text-white md:text-md     mt-3 '>
                  {t('About_Banner_four')}
-                </p>
-                 <p className='text-white font-regular md:text-md text-sm  mt-1  '>   {t('About_Banner_five')}</p>
+                </p>}
+                 
                </div>
             </div>
 

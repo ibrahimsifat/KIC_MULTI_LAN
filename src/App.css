@@ -40,6 +40,10 @@ body {
     border: 2px dotted black;
 }
 
+.my_container {
+    max-width: 1200px;
+}
+
 .footer-bg {
     background-image: url(./img/footerbg.png);
     background-repeat: no-repeat;
@@ -69,7 +73,7 @@ body {
 
 .selected {
     /* color: #FFCF2F; */
-    border-bottom: 3px solid #999;
+    border-bottom: 3px solid #555;
 }
 
 
@@ -203,4 +207,8 @@ li:hover>button svg {
 
 .min-w-32 {
     min-width: 8rem
+}
+
+.pushable {
+    background: linear-gradient( #111, #333);
 }

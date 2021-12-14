@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import SinglePortfolio from './SinglePortfolio';
 import cookies from 'js-cookie'
-import Navigation3 from '../../shared/Navigation3';
+
 const ProtfolioBanner2 = () => {
     const { t } = useTranslation()
     const [portfolios,setPortfolios]=useState([])
@@ -16,12 +16,12 @@ const ProtfolioBanner2 = () => {
     return (
         <div>
             
-            <div className="w-full m-0 p-0 bg-cover bg-bottom bgImage "
-style={{height:'500px',maxHeight:'560px'}} >
-    <Navigation3></Navigation3>
-        <div className="container  mx-auto text-center break-normal">
+            <div className=" m-0 p-0 bg-cover bg-bottom bgImage "
+style={{height:'400px',maxHeight:'460px'}} >
 
-                <p className="text-white mt-32 font-extrabold text-3xl md:text-5xl">
+        <div className="  mx-auto text-center break-normal">
+
+                <p className="text-white pt-32 font-extrabold text-3xl md:text-5xl">
                 {t('allPortfolio_one')}
                
                 </p>
@@ -32,15 +32,15 @@ style={{height:'500px',maxHeight:'560px'}} >
         </div>
        
     </div>
-    <div className="flex w-10/12 mx-auto rounded  ">
-                <div  className="bg-blue-100 grid sm:grid-cols-3">
+    <div className="my_container flex w-10/12 mx-auto rounded shadow  ">
+                <div  className="bg-blue-100 grid sm:grid-cols-3    ">
                
                     <div className='col-span-2'>
                     <img  src='https://i.ibb.co/rZrJpmS/43.jpg' className=" h-full " alt=''/>
            
                     </div>
 
-                    <div className={!IsArabic?'monsterratFont w-full flex flex-col flex-grow items-center h-full flex-shrink':"arabic-font-1 w-full h-full flex-col flex-grow flex-shrink" }>
+                    <div className={!IsArabic?'monsterratFont w-full flex flex-col flex-grow items-center h-full flex-shrink':'arabic-font-1 w-full flex flex-col flex-grow items-center h-full flex-shrink' }>
                         <div className="flex-1 bg-white rounded-t rounded-b-none bg-purple-50 md:pt-44 ">
                             
                             <div className="w-full font-bold text-xl text-gray-900 px-6 mb-7 mt-3">👋 {t('allPortfolio_four')}</div>

@@ -1,12 +1,12 @@
 .allclientbg {
-    background-image: url(../../img/clients-banner-1.jpg);
-    height: 500px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../img/clients-banner-1.jpg);
+    height: 400px;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 .bg-client-award {
-    background-image: url(../../img/bg-contant.png);
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(45, 44, 122, 0.5)), url(../../img/bg-contant.png);
 }
 
 .bgclientRecognition {

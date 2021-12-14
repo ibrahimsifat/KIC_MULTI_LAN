@@ -4,8 +4,6 @@ import { useParams } from 'react-router';
 import '../../App.css'
 import { NavLink } from 'react-router-dom';
 
-import Navigation3 from '../../shared/Navigation3';
-
 const AllclientDetails = () => {
 
     const {clientId}=useParams()
@@ -23,7 +21,7 @@ const AllclientDetails = () => {
     console.log('mached',matchClient);
     return (
         <div >
-          <Navigation3></Navigation3>
+          
           <div className='container flex justify-start  items-center my-5 '>
        <NavLink to='/allclients' className='flex justify-center mx-14 items-center border-b-2 border-purple-900 no-underline text-black font-semibold px-2 duration-300  mx-auto'> 
             <div className='mx-2 text-white duration-500 text-4xl no-underline'> 
@@ -146,6 +144,7 @@ const SingleDetails=({singleClient})=>{
            
        }
      </div>
+ 
         </>
     )
 }

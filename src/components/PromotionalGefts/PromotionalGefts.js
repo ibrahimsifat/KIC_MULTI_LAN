@@ -1,13 +1,12 @@
 import React from 'react';
 import Img from '../../img/promotional-gefts-(1).JPG'
 import Img2 from '../../img/promotional-gefts-(2).JPG'
-
-import Navigation3 from '../../shared/Navigation3';
+import './PromotionalGefts.css'
 const PromotionalGefts = () => {
     return (
-        <div>
-            <Navigation3></Navigation3>
-            <div id="carouselExampleDark" className="carousel carousel-dark w-8/12 slide mx-auto bg-gray-700" data-bs-ride="carousel">
+        <div className='bg-gray-00 geft-bg py-16'>
+         
+            <div id="carouselExampleDark" className="carousel carousel-dark md:w-9/12 slide  mx-auto bg-gray-700" data-bs-ride="carousel">
   <div className="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -37,6 +36,7 @@ const PromotionalGefts = () => {
     <span className="visually-hidden">Next</span>
   </button>
 </div>
+
         </div>
     );
 };

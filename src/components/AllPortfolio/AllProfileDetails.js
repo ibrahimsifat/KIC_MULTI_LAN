@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import '../../App.css'
 import { NavLink } from 'react-router-dom';
-import Navigation3 from '../../shared/Navigation3';
+
 const AllProfileDetails = () => {
     const {portfoliotId}=useParams()
     const [clients,setClients]=useState([])
@@ -19,7 +19,7 @@ const AllProfileDetails = () => {
     console.log('mached',matchClient);
     return (
         <div>
-          <Navigation3></Navigation3>
+    
             {
                 matchClient.map(singleClient=><SingleDetails
                 key={singleClient.id}
@@ -34,7 +34,7 @@ const SingleDetails=({singleClient})=>{
     return(<>
       
 
-<div className="container mx-auto my-8 py-8 px-3 md:px-6 rounded-lg ">
+<div className="container mx-auto mt-8 pt-8 px-3 md:px-6 rounded-lg ">
 <div className='container flex justify-start  items-center my-5 '>
        <NavLink to='/allportfolio' className='flex justify-center mx-14 items-center border-b-2 border-purple-900 no-underline text-black font-semibold px-2 duration-300  mx-auto'> 
             <div className='mx-2 text-white duration-500 text-4xl no-underline'> 

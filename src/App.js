@@ -15,7 +15,9 @@ import AllProfileDetails from './components/AllPortfolio/AllProfileDetails'
 import PromotionalGefts from './components/PromotionalGefts/PromotionalGefts'
 import KicMision from './components/KicMision/KicMision'
 import History from './components/History/History'
-import PHILOSOPHY3 from './components/Home/Philosophy/PHILOSOPHY3'
+import Footer from './shared/Footer'
+import Philosophy from './components/Home/Philosophy/Philosophy'
+import Navigation from './shared/Navigation'
 export default function App() {
 
 
@@ -57,6 +59,7 @@ export default function App() {
         </button>
       )}
             <BrowserRouter>
+            <Navigation></Navigation>
             <Switch>
           
             <Route  path='/home'>
@@ -97,7 +100,7 @@ export default function App() {
                 <History></History>
             </Route>
             <Route  path='/philosophy'>
-                <PHILOSOPHY3 ></PHILOSOPHY3>
+                <Philosophy></Philosophy>
             </Route>
             <Route exact path='/'>
                 <Home></Home>    
@@ -106,6 +109,7 @@ export default function App() {
                 <Home></Home>    
             </Route>
             </Switch>
+            <Footer></Footer>
             </BrowserRouter>
     
 

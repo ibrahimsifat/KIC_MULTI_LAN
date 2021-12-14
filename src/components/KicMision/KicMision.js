@@ -1,20 +1,22 @@
 import React from 'react';
-import cookies from 'js-cookie'
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import './KicVision.css'
-import VIsionImg from '../../img/mision.jpg'
-import VIsionImgArabic from '../../img/mision-arabic.jpg'
-import Navigation3 from '../../shared/Navigation3';
+import VIsionImg from '../../img/KICADV.png'
+import VIsionImg2 from '../../img/KICADVarabic.png'
+import cookies from 'js-cookie'
+
+import MisionTimeline from './MisionTimeline';
+
 const KicMision = () => {
-    const IsArabic=cookies.get('i18next') ==='ar'
+const IsArabic=cookies.get('i18next') ==='ar'
     const { t } = useTranslation()
     return (
-        <div >
-            <Navigation3></Navigation3>
+        <div className=''>
+       
             <div className='mb-16'>
                 <div className='VisionsBanner'>
-                <div className='   flex justify-center flex-col items-center pt-20'>
+                <div className='   flex justify-center flex-col items-center pt-44 '>
             <p className="text-black font-extrabold text-3xl md:text-5xl uppercase arabic-font-1">
                 
             {t('vision_first')}
@@ -27,14 +29,15 @@ const KicMision = () => {
                 </div>
                 
             </div>
-          {!IsArabic&&  <div className="">
-                <img className='block mx-auto' src={VIsionImg} alt="" />
-
-            </div>}
-            {IsArabic&&<div className="">
-                <img className='block mx-auto' src={VIsionImgArabic} alt="" />
-
-            </div>}
+         { !IsArabic? <div className="grid sm:grid-cols-2 justify-center md:w-10/12 mx-auto w-11/12 items-center">
+           <div><img src={VIsionImg} alt=""className='sm:border-r w-full' /></div>
+           <MisionTimeline ></MisionTimeline>
+           </div>: <div className="grid sm:grid-cols-2 justify-center md:w-10/12 mx-auto w-11/12 items-center"> 
+              <MisionTimeline ></MisionTimeline>
+           <div><img src={VIsionImg2} alt=""className='sm:border-r w-full' /></div>
+       
+           </div>}
+        
         </div>
     );
 };

@@ -1,5 +1,5 @@
 import React from 'react';
-import Footer from '../../shared/Footer';
+
 import Banner from './Banner/Banner';
 
 import HomePortfolio from './HomePortfolio/HomePortfolio';
@@ -19,7 +19,7 @@ const Home = () => {
             {/* <HomeSimpleService></HomeSimpleService> */}
             {/* <BootSlier></BootSlier> */}
             {/* <HomeClients2></HomeClients2> */}
-            <Footer></Footer>
+            
         </div>
     );
 };

@@ -2,6 +2,7 @@ import React from 'react';
 import './Serivces.css'
 import cookies from 'js-cookie'
 import PrintingBG from '../../img/servicePrinting-0.png'
+import PrintingBG2 from '../../img/servicePrinting-1.png'
 import { useTranslation } from 'react-i18next';
 import Fade from 'react-reveal/Fade';
 const ServicePrinting = () => {
@@ -24,7 +25,7 @@ const ServicePrinting = () => {
               </div>
             </div>
             <div className="left col-span-3 md:-mt-0 -mt-12 md:col-span-2">
-                <img className='lg:w-full md:h-96 md:w-full' src={PrintingBG} alt="" />
+                <img className='lg:w-full md:h-96 md:w-full' src={PrintingBG2} alt="" />
             </div>
           </div>
         </div>

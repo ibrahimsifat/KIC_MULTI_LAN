@@ -3,20 +3,20 @@ import cookies from 'js-cookie'
 import { useTranslation } from 'react-i18next';
 import Fade from 'react-reveal/Fade';
 import './Serivces.css'
-import Navigation3 from '../../shared/Navigation3';
 const ServicesBanner = () => {
     const IsArabic=cookies.get('i18next') ==='ar'
     const { t } = useTranslation()
     return (
-        <div className='service-bg-img h-screen	'>
+        <div className=' service-bg-img h-screen	'>
          <div className=''>
-         <Navigation3></Navigation3>
+
     <div className='flex justify-center items-center '>
-    <div className='grid lg:grid-cols-2 '>
-             <div className="home-content left flex flex-col justify-center lg:items-right items-end">
-        <Fade left>   <div className='md:w-8/12 w-12/12 px-3 lg:mt-52 md:mt-44 mt-24 block'>
-          <p className={!IsArabic?'monsterratFont text-white text-xl':"arabic-font-2 text-white text-xl" }>{t('Service_Banner_one')}</p>
-                <h1 className='bg-white py-1 md:w-64 w-52 ml-auto mt-4'> </h1>
+    <div className='my_container grid lg:grid-cols-3 '>
+             <div className="home-content col-span-2  left  -col justify-center lg:items-right items-end">
+        <Fade left> 
+          <div className=' px-3 lg:mt-52 md:mt-44 mt-16 block'>
+                <p className={!IsArabic?'monsterratFont text-white md:text-2xl sm:text-xl text-md':"arabic-font-2 text-white md:text-2xl sm:text-xl text-md" }>{t('Service_Banner_one')}</p>
+                <h1 className='bg-white py-1 md:w-80 sm:w-72 w-52 ml-auto mt-4 md:mr-8'> </h1>
           </div>
 </Fade>
              </div>

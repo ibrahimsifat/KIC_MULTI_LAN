@@ -4,21 +4,21 @@ import Hero from '../../../img/Hero.png'
 import './Banner.css'
 import { useTranslation } from 'react-i18next';
 import { AiOutlineDownload } from 'react-icons/ai';
-import Navigation3 from '../../../shared/Navigation3';
+
 import Fade from 'react-reveal/Fade';
 const Banner = () => {
     const { t } = useTranslation()
     const IsArabic=cookies.get('i18next') ==='ar'
     return (
          <div className={!IsArabic?'bg-img':'bg-img-arabic'}>
-         <div className=''>
-         <Navigation3></Navigation3>
+         <div className='pt-8'>
+         
    <Fade bottom> <div className='flex justify-center items-center '>
-    <div  className='grid md:grid-cols-2 '>
+    <div  className='my_container grid md:grid-cols-2 '>
              <div data-aos="fade-up-left"  data-aos-easing="linear"
      data-aos-duration="1000" className="home-content left flex flex-col justify-center lg:items-right items-center">
-                <div className={!IsArabic?'monsterratFont text-right px-4  md:my-0 my-8 md:pt-0 pt-8 ':
-                'text-right px-4  md:my-0 my-8 md:pt-0 pt-8 arabic-font-1 '}>
+                <div className={!IsArabic?'monsterratFont text-right md:pl-8 pl-0 md:mr-auto md:my-0 my-8 md:pt-0 pt-8 ':
+                'text-right md:ml-auto md:mr-1 px-3 md:my-0 my-8 md:pt-0 pt-8 arabic-font-1 '}>
                 <p><span className='text-3xl md:text-3xl text-white'>{t('home_banner_first')}</span> 
                 <span className='textred text-3xl sm:text-5xl md:text-5xl lg:text-6xl  font-bold'> {t('home_banner_second')}</span></p>
                  <p className=' text-3xl sm:text-4xl md:text-4xl lg:text-5xl text-white'>{t('home_banner_three')}</p>
