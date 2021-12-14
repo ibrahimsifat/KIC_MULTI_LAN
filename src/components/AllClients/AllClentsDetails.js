@@ -1,17 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { useHistory } from 'react-router';
+import useClients from '../../shared/useClients';
 
 
 import SingleClients from './SingleClients';
 const AllClientsDetails = () => {
-const [clients,setClients]=useState([])
+const [clients]=useClients()
 
-    useEffect(()=>{
-        fetch('../AllMeal.json')
-        .then(res=>res.json())
-        .then(data=>setClients(data))
-        
-    },[])
+  
     let history=useHistory()
     const handleClientDetails=(id)=>{
         const url= `allclientsdetails/${id}`
