@@ -14,7 +14,7 @@ const MisionTimeline = () => {
   const { t } = useTranslation()
     return (
         <div className=' mx-auto'>
-            <div class="border-l-2 mt-10">
+            <div className="border-l-2 mt-10">
        <Slide title={t('Mission_one')}
        description={t('Mission_two')}
        VisionStyle={VisionStyle}
@@ -39,21 +39,21 @@ const Slide=({title,description,VisionStyle})=>{
    return(
     <div
     style={VisionStyle}
-    class="transform transition cursor-pointer hover:-translate-y-2 ml-10 relative flex items-center px-6 py-4  text-white rounded mb-10 flex-col md:flex-row space-y-4 md:space-y-0">
+    className="transform transition cursor-pointer hover:-translate-y-2 ml-10 relative flex items-center px-6 py-4  text-white rounded mb-10 flex-col md:flex-row space-y-4 md:space-y-0">
       
     <div
        style={VisionStyle}
-        class="w-5 h-5 absolute -left-10 transform -translate-x-2/4 rounded-full z-10 mt-2 md:mt-0"></div>
+        className="w-5 h-5 absolute -left-10 transform -translate-x-2/4 rounded-full z-10 mt-2 md:mt-0"></div>
 
  
     <div 
     style={VisionStyle}
-    class="w-10 h-1 absolute -left-10 z-0"></div>
+    className="w-10 h-1 absolute -left-10 z-0"></div>
 
 
-    <div class="flex-auto">
-      <h1 class="text-xl font-bold">{title}</h1>
-      <h1 class="text-sm font-bold">{description}</h1>
+    <div className="flex-auto">
+      <h1 className="text-xl font-bold">{title}</h1>
+      <h1 className="text-sm font-bold">{description}</h1>
     </div>
 
   </div>

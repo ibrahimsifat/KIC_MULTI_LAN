@@ -1,22 +1,16 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { useParams } from 'react-router';
 import '../../App.css'
 import { NavLink } from 'react-router-dom';
+import usePortfolio from '../../shared/usePortfolio';
 
 const AllProfileDetails = () => {
     const {portfoliotId}=useParams()
-    const [clients,setClients]=useState([])
-    console.log(portfoliotId);
-    useEffect(()=>{
-        fetch('../AllPortfolio.json')
-        .then(res=>res.json())
-        .then(data=>setClients(data))
-        
-    },[])
-    console.log(clients);
+    const [clients]=usePortfolio()
+
 
     const matchClient=clients.filter(client=>client.id===portfoliotId)
-    console.log('mached',matchClient);
+    
     return (
         <div>
     

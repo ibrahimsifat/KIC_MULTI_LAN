@@ -1,24 +1,17 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { useParams } from 'react-router';
 
 import '../../App.css'
 import { NavLink } from 'react-router-dom';
+import useClients from '../../shared/useClients';
 
 const AllclientDetails = () => {
 
     const {clientId}=useParams()
-    const [clients,setClients]=useState([])
-    console.log(clientId);
-    useEffect(()=>{
-        fetch('../AllMeal.json')
-        .then(res=>res.json())
-        .then(data=>setClients(data))
-        
-    },[])
-    console.log(clients);
-
+    const [clients]=useClients()
+  
     const matchClient=clients.filter(client=>client.id===clientId)
-    console.log('mached',matchClient);
+
     return (
         <div >
           
