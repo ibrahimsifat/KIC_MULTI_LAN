@@ -1,11 +1,11 @@
+import cookies from 'js-cookie';
 import React from 'react';
-import cookies from 'js-cookie'
-import Hero from '../../../img/Hero.png'
-import './Banner.css'
 import { useTranslation } from 'react-i18next';
 import { AiOutlineDownload } from 'react-icons/ai';
-
 import Fade from 'react-reveal/Fade';
+import Hero from '../../../img/Hero.png';
+import './Banner.css';
+
 const Banner = () => {
     const { t } = useTranslation()
     const IsArabic=cookies.get('i18next') ==='ar'
