@@ -2,6 +2,7 @@
   "name": "react-local",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://kicadv.com/",
   "dependencies": {
     "@craco/craco": "^6.4.1",
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
