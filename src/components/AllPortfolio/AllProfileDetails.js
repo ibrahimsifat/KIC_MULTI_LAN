@@ -1,72 +1,70 @@
-import React from 'react';
-import { useParams } from 'react-router';
-import '../../App.css'
-import { NavLink } from 'react-router-dom';
-import usePortfolio from '../../shared/usePortfolio';
+import React from "react";
+import { useParams } from "react-router";
+import { NavLink } from "react-router-dom";
+import "../../App.css";
+import usePortfolio from "../../shared/usePortfolio";
 
 const AllProfileDetails = () => {
-    const {portfoliotId}=useParams()
-    const [clients]=usePortfolio()
+  const { portfoliotId } = useParams();
+  const [clients] = usePortfolio();
 
+  const matchClient = clients.filter((client) => client._id === portfoliotId);
 
-    const matchClient=clients.filter(client=>client.id===portfoliotId)
-    
-    return (
-        <div>
-    
-            {
-                matchClient.map(singleClient=><SingleDetails
-                key={singleClient.id}
-                    singleClient={singleClient}
-                ></SingleDetails>)
-            }
-        </div>
-    );
+  return (
+    <div>
+      {matchClient.map((singleClient) => (
+        <SingleDetails
+          key={singleClient._id}
+          singleClient={singleClient}
+        ></SingleDetails>
+      ))}
+    </div>
+  );
 };
-const SingleDetails=({singleClient})=>{
-    const {img}=singleClient
-    return(<>
-      
-
-<div className="container mx-auto mt-8 pt-8 px-3 md:px-6 rounded-lg ">
-<div className='container flex justify-start  items-center my-5 '>
-       <NavLink to='/allportfolio' className='flex justify-center mx-14 items-center border-b-2 border-purple-900 no-underline text-black font-semibold px-2 duration-300  mx-auto'> 
-            <div className='mx-2 text-white duration-500 text-4xl no-underline'> 
- 
-            <button  id="topButton"
-        className=" z-10  hover:text-red-700 duration-500 text-black md:p-3 p-2  bottom-10 right-10 animate-bounce">
-        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M5 10l7-7m0 0l7 7m-7-7v18">
-            </path>
-        </svg>
-        <div className="absolute top-0 -left-4 w-10 h-10 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob "></div>
-        </button>
-                      
+const SingleDetails = ({ singleClient }) => {
+  const { img } = singleClient;
+  return (
+    <>
+      <div className="container mx-auto mt-8 pt-8 px-3 md:px-6 rounded-lg ">
+        <div className="container flex justify-start  items-center my-5 ">
+          <NavLink
+            to="/allportfolio"
+            className="flex justify-center mx-14 items-center border-b-2 border-purple-900 no-underline text-black font-semibold px-2 duration-300  mx-auto"
+          >
+            <div className="mx-2 text-white duration-500 text-4xl no-underline">
+              <button
+                id="topButton"
+                className=" z-10  hover:text-red-700 duration-500 text-black md:p-3 p-2  bottom-10 right-10 animate-bounce"
+              >
+                <svg
+                  className="w-8 h-8"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2.5"
+                    d="M5 10l7-7m0 0l7 7m-7-7v18"
+                  ></path>
+                </svg>
+                <div className="absolute top-0 -left-4 w-10 h-10 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob "></div>
+              </button>
             </div>
-         
-        </NavLink>
+          </NavLink>
         </div>
 
-          <img  className='md:my-16 my-3 w-full md:w-10/12 mx-auto border-3 border-purple-900' src={img} alt="" />
-            
-      
-    
-</div>
-
-
-
-
-
-
-    
-
-
-  
-
-        </>
-    )
-}
-
+        <img
+          className="md:my-16 my-3 w-full md:w-10/12 mx-auto border-3 border-purple-900"
+          src={img}
+          alt=""
+        />
+      </div>
+    </>
+  );
+};
 
 // const CloseSVG=()=>{
 //     return(

@@ -5,12 +5,11 @@ import SingleClients from "./SingleClients";
 
 const AllClientsDetails = () => {
   const [clients] = useClients();
-
+  console.log("clients", clients);
   let history = useHistory();
   const handleClientDetails = (id) => {
     const url = `allclientsdetails/${id}`;
     history.push(url);
-
     console.log(id);
   };
   return (
@@ -20,7 +19,8 @@ const AllClientsDetails = () => {
           <SingleClients
             key={client.id}
             client={client}
-            handleClientDetails={handleClientDetails}></SingleClients>
+            handleClientDetails={handleClientDetails}
+          ></SingleClients>
         ))}
       </div>
     </div>
