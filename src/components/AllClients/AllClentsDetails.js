@@ -5,12 +5,12 @@ import SingleClients from "./SingleClients";
 
 const AllClientsDetails = () => {
   const [clients] = useClients();
-  console.log("clients", clients);
+  // console.log("clients", clients);
   let history = useHistory();
   const handleClientDetails = (id) => {
     const url = `allclientsdetails/${id}`;
     history.push(url);
-    console.log(id);
+    // console.log(id);
   };
   return (
     <div className="bg-gray-100">

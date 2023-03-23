@@ -1,58 +1,54 @@
 .contact_bg_img {
-    background-image: url(../../img/contactbg.png);
-    background-size: cover;
-    background-repeat: no-repeat;
+  background-image: url(../../img/contactbg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .contactFooterbg {
-    background-image: url(../../img/footerbg.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.monsterratFont {
-    font-family: 'Montserrat', sans-serif;
+  background-image: url(../../img/footerbg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .bgContactBanner {
-    background-image: url(../../img/contactbg.png);
+  background-image: url(../../img/contactbg.png);
 }
 
 .contact-banner1 {
-    background-image: url(../../img/contacthandbg.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 500px;
-    width: 100%;
+  background-image: url(../../img/contacthandbg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 500px;
+  width: 100%;
 }
 
 .contact_button:after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #e3336c;
-    z-index: -2;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #e3336c;
+  z-index: -2;
 }
 
 .contact_button:before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0%;
-    height: 100%;
-    background-color: #393993;
-    transition: all 0.3s;
-    z-index: -1;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #393993;
+  transition: all 0.3s;
+  z-index: -1;
 }
 
 .contact_button:hover {
-    color: #000;
+  color: #000;
 }
 
 .contact_button:hover:before {
-    width: 100%;
+  width: 100%;
 }

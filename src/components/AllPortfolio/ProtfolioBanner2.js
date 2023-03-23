@@ -41,13 +41,7 @@ const ProtfolioBanner2 = () => {
             />
           </div>
 
-          <div
-            className={
-              !IsArabic
-                ? "monsterratFont w-full flex flex-col flex-grow items-center h-full flex-shrink"
-                : "arabic-font-1 w-full flex flex-col flex-grow items-center h-full flex-shrink"
-            }
-          >
+          <div className="w-full flex flex-col flex-grow items-center h-full flex-shrink">
             <div className="flex-1 bg-white rounded-t rounded-b-none bg-purple-50 md:pt-44 ">
               <div className="w-full font-bold text-xl text-gray-900 px-6 mb-7 mt-3">
                 👋 {t("allPortfolio_four")}

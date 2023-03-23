@@ -13,7 +13,7 @@ const SinglePortfolio = ({ portfolio }) => {
     const url = `allportfoliodetails/${id}`;
     history.push(url);
 
-    console.log(id);
+    // console.log(id);
   };
   const { img, _id } = portfolio;
 

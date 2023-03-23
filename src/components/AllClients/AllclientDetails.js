@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { useParams } from "react-router";
 
 import { NavLink } from "react-router-dom";
@@ -8,41 +9,56 @@ import useClients from "../../shared/useClients";
 const AllclientDetails = () => {
   const { clientId } = useParams();
   const [clients] = useClients();
-  console.log(clients);
+  // console.log(clients);
   const matchClient = clients.filter((client) => client._id === clientId);
-  console.log(matchClient);
-  console.log("clientId", clientId);
-
+  // console.log(matchClient);
+  // console.log("clientId", clientId);
+  const { t } = useTranslation();
   return (
     <div>
-      <div className="container flex justify-start  items-center my-5 ">
-        <NavLink
-          to="/allclients"
-          className="flex justify-center mx-14 items-center border-b-2 border-purple-900 no-underline text-black font-semibold px-2 duration-300  mx-auto"
-        >
-          <div className="mx-2 text-white duration-500 text-4xl no-underline">
-            <button
-              id="topButton"
-              className=" z-10  hover:text-red-700 duration-500 text-black md:p-3 p-2  bottom-10 right-10 animate-bounce"
-            >
-              <svg
-                className="w-8 h-8"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2.5"
-                  d="M5 10l7-7m0 0l7 7m-7-7v18"
-                ></path>
-              </svg>
-              <div className="absolute top-0 -left-4 w-10 h-10 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob "></div>
+      <div className="container flex justify-between  items-center my-5 ">
+        <div>
+          <NavLink
+            className="no-underline cursor-pointer text-black hover:text-blue-400"
+            to="/"
+          >
+            {t("Navigation_home")}
+          </NavLink>{" "}
+          /{" "}
+          <NavLink
+            className="no-underline cursor-pointer text-black hover:text-blue-400"
+            to="/allclients"
+          >
+            {t("Navigation_Clients")}
+          </NavLink>
+        </div>
+        <div>
+          <NavLink
+            to="/allclients"
+            className="flex justify-center  items-center     mx-auto"
+          >
+            <button class="inline-flex items-center px-4 py-2 bg-gray-700 hover:bg-black text-white text-sm font-bold rounded-md">
+              <div className="px-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5 mr-2"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 10h10a8 8 0 018 8v2M3 10l6 6m-6-6l6-6"
+                  />
+                </svg>
+              </div>
+              {/* Back To clients */}
+              {t("Back")}
             </button>
-          </div>
-        </NavLink>
+          </NavLink>
+        </div>
       </div>
       {/* {!IsArabic&&  <div className='container flex justify-start  items-center my-5'>
        <NavLink to='/allclients' className='flex justify-center mx-14 items-center bg-gray-400 no-underline text-black font-semibold px-2 hover:bg-gray-600 duration-500 hover:text-white '> 
@@ -52,11 +68,8 @@ const AllclientDetails = () => {
         </NavLink>
         </div>} */}
 
-      {matchClient.map((singleClient) => (
-        <SingleDetails
-          key={singleClient.id}
-          singleClient={singleClient}
-        ></SingleDetails>
+      {matchClient.map((singleClient, i) => (
+        <SingleDetails key={i} singleClient={singleClient}></SingleDetails>
       ))}
     </div>
   );

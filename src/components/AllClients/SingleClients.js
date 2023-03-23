@@ -9,7 +9,7 @@ import Zoom from "react-reveal/Zoom";
 const search = <FontAwesomeIcon icon={faSearch} />;
 const SingleClients = ({ client, handleClientDetails }) => {
   const { img, _id } = client;
-  console.log("id", _id);
+  // console.log("id", _id);
   return (
     <div className=" mx-auto  img-hover duration-700  ">
       <div className=" transition duration-300 ease-in-out  cursor-pointer group">

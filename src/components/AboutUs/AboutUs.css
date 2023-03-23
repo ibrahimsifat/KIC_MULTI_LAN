@@ -1,54 +1,53 @@
 .aboutBg-img {
-    background-image: url(../../img/aboutbg.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100%;
+  background-image: url(../../img/aboutbg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
 }
 
 .about_content {
-    background-image: url(../../img/aboutsecondbg.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 360px;
+  background-image: url(../../img/aboutsecondbg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 360px;
 }
 
-@media screen and (max-width:600px) {
-    .about_content {
-        height: auto;
-    }
+@media screen and (max-width: 600px) {
+  .about_content {
+    height: auto;
+  }
 }
 
 .about_portfolio_bg {
-    background-image: url(../../img/aboutPortfoliobg.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 600px;
+  background-image: url(../../img/aboutPortfoliobg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 600px;
 }
 
 .aboutIdeaBg {
-    background-image: url(../../img/philosophy.png);
-    width: 100%;
-    height: 440px;
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-image: url(../../img/philosophy.png);
+  width: 100%;
+  height: 440px;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .monsterratFont {
-    font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .content-color {
-    color: #2d2d7d;
+  color: #2d2d7d;
 }
 
 .strokeme {
-    color: #E3336C;
-    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+  color: #e3336c;
+  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff,
+    1px 1px 0 #fff;
 }
 
-
 /* border animation  */
-
 
 /* a:after {
     display: block;
@@ -65,7 +64,6 @@ a:hover:after {
 a.fromRight:after {
     transform-origin: 100% 50%;
 } */
-
 
 /* 
 a.fromLeft:after {
