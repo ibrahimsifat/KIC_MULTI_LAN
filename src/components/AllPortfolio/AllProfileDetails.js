@@ -7,7 +7,6 @@ import usePortfolio from "../../shared/usePortfolio";
 const AllProfileDetails = () => {
   const { portfoliotId } = useParams();
   const [clients] = usePortfolio();
-
   const matchClient = clients.filter((client) => client._id === portfoliotId);
 
   return (
@@ -27,38 +26,55 @@ const SingleDetails = ({ singleClient }) => {
   return (
     <>
       <div className="container mx-auto mt-8 px-3 md:px-6 rounded-lg ">
-        <div className="container flex justify-start  items-center my-5 ">
-          <NavLink
-            to="/allportfolio"
-            className="flex justify-center  items-center     mx-auto"
-          >
-            <button class="inline-flex items-center px-4 py-2 bg-gray-700 hover:bg-black text-white text-sm font-bold rounded-md ">
-              <div className="px-2">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-5 w-5 mr-2"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M3 10h10a8 8 0 018 8v2M3 10l6 6m-6-6l6-6"
-                  />
-                </svg>
-              </div>
-              {/* Back To clients */}
-              {t("Back")}
-            </button>
-          </NavLink>
+        <div className="container flex justify-between  items-center my-5 ">
+          <div>
+            <NavLink
+              className="no-underline cursor-pointer text-black hover:text-blue-400"
+              to="/"
+            >
+              {t("Navigation_home")}
+            </NavLink>{" "}
+            /{" "}
+            <NavLink
+              className="no-underline cursor-pointer text-black hover:text-blue-400"
+              to="/allportfolio"
+            >
+              {t("Navigation_Portfolio")}
+            </NavLink>
+          </div>
+          <div>
+            <NavLink
+              to="/allportfolio"
+              className="flex justify-center  items-center     mx-auto"
+            >
+              <button className="inline-flex items-center px-4 py-2 bg-gray-700 hover:bg-black text-white text-sm font-bold rounded-md">
+                <div className="px-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-5 w-5 mr-2"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M3 10h10a8 8 0 018 8v2M3 10l6 6m-6-6l6-6"
+                    />
+                  </svg>
+                </div>
+                {/* Back To clients */}
+                {t("Back")}
+              </button>
+            </NavLink>
+          </div>
         </div>
 
         <img
           className="md:my-16 my-3 w-full md:w-10/12 mx-auto border-3 border-purple-900"
           src={img}
-          alt=""
+          alt={img}
         />
       </div>
     </>

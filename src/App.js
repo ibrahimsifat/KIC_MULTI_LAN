@@ -1,4 +1,3 @@
-import cookies from "js-cookie";
 import React, { Suspense, useEffect, useState } from "react";
 
 import "./App.css";
@@ -8,7 +7,6 @@ import ScrollTop from "./shared/ScrollTop";
 import Spinner from "./shared/Spinner";
 
 export default function App() {
-  const IsArabic = cookies.get("i18next") === "ar";
   const [showButton, setShowButton] = useState(false);
 
   useEffect(() => {
@@ -31,7 +29,7 @@ export default function App() {
 
   return (
     <>
-      <div className={!IsArabic ? "monsterratFont" : "arabic-font-2"}>
+      <div>
         {showButton && <ScrollTop scrollToTop={scrollToTop} />}
         <Suspense fallback={<Spinner />}>
           <Routes />

@@ -24,12 +24,7 @@ const Footer = () => {
 
   const { t } = useTranslation();
   return (
-    <div
-      style={BG}
-      className={
-        !IsArabic ? " bg- pt-8  monsterratFont" : " footer- pt-8 arabic-font-1"
-      }
-    >
+    <div style={BG} className={!IsArabic ? " bg- pt-8  " : " footer- pt-8 "}>
       <div className="mt-8">
         <div className="container mx-auto grid  lg:grid-cols-3  md:grid-cols-2 justify-between items-start ">
           <FooterLogo></FooterLogo>
@@ -150,13 +145,13 @@ const FooterLogo = () => {
         </a>
       </div> */}
       <div className="mt-3">
-        <div class="flex flex-wrap  gap-2">
+        <div className="flex flex-wrap  gap-2">
           <a
             href="https://wa.me/+966505353820"
             target="_blank"
             rel="noreferrer"
           >
-            <button class="bg-blue-500 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded">
+            <button className="bg-blue-500 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded">
               <BsFillTelephoneFill
                 className="text-"
                 style={{ fontSize: "16px" }}
@@ -164,7 +159,7 @@ const FooterLogo = () => {
             </button>
           </a>
           <a href="mailto:kic121@hotmail.com" target="_blank" rel="noreferrer">
-            <button class="bg-blue-700 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded">
+            <button className="bg-blue-700 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded">
               <GrMail style={{ fontSize: "16px" }} />
             </button>
           </a>
@@ -173,7 +168,7 @@ const FooterLogo = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <button class="bg-blue-400 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded">
+            <button className="bg-blue-400 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded">
               <BsTwitter style={{ fontSize: "16px" }} />
             </button>
           </a>
@@ -182,7 +177,7 @@ const FooterLogo = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <button class="bg-pink-700 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded">
+            <button className="bg-pink-700 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded">
               <BsInstagram style={{ fontSize: "16px" }} />
             </button>
           </a>
@@ -191,7 +186,7 @@ const FooterLogo = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <button class="bg-yellow-400 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded">
+            <button className="bg-yellow-400 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded">
               <BsSnapchat style={{ fontSize: "16px" }} />
             </button>
           </a>
@@ -200,7 +195,7 @@ const FooterLogo = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <button class="bg-black p-2 font-semibold text-white inline-flex items-center space-x-2 rounded">
+            <button className="bg-black p-2 font-semibold text-white inline-flex items-center space-x-2 rounded">
               <FaTiktok style={{ fontSize: "16px" }} />
             </button>
           </a>
@@ -215,10 +210,6 @@ const Pages = () => {
     <>
       <div className=" flex text-white mb-4">
         <div className="  md:mx-4  ">
-          {/* <div className="text-center">
-        <p className={!IsArabic?'text-white font-bold text-xl arabic-font-1 pb-1': 'text-black font-bold text-xl monsterratFont pb-1'}>{t('Footer_Pages')}</p>
-            <p className='border-b-2 border-red-600 border-fuchsia-600 w-14 mx-auto'></p>
-        </div> */}
           <div className="grid grid-cols-2">
             <nav className="list-none  mt-3">
               <li>

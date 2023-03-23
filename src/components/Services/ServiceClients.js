@@ -28,13 +28,7 @@ const HomeClients = () => {
 
   return (
     <div className="-mt-8">
-      <div
-        className={
-          !IsArabic
-            ? "my-24 relative monsterratFont"
-            : "my-24 relative arabic-font-1"
-        }
-      >
+      <div className="my-24 relative ">
         <div className=" md:px-20">
           <h1 className="lg:ml-20 ml:mx-10 sm:mx-8 mx-16  text-3xl font-extrabold sm:text-4xl md:text-4xl lg:text-5xl textred my-4 uppercase">
             {t("home_clients_first")}

@@ -58,8 +58,8 @@ const Navigation3 = () => {
     <div
       className={
         !IsArabic
-          ? "container monsterratFont -my-2  bg-white lg:flex  items-center justify-between  "
-          : " container arabic-font-1  lg:flex  items-center justify-between bg-white "
+          ? "container  -my-2  bg-white lg:flex  items-center justify-between  "
+          : " container   lg:flex  items-center justify-between bg-white "
       }
     >
       <div className=" w-full mx-auto z-30 my-0 py-0  ">
@@ -292,7 +292,7 @@ const Navigation3 = () => {
               </NavLink>
             </li>
 
-            <li className="lg:mx-4  fromLeft mt-3">
+            <li className="lg:mx-4  fromLeft mt-2.5">
               {!IsArabic ? (
                 <p
                   onClick={() => {

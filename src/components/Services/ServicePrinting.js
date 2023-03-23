@@ -18,9 +18,7 @@ const ServicePrinting = () => {
             <div className=" col-span-3 print-bg right  flex justify-center items-center lg-pt-0 pt-8 md:h-96">
               <div
                 className={
-                  !IsArabic
-                    ? "monsterratFont  px-6 md:py-0 py-6 md:px-16"
-                    : "arabic-font-2 px-8 md:px-16"
+                  !IsArabic ? "  px-6 md:py-0 py-6 md:px-16" : "px-8 md:px-16"
                 }
               >
                 <Fade right>

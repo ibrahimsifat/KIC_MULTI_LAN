@@ -1,63 +1,58 @@
 .service-bg-img {
-    background-image: url(../../img/servicehomebg.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.monsterratFont {
-    font-family: 'Montserrat', sans-serif;
+  background-image: url(../../img/servicehomebg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .print-bg {
-    background-image: url(../../img/servicePrinting-01.png);
-    background-size: cover;
-    background-repeat: no-repeat;
+  background-image: url(../../img/servicePrinting-01.png);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .h-img {
-    height: 300px;
+  height: 300px;
 }
 
 .bg-web {
-    background-image: url(../../img/serviceWebdesign-02.png);
-    background-size: cover;
-    background-repeat: no-repeat;
+  background-image: url(../../img/serviceWebdesign-02.png);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .bg-graphic {
-    background-image: url(../../img/serviceGraphicdesign-01.png);
-    background-size: cover;
-    background-repeat: no-repeat;
+  background-image: url(../../img/serviceGraphicdesign-01.png);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .marketing-bg {
-    background-image: url(../../img/serviceMerkating.png);
-    background-size: cover;
-    background-repeat: no-repeat;
+  background-image: url(../../img/serviceMerkating.png);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .downloadPortfolio_bg {
-    background-image: url(../../img/ServiceDownloadPortfolio.png);
-    background-size: cover;
-    height: 120px;
-    background-repeat: no-repeat;
+  background-image: url(../../img/ServiceDownloadPortfolio.png);
+  background-size: cover;
+  height: 120px;
+  background-repeat: no-repeat;
 }
-
 
 /* border animation  */
 
 .border-line:after {
-    display: block;
-    content: '';
-    border-bottom: solid 3px #fff;
-    transform: scaleX(0);
-    transition: transform 250ms ease-in-out;
+  display: block;
+  content: "";
+  border-bottom: solid 3px #fff;
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
 }
 
 .border-line:hover:after {
-    transform: scaleX(1);
+  transform: scaleX(1);
 }
 
 .border-line.fromLeft:after {
-    transform-origin: 0% 50%;
+  transform-origin: 0% 50%;
 }

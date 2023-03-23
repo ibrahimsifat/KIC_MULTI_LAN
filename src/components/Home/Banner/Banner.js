@@ -18,8 +18,8 @@ const Banner = () => {
                 <div
                   className={
                     !IsArabic
-                      ? "monsterratFont text-right md:pl-8 pl-0 md:mr-auto md:my-0 my-8 md:pt-0 pt-8 "
-                      : "text-right md:ml-auto md:mr-1 px-3 md:my-0 my-8 md:pt-0 pt-8 arabic-font-1 "
+                      ? " text-right md:pl-8 pl-0 md:mr-auto md:my-0 my-8 md:pt-0 pt-8 "
+                      : "text-right md:ml-auto md:mr-1 px-3 md:my-0 my-8 md:pt-0 pt-8"
                   }
                 >
                   <p>
@@ -54,10 +54,7 @@ const Banner = () => {
                 </div>
               </div>
 
-              <div
-                data-aos="fade-right"
-                className="right w-12/12 mt-2 md:mt-8 px-4"
-              >
+              <div className="right w-12/12 mt-2 md:mt-8 px-4">
                 <img src={Hero} alt="" />
               </div>
             </Fade>

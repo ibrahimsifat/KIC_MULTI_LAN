@@ -37,11 +37,11 @@ const AllclientDetails = () => {
             to="/allclients"
             className="flex justify-center  items-center     mx-auto"
           >
-            <button class="inline-flex items-center px-4 py-2 bg-gray-700 hover:bg-black text-white text-sm font-bold rounded-md">
+            <button className="inline-flex items-center px-4 py-2 bg-gray-700 hover:bg-black text-white text-sm font-bold rounded-md">
               <div className="px-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  class="h-5 w-5 mr-2"
+                  className="h-5 w-5 mr-2"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -60,13 +60,6 @@ const AllclientDetails = () => {
           </NavLink>
         </div>
       </div>
-      {/* {!IsArabic&&  <div className='container flex justify-start  items-center my-5'>
-       <NavLink to='/allclients' className='flex justify-center mx-14 items-center bg-gray-400 no-underline text-black font-semibold px-2 hover:bg-gray-600 duration-500 hover:text-white '> 
-            <div className='mx-2 text-white duration-500 text-4xl no-underline'> 
-            <span >{arrowIcon}</span></div>
-            <span className=' text-md md:text-xl text-white mb-1'>Back</span>
-        </NavLink>
-        </div>} */}
 
       {matchClient.map((singleClient, i) => (
         <SingleDetails key={i} singleClient={singleClient}></SingleDetails>

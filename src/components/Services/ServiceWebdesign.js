@@ -21,13 +21,7 @@ const ServiceWebdesign = () => {
               />
             </div>
             <div className=" right bg-web flex justify-center items-center lg-pt-0 pt-8 md:h-96 ">
-              <div
-                className={
-                  !IsArabic
-                    ? "monsterratFont px-8 md:px-16"
-                    : "arabic-font-2 px-8 md:px-16"
-                }
-              >
+              <div className="px-8 md:px-16">
                 <Fade right>
                   <h1 className=" tracking-tighter font-extrabold uppercase text-white text-3xl sm:text-5xl md:text-4xl lg:text-5xl mb-6 lg:mb-8">
                     {t("service_web_one")}

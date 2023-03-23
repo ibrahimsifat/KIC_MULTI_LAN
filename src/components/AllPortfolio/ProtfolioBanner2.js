@@ -1,4 +1,3 @@
-import cookies from "js-cookie";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
@@ -9,7 +8,6 @@ const ProtfolioBanner2 = () => {
   const { t } = useTranslation();
   const [portfolios] = usePortfolio();
 
-  const IsArabic = cookies.get("i18next") === "ar";
   return (
     <div>
       <div
