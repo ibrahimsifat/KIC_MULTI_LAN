@@ -34,7 +34,7 @@ const Footer = () => {
         </div>
         <p className="md:mt-8 mt-5 pb-2 text-center text-white  ">
           {" "}
-          {t("home_footer_copyright")} © 2021 KIC.
+          {t("home_footer_copyright")} ©{new Date().getFullYear()} KIC.
         </p>
       </div>
     </div>
@@ -182,7 +182,7 @@ const FooterLogo = () => {
             </button>
           </a>
           <a
-            href="https://www.snapchat.com/add/kicadv1"
+            href="https://www.snapchat.com/add/kicadv_sa1"
             target="_blank"
             rel="noreferrer"
           >
@@ -208,98 +208,94 @@ const Pages = () => {
   const { t } = useTranslation();
   return (
     <>
-      <div className=" flex text-white mb-4">
-        <div className="  md:mx-4  ">
-          <div className="grid grid-cols-2">
-            <nav className="list-none  mt-3">
-              <li>
-                <NavLink
-                  className="text-white no-underline font-   block"
-                  to="/"
-                >
-                  {t("Navigation_home")}
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  className="ml-0 text-white no-underline font-  py-3 block "
-                  to="/aboutus"
-                >
-                  {t("Navigation_About")}
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  className="text-white  no-underline font-   block"
-                  to="/visions"
-                >
-                  {t("vision_first")}
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  className="text-white no-underline py-3  block"
-                  to="/history"
-                >
-                  {t("home_history")}
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  className="text-white  no-underline font-   block"
-                  to="/services"
-                >
-                  {" "}
-                  {t("Navigation_Service")}
-                </NavLink>
-              </li>
-            </nav>
-            <nav className="list-none  mt-3">
-              <li>
-                <NavLink
-                  className="text-white no-underline block"
-                  to="/allclients"
-                >
-                  {t("Navigation_Clients")}
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  className="text-white    no-underline py-3  block"
-                  to="/allclientsrecognition"
-                >
-                  {t("Navigation_recognition")}
-                </NavLink>
-              </li>
+      <div className="  text-white mb-4 text-center">
+        {/* <h3 className="mx-auto">Important Links</h3> */}
+        <div className=" flex justify-center items-center">
+          <nav className="list-none  mt-3 px-4">
+            <li>
+              <NavLink className="text-white no-underline font-   block" to="/">
+                {t("Navigation_home")}
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                className="ml-0 text-white no-underline font-  py-3 block "
+                to="/aboutus"
+              >
+                {t("Navigation_About")}
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                className="text-white  no-underline font-   block"
+                to="/visions"
+              >
+                {t("vision_first")}
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                className="text-white no-underline py-3  block"
+                to="/history"
+              >
+                {t("home_history")}
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                className="text-white  no-underline font-   block"
+                to="/services"
+              >
+                {" "}
+                {t("Navigation_Service")}
+              </NavLink>
+            </li>
+          </nav>
+          <nav className="list-none  mt-3 px-4">
+            <li>
+              <NavLink
+                className="text-white no-underline block"
+                to="/allclients"
+              >
+                {t("Navigation_Clients")}
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                className="text-white    no-underline py-3  block"
+                to="/allclientsrecognition"
+              >
+                {t("Navigation_recognition")}
+              </NavLink>
+            </li>
 
-              <li>
-                <NavLink
-                  className="text-white   no-underline block"
-                  to="/philosophy"
-                >
-                  {t("Navigation_philosophy")}
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  className="text-white    no-underline py-2  py-3 block"
-                  to="/allportfolio"
-                >
-                  {" "}
-                  {t("Navigation_Portfolio")}
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  className="text-white  no-underline font-  block"
-                  to="/contactus"
-                >
-                  {" "}
-                  {t("Navigation_Touch")}
-                </NavLink>
-              </li>
-            </nav>
-          </div>
+            <li>
+              <NavLink
+                className="text-white   no-underline block"
+                to="/philosophy"
+              >
+                {t("Navigation_philosophy")}
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                className="text-white    no-underline py-2  py-3 block"
+                to="/allportfolio"
+              >
+                {" "}
+                {t("Navigation_Portfolio")}
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                className="text-white  no-underline font-  block"
+                to="/contactus"
+              >
+                {" "}
+                {t("Navigation_Touch")}
+              </NavLink>
+            </li>
+          </nav>
         </div>
       </div>
     </>

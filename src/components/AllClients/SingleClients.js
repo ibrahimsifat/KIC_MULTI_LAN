@@ -15,11 +15,11 @@ const SingleClients = ({ client, handleClientDetails }) => {
       <div className=" transition duration-300 ease-in-out  cursor-pointer group">
         <Zoom>
           <div
-            className="overflow-hidden relative  rounded-md item-zoom"
+            className="overflow-hidden relative  rounded-md item-zoom shadow-md border-2 border-gray-100"
             onClick={() => handleClientDetails(_id)}
           >
             <img
-              className="w-full transition duration-700  border-2 border-gray-200 border-opacity-50   "
+              className="w-full transition duration-700  "
               src={img}
               alt=""
             />

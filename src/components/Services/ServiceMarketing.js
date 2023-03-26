@@ -1,11 +1,9 @@
-import cookies from "js-cookie";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import Fade from "react-reveal/Fade";
 import MarketingBG from "../../img/serviceMerkating-01.png";
 import "./Serivces.css";
 const ServiceMarketing = () => {
-  const IsArabic = cookies.get("i18next") === "ar";
   const { t } = useTranslation();
   return (
     <>

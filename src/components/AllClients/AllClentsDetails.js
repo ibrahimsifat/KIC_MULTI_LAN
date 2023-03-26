@@ -13,7 +13,7 @@ const AllClientsDetails = () => {
     // console.log(id);
   };
   return (
-    <div className="bg-gray-100">
+    <div className="">
       <div className="container mx-auto grid lg:grid-cols-6 md:grid-cols-4 sm:grid-cols-3 grid-cols-3  gap-3 my-0 py-16 ">
         {clients.map((client) => (
           <SingleClients

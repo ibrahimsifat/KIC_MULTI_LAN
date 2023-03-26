@@ -20,7 +20,7 @@ const AllPortfolioBanner = () => {
 
   return (
     <div>
-      <div className="bg-purple-100 font-sans leading-normal tracking-normal">
+      <div className="bg-purple-100 leading-normal tracking-normal">
         <div
           className="w-full m-0 p-0 bg-cover bg-bottom bgImage "
           style={{ height: "500px", maxHeight: "560px" }}
@@ -62,7 +62,7 @@ const AllPortfolioBanner = () => {
                       <div className="w-full font-bold text-xl text-gray-900 px-6 mb-7 ">
                         👋 {t("allPortfolio_four")}
                       </div>
-                      <p className="text-gray-800 font-serif md:text-xl text-base px-6 mb-4">
+                      <p className="text-gray-800  md:text-xl text-base px-6 mb-4">
                         {t("allPortfolio_five")}
                       </p>
                       <div className="mx-4">

@@ -1,13 +1,14 @@
 .bgImage {
-    background-image: url(../../img/aboutPortfoliobg.png);
-    background-repeat: no-repeat;
-    background-position: center center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url(../../img/aboutPortfoliobg.png);
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 .bg-btn {
-    background-color: #270B55;
+  background-color: #270b55;
 }
 
 .bg-btn:hover {
-    background-color: #55148A;
+  background-color: #55148a;
 }

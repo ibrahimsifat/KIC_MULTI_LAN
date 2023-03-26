@@ -1,10 +1,9 @@
-import cookies from "js-cookie";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import Fade from "react-reveal/Fade";
 import WebdesignBG from "../../img/serviceWebdesign-01.png";
 import "./Serivces.css";
-const IsArabic = cookies.get("i18next") === "ar";
+
 const ServiceWebdesign = () => {
   const { t } = useTranslation();
   return (

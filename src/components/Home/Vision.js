@@ -9,8 +9,8 @@ const Vision = () => {
   return (
     <div>
       <div className="grid md:grid-cols-2">
-        <div className="left">
-          <img src={VisionsBg} alt="" />
+        <div className="left bg-indigo-600 bg-opacity-20">
+          <img src={VisionsBg} alt="" className="bg-indigo-600 bg-opacity-20" />
         </div>
 
         <div className=" right bgred flex justify-center items-center lg-pt-0 pt-8 ">
